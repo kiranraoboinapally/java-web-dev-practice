@@ -1,0 +1,21 @@
+1.Swapping Two numbers using third variable(without scanner )?
+fileName= swap.java
+2.Write a Java program that takes a character as input and classifies it as either a "Capital Letter", "Small Letter", or "Special Symbol". 
+If the character is between 'A' and 'Z', print "Capital Letter"; if it's between 'a' and 'z', print "Small Letter"; otherwise, print "Special Symbol". 
+How would you implement this logic?
+fileName= char.java
+3.Input is even number or odd?
+fileName= loc.java
+4.Accept a person age as input and check whether is a major or minor or senior citizen?
+fileName= age.java
+5.Accept a number as input if its divisible by 3 print fizz,if its divisible by 5 print buzz,
+if its both print fizz and buzz?
+fileName=fb.java
+6.Switch Case to do ???why break & why continue?? why not if else??
+7.Take age as input and check whether it is +ve or -ve.If it is +ve check age>18
+print eligible for job if age>21 print he is eligible for upsc
+if he is>18 & <21 eligible for ssc exams if age<18 he is not eligible to apply?
+8.Take 3 numbers as input and find the largest among them?
+fileName=   large.java
+9.using ternary operator to add or subtract?
+fileName= terny.java

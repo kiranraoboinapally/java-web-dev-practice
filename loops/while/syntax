@@ -1,0 +1,7 @@
+initialization
+
+while(condition)
+{
+    //body of loop
+    //updation
+}

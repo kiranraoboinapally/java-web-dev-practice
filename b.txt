@@ -12,10 +12,99 @@ fileName= age.java
 if its both print fizz and buzz?
 fileName=fb.java
 6.Switch Case to do ???why break & why continue?? why not if else??
+
 7.Take age as input and check whether it is +ve or -ve.If it is +ve check age>18
 print eligible for job if age>21 print he is eligible for upsc
 if he is>18 & <21 eligible for ssc exams if age<18 he is not eligible to apply?
+
 8.Take 3 numbers as input and find the largest among them?
 fileName=   large.java
 9.using ternary operator to add or subtract?
 fileName= terny.java
+10.
+fileName= w1.java
+11.
+fileName= w2.java
+12.
+fileName= w3.java
+13.
+fileName= w4.java
+14.
+fileName= w5.java
+15.
+pre1.java
+16.Print 3 table as 3X1=3......3X10=30
+fileName=t1.java
+17.Print 3 table and find the result is prime or not?
+
+18.Check the result is even or odd?
+3X1=3 odd 3X2=6 even......
+
+19.Check how many even numbers in 3 table and odd numbers
+print even numbers are 5
+print odd numbers are 5
+
+20.Take num=3 as input 
+if the input is even then num=num/2 else if input is odd num=3*num+1
+output 10 5 16 8 4 2 1
+
+
+21.Fibonacci Series if input a=0 and b=1 then output
+0 1 1 2 3 5 8 13 21 34 //c=a+b
+
+
+22.Power a number without using Math.pow()
+
+
+23.Print only Last digit in the range of 10 to 20 numbers
+fileName= l1.java
+
+
+24.Print Square roots of 1 to 10 numbers
+
+
+
+25.Print perfect square numbers in the range of 1 to 100
+
+
+26.Print Leap Years in the range of 1900 to 2024
+
+
+27.Print fizz and buzz i.e divisible by 3 and 5 in the range of 1000 to 100 print with numbers as fizz and buzz
+
+
+
+28.Sum of Even numbers in 1 to 100 range
+
+
+
+29.nCr Problem
+
+
+
+30.Factors of a number
+
+
+31.Perfect Number find Factors of a number and sum those factors  
+Example factors for 6 are 1,2,3 not including 6 then adding those numbers 1+2+3=6 taken input are equal said to be perfect number
+
+
+
+32.Count Number of Factors to a taken input
+
+
+33.Check whether taken input is a prime or not?
+
+
+34.take input as any number example 20
+output 20 19 18 17.....11 1 2 3.....10
+
+
+
+35.HCF of a taken number other than that?
+
+
+36.HCF of two numbers
+
+
+37.

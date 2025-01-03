@@ -1,16 +1,21 @@
 1.Swapping Two numbers using third variable(without scanner )?
 fileName= swap.java
+
 2.Write a Java program that takes a character as input and classifies it as either a "Capital Letter", "Small Letter", or "Special Symbol". 
 If the character is between 'A' and 'Z', print "Capital Letter"; if it's between 'a' and 'z', print "Small Letter"; otherwise, print "Special Symbol". 
 How would you implement this logic?
 fileName= char.java
+
 3.Input is even number or odd?
 fileName= loc.java
+
 4.Accept a person age as input and check whether is a major or minor or senior citizen?
 fileName= age.java
+
 5.Accept a number as input if its divisible by 3 print fizz,if its divisible by 5 print buzz,
 if its both print fizz and buzz?
 fileName=fb.java
+
 6.Switch Case to do ???why break & why continue?? why not if else??
 
 7.Take age as input and check whether it is +ve or -ve.If it is +ve check age>18
@@ -19,30 +24,42 @@ if he is>18 & <21 eligible for ssc exams if age<18 he is not eligible to apply?
 
 8.Take 3 numbers as input and find the largest among them?
 fileName=   large.java
+
 9.using ternary operator to add or subtract?
 fileName= terny.java
+
 10.
 fileName= w1.java
+
 11.
 fileName= w2.java
+
 12.
 fileName= w3.java
+
 13.
 fileName= w4.java
+
 14.
 fileName= w5.java
+
 15.
 pre1.java
+
 16.Print 3 table as 3X1=3......3X10=30
 fileName=t1.java
+
 17.Print 3 table and find the result is prime or not?
+
 
 18.Check the result is even or odd?
 3X1=3 odd 3X2=6 even......
 
+
 19.Check how many even numbers in 3 table and odd numbers
 print even numbers are 5
 print odd numbers are 5
+
 
 20.Take num=3 as input 
 if the input is even then num=num/2 else if input is odd num=3*num+1
@@ -53,11 +70,14 @@ output 10 5 16 8 4 2 1
 0 1 1 2 3 5 8 13 21 34 //c=a+b
 
 
+
 22.Power a number without using Math.pow()
+
 
 
 23.Print only Last digit in the range of 10 to 20 numbers
 fileName= l1.java
+
 
 
 24.Print Square roots of 1 to 10 numbers
@@ -67,7 +87,9 @@ fileName= l1.java
 25.Print perfect square numbers in the range of 1 to 100
 
 
+
 26.Print Leap Years in the range of 1900 to 2024
+
 
 
 27.Print fizz and buzz i.e divisible by 3 and 5 in the range of 1000 to 100 print with numbers as fizz and buzz
@@ -85,15 +107,19 @@ fileName= l1.java
 30.Factors of a number
 
 
+
 31.Perfect Number find Factors of a number and sum those factors  
 Example factors for 6 are 1,2,3 not including 6 then adding those numbers 1+2+3=6 taken input are equal said to be perfect number
+
 
 
 
 32.Count Number of Factors to a taken input
 
 
+
 33.Check whether taken input is a prime or not?
+
 
 
 34.take input as any number example 20
@@ -101,10 +127,58 @@ output 20 19 18 17.....11 1 2 3.....10
 
 
 
+
 35.HCF of a taken number other than that?
+
+
 
 
 36.HCF of two numbers
 
 
-37.
+
+
+37.Take input as any number example 1432 then extract and add all of it like 3+2+4+1
+
+
+
+
+
+38.I am Strong numbers 153,370,371,407
+take any number as input and find its armstrong or not?
+Example:153 -->3^3+5^3+1^3=153 based on number of digits power it to the given all numbers.
+
+
+
+39.Take input as any number 
+Example : 8765876 Sum of even digits ,product of odd digits
+
+
+
+
+40.Largest and Smallest Digit in a taken Input 1234556
+
+
+
+41.Reversing a given input 123 i.e 321 again 123
+
+
+
+42.Taken Input number=75467 print as 7 5 4 6 7
+
+
+
+43.If i give input as 12300 it should print as 1 2 3 0 0
+
+
+
+
+44.Palindrome Number
+
+
+
+
+45.Palindrome Prime or not?
+
+
+

@@ -82,6 +82,3 @@ Feel free to fork this repository and contribute by adding your own solutions or
 
 ---
 
-### End of README
-
----

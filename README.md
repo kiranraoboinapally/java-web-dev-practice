@@ -1,5 +1,3 @@
-Sure! Here's a README you can use for your GitHub repository to showcase the Java problems you've practiced. This will help others understand what the repository contains and how to navigate it.
-
 ---
 
 # Java Practice Problems
@@ -87,5 +85,3 @@ Feel free to fork this repository and contribute by adding your own solutions or
 ### End of README
 
 ---
-
-This README provides an overview of your repository, organizes your problems into categories, and includes instructions for running the Java programs. You can always update it as you add more problems or make changes to the structure.

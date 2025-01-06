@@ -108,7 +108,7 @@ fileName= nCr.java
 
 
 30.Factors of a number
-fileName= .java
+fileName= factors.java
 
 
 31.Perfect Number find Factors of a number and sum those factors  

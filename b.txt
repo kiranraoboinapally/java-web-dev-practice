@@ -1,5 +1,8 @@
-1.Swapping Two numbers using third variable(without scanner )?
+1a.Swapping Two numbers using third variable(without scanner )?
 fileName= swap.java
+1b.Swapping Two numbers without using third variable()
+
+1c.Swapping  two numbers using  Bitwise XOR
 
 2.Write a Java program that takes a character as input and classifies it as either a "Capital Letter", "Small Letter", or "Special Symbol". 
 If the character is between 'A' and 'Z', print "Capital Letter"; if it's between 'a' and 'z', print "Small Letter"; otherwise, print "Special Symbol". 

@@ -1,0 +1,297 @@
+1a.Swapping Two numbers using third variable(without scanner )?
+fileName= swap.java
+1b.Swapping Two numbers without using third variable()
+
+1c.Swapping  two numbers using  Bitwise XOR
+
+2.Write a Java program that takes a character as input and classifies it as either a "Capital Letter", "Small Letter", or "Special Symbol". 
+If the character is between 'A' and 'Z', print "Capital Letter"; if it's between 'a' and 'z', print "Small Letter"; otherwise, print "Special Symbol". 
+How would you implement this logic?
+fileName= char.java
+
+3.Input is even number or odd?
+fileName= loc.java
+
+4.Accept a person age as input and check whether is a major or minor or senior citizen?
+fileName= age.java
+
+5.Accept a number as input if its divisible by 3 print fizz,if its divisible by 5 print buzz,
+if its both print fizz and buzz?
+fileName=fb.java
+
+6.Switch Case to do ???why break & why continue?? why not if else??
+
+7.Take age as input and check whether it is +ve or -ve.If it is +ve check age>18
+print eligible for job if age>21 print he is eligible for upsc
+if he is>18 & <21 eligible for ssc exams if age<18 he is not eligible to apply?
+
+8.Take 3 numbers as input and find the largest among them?
+fileName=   large.java
+
+9.using ternary operator to add or subtract?
+fileName= terny.java
+
+10.
+fileName= w1.java
+
+11.
+fileName= w2.java
+
+12.
+fileName= w3.java
+
+13.
+fileName= w4.java
+
+14.
+fileName= w5.java
+
+15.
+pre1.java
+
+16.Print 3 table as 3X1=3......3X10=30
+fileName=t1.java
+
+17.Print 3 table and find the result is prime or not?
+fileName= .java
+
+18.Check the result is even or odd?
+3X1=3 odd 3X2=6 even......
+fileName= .java
+
+19.Check how many even numbers in 3 table and odd numbers
+print even numbers are 5
+print odd numbers are 5
+fileName= .java
+
+20.Take num=3 as input 
+if the input is even then num=num/2 else if input is odd num=3*num+1
+output 10 5 16 8 4 2 1
+fileName= .java
+
+21.Fibonacci Series if input a=0 and b=1 then output
+0 1 1 2 3 5 8 13 21 34 //c=a+b
+fileName= fibo.java in loops/while folder
+
+
+22.Power a number without using Math.pow()
+fileName= powe.java in loops/while folder
+
+
+23.Print only Last digit in the range of 10 to 20 numbers
+fileName= l1.java in loops/while folder
+
+
+
+24.Print Square roots of 1 to 10 numbers
+fileName= sqrt.java in loops/while folder
+
+
+25.Print perfect square numbers in the range of 1 to 100
+fileName= persq.java in loops/while folder
+
+
+26.Print Leap Years in the range of 1900 to 2024
+fileName= leap.java in loops/while folder
+
+
+27.Print fizz and buzz i.e divisible by 3 and 5 in the range of 1000 to 100 print with numbers as fizz and buzz
+fileName= fizzBuzz.java in loops/while folder
+
+
+28.Sum of Even numbers in 1 to 100 range
+fileName= sumEven.java in loops/while folder
+
+
+29.nCr Problem
+fileName= nCr.java
+
+
+30.Factors of a number
+fileName= .java
+
+
+31.Perfect Number find Factors of a number and sum those factors  
+Example factors for 6 are 1,2,3 not including 6 then adding those numbers 1+2+3=6 taken input are equal said to be perfect number
+fileName= .java
+
+
+
+32.Count Number of Factors to a taken input
+fileName= .java
+
+
+33.Check whether taken input is a prime or not?
+fileName= .java
+
+
+34.take input as any number example 20
+output 20 19 18 17.....11 1 2 3.....10
+fileName= .java
+
+
+
+35.HCF of a taken number other than that?
+fileName= .java
+
+
+
+36.HCF of two numbers
+fileName= .java
+
+
+
+37.Take input as any number example 1432 then extract and add all of it like 3+2+4+1
+fileName= .java
+
+
+
+
+38.I am Strong numbers 153,370,371,407
+take any number as input and find its armstrong or not?
+Example:153 -->3^3+5^3+1^3=153 based on number of digits power it to the given all numbers.
+fileName= .java
+
+
+39.Take input as any number 
+Example : 8765876 Sum of even digits ,product of odd digits
+fileName= .java
+
+
+
+40.Largest and Smallest Digit in a taken Input 1234556
+fileName= .java
+
+
+41.Reversing a given input 123 i.e 321 again 123
+fileName= .java
+
+
+42.Taken Input number=75467 print as 7 5 4 6 7
+fileName= .java
+
+
+43.If i give input as 12300 it should print as 1 2 3 0 0
+fileName= .java
+
+
+
+44.Palindrome Number or not?
+fileName= .java
+
+
+
+45.Palindrome Prime or not?
+fileName= .java
+
+
+46.Minimum and maximum in a given input number as example input is 1278689 i need to print min is 1 max is 9
+fileName= .java
+
+
+
+47.Second Minimum Value and Maximum value in a given input if having repeated value also?
+fileName= .java
+
+
+48.Twin Primes?
+fileName= .java
+
+
+
+49.Armstrong prime or not??
+fileName= .java
+
+
+
+
+
+java.lang is default pkg in java
+
+
+50.Check whether a number is a twisted prime or not?
+fileName= .java
+
+
+
+
+//Using for loops?
+
+
+51.Write a program with for loop to print as 
+1 1
+1 2
+1 3
+1 4
+2 1
+2 2 
+2 3
+2 4
+fileName= .java
+
+
+
+52.prime range in 1 to 100 numbers?
+fileName= .java
+
+
+
+
+53.Palindrome range from 1 to 100 numbers?
+fileName= .java
+
+
+
+54.Factorial in range from 1 to 100 numbers?
+fileName= .java
+
+
+55.Armstrong range in 1 to 10000 numbers?
+fileName= .java
+
+
+56.Print tables 1 to 10 as 1X10=10 1X9==9......1X1=1
+..........................10X10=100...........10X1=10
+fileName= .java
+
+
+57.Print all the prime numbers in taken input number
+example num=987635 then print 5,3,7 are prime numbers
+fileName= .java
+
+
+58.A number having even number of digits then split to half and add both of it
+example 456787 i.e 456+787
+fileName= .java
+
+
+
+
+--------Patterns--------
+59.
+
+
+
+
+
+
+--------Methods--------
+
+
+
+
+
+
+--------Recursion--------
+
+
+
+
+
+
+
+optional practice questions
+input 17453 do 1+5+3 and 7+4
+input 17543 then 3^1+4^2+5^3+7^4+1^5
+input 1678 then 16+78
+all exam questions

@@ -150,7 +150,7 @@ fileName= .java
 38.I am Strong numbers 153,370,371,407
 take any number as input and find its armstrong or not?
 Example:153 -->3^3+5^3+1^3=153 based on number of digits power it to the given all numbers.
-fileName= .java
+fileName=  .java
 
 
 39.Take input as any number 

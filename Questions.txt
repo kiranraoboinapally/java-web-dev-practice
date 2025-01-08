@@ -194,7 +194,7 @@ fileName= palindrome.java
 
 
 45.Palindrome Prime or not?
-fileName= .java
+fileName= palindromePrime.java //pending
 
 
 46.Minimum and maximum in a given input number as example input is 1278689 i need to print min is 1 max is 9
@@ -366,6 +366,46 @@ A B C D                          I J K L                            C D E F
 
 --------Recursion--------
 
+
+
+
+
+
+
+--------ARRAYS------------
+1.Run Time Initialization(forward and backward insertion)
+
+
+
+2.Compile Time Initialization
+
+
+
+3.a[] array elements are copying into b[] with same size
+
+
+4.a[] array elements let it be {1,2,3,4,5}
+b[] array elements should become{5,4,3,2,1}
+
+
+
+5.a[] array elements let it be {10,30,20,50,40}
+b[] array elements let it be{10,30,30,40}
+c[] array elements a[] and b[] i.e {10,30,20,50,40,10,30,30,40}
+
+
+
+6a.Max element in an array
+6b.Min element in an array
+
+
+
+7.Linear search in an array of elements finding the element exists or not in it
+
+
+
+
+________________________________
 
 
 

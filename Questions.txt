@@ -176,7 +176,7 @@ fileName= .java
 
 
 41.Reversing a given input 123 i.e 321 again 123
-fileName= .java
+fileName= reverseNumWithoutZero.java
 
 
 42.Taken Input number=75467 print as 7 5 4 6 7

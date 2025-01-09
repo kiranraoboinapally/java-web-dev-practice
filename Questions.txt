@@ -407,6 +407,44 @@ linearSearch.java
 
 
 
+8.In an array a[]={10,12,19,15,23,24,27,36,55} arrange first even elements in an array b[] of same size to a[] array then next odd elements  store after even elements
+evenOddSort.java
+
+
+
+9.Second Maximum Element in an array a[]={10,12,19,15,23,24,27} without sorting
+secondMax.java
+
+
+10.
+Given an array a[] of size n, create a new array b[] using the following rules:
+
+a. The first element of b[] is the sum of the first and second elements of a[].
+b. Each middle element of b[] is the sum of the previous and next elements from the corresponding index in a[].
+c. The last element of b[] is the sum of the last and second-last elements of a[].
+
+Write a function that transforms the array a[] into b[] based on these rules.
+a[]={10,20,30,40,50} then 
+b[]={30,40,60,80,90} 
+arrayTransformation.java
+
+
+
+11.
+Given an array a[]  of integers, create a new array b[] where each element b[i] is the quotient of the sum of all elements in `a[]` excluding `a[i]` divided by `a[i]`.
+For example, for a[] = {10, 20, 30, 40, 50}, the output b[] should be {14, 6, 4, 2, 2}.
+arrayOperation.java
+
+Explanation:
+b[0] = (20 + 30 + 40 + 50) / 10 = 140 / 10 = 14
+b[1] = (10 + 30 + 40 + 50) / 20 = 130 / 20 = 6
+b[2] = (10 + 20 + 40 + 50) / 30 = 120 / 30 = 4
+b[3] = (10 + 20 + 30 + 50) / 40 = 110 / 40 = 2
+b[4] = (10 + 20 + 30 + 40) / 50 = 100 / 50 = 2
+
+
+
+
 ________________________________
 
 

@@ -2,7 +2,7 @@ class removeDuplicates
 {
     public static void main(String args[]) 
     {
-        int a[] = new int[]{1,1,2};
+        int a[] = new int[]{0,1,1,1,2,3,3,4};
         int index = 0,count=0;
         for (int i = 0; i < a.length; i++) 
         {

@@ -207,7 +207,7 @@ fileName= .java
 
 
 48.Twin Primes?
-fileName= .java
+fileName= twinPrimes.java
 
 
 

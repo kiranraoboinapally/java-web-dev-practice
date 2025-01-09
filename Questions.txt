@@ -272,7 +272,6 @@ example num=987635 then print 5,3,7 are prime numbers
 fileName= .java
 
 
-
 58.A number having even number of digits then split to half and add both of it
 example 456787 i.e 456+787
 fileName= .java

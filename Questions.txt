@@ -408,7 +408,7 @@ linearSearch.java
 
 
 8.In an array a[]={10,12,19,15,23,24,27,36,55} arrange first even elements in an array b[] of same size to a[] array then next odd elements  store after even elements
-evenOddSort.java
+evenOddSort.java problem pending
 
 
 

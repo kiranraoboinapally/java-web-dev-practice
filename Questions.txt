@@ -1,281 +1,185 @@
-1a.Swapping Two numbers using third variable(without scanner )?
-fileName= swap.java
-1b.Swapping Two numbers without using third variable()
+### Basic Programs
+1. **Swapping Numbers**
+   - **1a.** Swapping Two numbers using third variable (without scanner) - `swap.java`
+   - **1b.** Swapping Two numbers without using third variable - `swap.java`
+   - **1c.** Swapping Two numbers using Bitwise XOR - `swap.java`
 
-1c.Swapping  two numbers using  Bitwise XOR
+2. **Character Classification**
+   - **2.** Classify a character as "Capital Letter", "Small Letter", or "Special Symbol" - `char.java`
 
-2.Write a Java program that takes a character as input and classifies it as either a "Capital Letter", "Small Letter", or "Special Symbol". 
-If the character is between 'A' and 'Z', print "Capital Letter"; if it's between 'a' and 'z', print "Small Letter"; otherwise, print "Special Symbol". 
-How would you implement this logic?
-fileName= char.java
+3. **Even or Odd**
+   - **3.** Check if input is even or odd - `loc.java`
 
-3.Input is even number or odd?
-fileName= loc.java
+4. **Age Classification**
+   - **4.** Accept age and check if the person is a major, minor, or senior citizen - `age.java`
 
-4.Accept a person age as input and check whether is a major or minor or senior citizen?
-fileName= age.java
+5. **FizzBuzz Problem**
+   - **5.** Accept a number and print "Fizz" if divisible by 3, "Buzz" if divisible by 5, and "FizzBuzz" if divisible by both - `fb.java`
 
-5.Accept a number as input if its divisible by 3 print fizz,if its divisible by 5 print buzz,
-if its both print fizz and buzz?
-fileName=fb.java
+6. **Switch Case Explanation**
+   - **6.** Use switch-case with a comparison to `if-else`, explaining `break` and `continue`
 
-6.Switch Case to do ???why break & why continue?? why not if else??
+7. **Eligibility Based on Age**
+   - **7.** Check age for job eligibility and apply different conditions for various job eligibility like UPSC, SSC - `ageCheck.java`
 
-7.Take age as input and check whether it is +ve or -ve.If it is +ve check age>18
-print eligible for job if age>21 print he is eligible for upsc
-if he is>18 & <21 eligible for ssc exams if age<18 he is not eligible to apply?
+8. **Find Largest Among Three Numbers**
+   - **8.** Take three numbers and find the largest - `large.java`
 
-8.Take 3 numbers as input and find the largest among them?
-fileName=   large.java
+9. **Ternary Operator Example**
+   - **9.** Add or subtract using the ternary operator - `terny.java`
 
-9.using ternary operator to add or subtract?
-fileName= terny.java
+10. **Sample Program (Placeholder)**
+   - **10.** Placeholder for a general program - `w1.java`
 
-10.
-fileName= w1.java
+11. **Sample Program (Placeholder)**
+   - **11.** Placeholder for a general program - `w2.java`
 
-11.
-fileName= w2.java
+12. **Sample Program (Placeholder)**
+   - **12.** Placeholder for a general program - `w3.java`
 
-12.
-fileName= w3.java
+13. **Sample Program (Placeholder)**
+   - **13.** Placeholder for a general program - `w4.java`
 
-13.
-fileName= w4.java
+14. **Sample Program (Placeholder)**
+   - **14.** Placeholder for a general program - `w5.java`
 
-14.
-fileName= w5.java
+15. **Predefined Program Example**
+   - **15.** Example for predefined code - `pre1.java`
 
-15.
-pre1.java
+### Loops - While Loop
 
+16. **Multiplication Table of 3**
+   - **16.** Print the table of 3 (3x1=3, 3x10=30) - `t1.java`
 
-----------------------------------------LOOPS------------------------------------------------
-*******WHILE*******
-16.Print 3 table as 3X1=3......3X10=30
-fileName=t1.java
+17. **Prime Check in Multiplication Table**
+   - **17.** Print the 3 table and check whether each result is prime or not - `primeInTable.java`
 
-17.Print 3 table and find the result is prime or not?
-fileName= .java
+18. **Even or Odd Results in 3 Table**
+   - **18.** Check if the result of the 3 table is even or odd - `evenOddTable.java`
 
-18.Check the result is even or odd?
-3X1=3 odd 3X2=6 even......
-fileName= .java
+19. **Count Even and Odd Numbers in 3 Table**
+   - **19.** Count how many even and odd numbers are in the 3 table - `countEvenOddTable.java`
 
-19.Check how many even numbers in 3 table and odd numbers
-print even numbers are 5
-print odd numbers are 5
-fileName= .java
+20. **Collatz Conjecture**
+   - **20.** Implement Collatz conjecture and print the sequence - `collatzConjecture.java`
 
-20.Take num=3 as input 
-if the input is even then num=num/2 else if input is odd num=3*num+1
-output 10 5 16 8 4 2 1
-fileName= collatzConjecture.java in loop/while folder
+21. **Fibonacci Sequence**
+   - **21.** Print Fibonacci series - `fibo.java`
 
-21.Fibonacci Series if input a=0 and b=1 then output
-0 1 1 2 3 5 8 13 21 34 //c=a+b
-fileName= fibo.java in loops/while folder
+22. **Power of a Number**
+   - **22.** Calculate the power of a number without using `Math.pow()` - `powe.java`
 
+23. **Last Digit of Numbers from 10 to 20**
+   - **23.** Print the last digit in the range of 10 to 20 numbers - `l1.java`
 
-22.Power a number without using Math.pow()
-fileName= powe.java in loops/while folder
+24. **Square Roots from 1 to 10**
+   - **24.** Print square roots of numbers from 1 to 10 - `sqrt.java`
 
+25. **Perfect Square Numbers in 1-100**
+   - **25.** Print perfect square numbers between 1 and 100 - `persq.java`
 
-23.Print only Last digit in the range of 10 to 20 numbers
-fileName= l1.java in loops/while folder
+26. **Leap Year from 1900 to 2024**
+   - **26.** Print leap years in the range from 1900 to 2024 - `leap.java`
 
+27. **FizzBuzz in Range 1000 to 100**
+   - **27.** Print Fizz and Buzz for numbers divisible by 3 and 5 in the range from 1000 to 100 - `fizzBuzzRange.java`
 
+28. **Sum of Even Numbers from 1 to 100**
+   - **28.** Calculate sum of even numbers in the range of 1 to 100 - `sumEven.java`
 
-24.Print Square roots of 1 to 10 numbers
-fileName= sqrt.java in loops/while folder
+29. **nCr Problem**
+   - **29.** Calculate nCr (Combination) - `nCr.java`
 
+30. **Factors of a Number**
+   - **30.** Print factors of a number - `factors.java`
 
-25.Print perfect square numbers in the range of 1 to 100
-fileName= persq.java in loops/while folder
+31. **Perfect Number**
+   - **31.** Find if a number is perfect by summing its factors - `per.java`
 
+32. **Count Factors of a Number**
+   - **32.** Count the number of factors of an input number - `factorsCount.java`
 
-26.Print Leap Years in the range of 1900 to 2024
-fileName= leap.java in loops/while folder
+33. **Prime Check for a Number**
+   - **33.** Check if a number is prime - `prime.java`
 
+34. **Decrement and Increment Sequence**
+   - **34.** Print numbers in decreasing order then increasing order from 20 to 10 - `decrementIncrement.java`
 
-27.Print fizz and buzz i.e divisible by 3 and 5 in the range of 1000 to 100 print with numbers as fizz and buzz
-fileName= fizzBuzz.java in loops/while folder
+35. **Highest Factor of a Number**
+   - **35.** Find the highest factor of a number excluding itself - `hf.java`
 
+36. **HCF of Two Numbers**
+   - **36.** Calculate the Highest Common Factor (HCF) of two numbers - `hcf.java`
 
-28.Sum of Even numbers in 1 to 100 range
-fileName= sumEven.java in loops/while folder
+### Extraction (For Loops)
 
+37. **Extract and Add Digits of a Number**
+   - **37.** Extract and sum the digits of a number - `extractSum.java`
 
-29.nCr Problem
-fileName= nCr.java
+38. **Armstrong Numbers**
+   - **38.** Check if a number is an Armstrong number (e.g., 153) - `armstrong.java`
 
+39. **Sum and Product of Even and Odd Digits**
+   - **39.** For a number, sum even digits and multiply odd digits - `evenSum.java`
 
-30.Factors of a number
-fileName= factors.java
+40. **Largest and Smallest Digits**
+   - **40.** Find largest and smallest digits in a number - `largestSmallestDigits.java`
 
+41. **Reverse a Number**
+   - **41.** Reverse a number and check if it’s a palindrome - `reverseNum.java`
 
-31.Perfect Number find Factors of a number and sum those factors  
-Example factors for 6 are 1,2,3 not including 6 then adding those numbers 1+2+3=6 taken input are equal said to be perfect number
-fileName= per.java
+42. **Print Digits with Even Position Sum**
+   - **42.** Print digits and sum even positions only - `digitSumEvenPositions.java`
 
+43. **Reverse with Zeros**
+   - **43.** Reverse number but preserve zeros - `reverseNumWithZero.java`
 
+44. **Palindrome Check**
+   - **44.** Check if a number is a palindrome - `palindrome.java`
 
-32.Count Number of Factors to a taken input
-fileName= factorsCount.java in Loop/while folder
+45. **Palindrome Prime Check**
+   - **45.** Check if a number is a palindrome prime - `palindromePrime.java`
 
+46. **Min and Max Digits in Number**
+   - **46.** Find minimum and maximum digits in a number - `minMaxDigits.java`
 
-33.Check whether taken input is a prime or not?
-fileName= prime.java
+47. **Second Minimum and Maximum Digits**
+   - **47.** Find second minimum and maximum digits in a number - `secondMinMax.java`
 
+48. **Twin Primes**
+   - **48.** Find twin primes - `twinPrimes.java`
 
-34.take input as any number example 20
-output 20 19 18 17.....11 1 2 3.....10
-fileName= decrementIncrement.java
+49. **Armstrong Prime Check**
+   - **49.** Check if a number is an Armstrong prime - `armstrongPrime.java`
 
+50. **Twisted Prime Check**
+   - **50.** Check if a number is a twisted prime - `twistedPrime.java`
 
+### Using For Loops
 
-35.Highest Factor of a taken number other than that?
-fileName= hf.java
+51. **Pattern with For Loops (1,1; 1,2; 1,3)**
+   - **51.** Print a pattern using nested loops - `pattern1.java`
 
+52. **Prime Numbers from 1 to 100**
+   - **52.** Print prime numbers from 1 to 100 - `primeRange.java`
 
+53. **Palindrome Numbers from 1 to 100**
+   - **53.** Print palindrome numbers from 1 to 100 - `palindromeRange.java`
 
-36.HCF of two numbers
-fileName= hcf.java in loops/while
+54. **Factorial of Numbers from 1 to 100**
+   - **54.** Print factorial of numbers from 1 to 100 - `factorialRange.java`
 
+55. **Armstrong Numbers from 1 to 10000**
+   - **55.** Print Armstrong numbers from 1 to 10000 - `armstrongRange.java`
 
+56. **Print Tables from 1 to 10**
+   - **56.** Print multiplication tables from 1 to 10 - `tables1to10.java`
 
-----------------------------------------EXTRACTION------------------------------------------------
-*******FOR*******
+57. **Prime Digits in a Number**
+   - **57.** Extract and print prime digits from a number - `digitPrime.java`
 
-% gives Remainder
-/ gives Quotient
-
-num= 154;
-rem=num%10; //4 5 1
-sys(rem;)
-num/=10; //15 1 0
-
-37.Take input as any number example 1432 then extract and add all of it like 3+2+4+1
-fileName= extractSum.java in loops/for folder
-
-
-38.I am Strong numbers 153,370,371,407
-take any number as input and find its armstrong or not?
-Example:153 -->3^3+5^3+1^3=153 based on number of digits power it to the given all numbers.
-fileName= armstrongWithOutCount.java
-
-
-39.Take input as any number 
-Example : 8765876 Sum of even digits ,product of odd digits
-fileName= evenSum.java in loops/for folder
-
-
-
-40.Largest and Smallest Digit in a taken Input 1234556
-fileName= .java  same question as 46 question
-
-
-41.Reversing a given input 123 i.e 321 again 123
-fileName= reverseNumWithoutZero.java
-
-
-42a.Taken Input number=75467 print as 7 5 4 6 7
-b. and add even positons only i.e 6+5=11
-fileName= .java
-
-
-43.If i give input as 12300 it should print as 1 2 3 0 0
-fileName= reverseNumWithZero.java
-
-
-
-44.Palindrome Number or not?
-fileName= palindrome.java
-
-
-
-45.Palindrome Prime or not?
-fileName= palindromePrime.java 
-
-
-46.Minimum and maximum in a given input number as example input is 1278689 i need to print min is 1 max is 9
-fileName= .java
-
-
-
-47.Second Minimum Value and Maximum value in a given input if having repeated value also?
-fileName= secondMin.java in loops/for folder
-
-
-48.Twin Primes?
-fileName= twinPrimes.java
-
-
-
-49.Armstrong prime or not??
-fileName= .java
-
-
-
-
-
-java.lang is default pkg in java
-
-
-50.Check whether a number is a twisted prime or not?
-fileName= .java
-
-
-
-
-//Using for loops?
-
-
-51.Write a program with for loop to print as 
-1 1
-1 2
-1 3
-1 4
-2 1
-2 2 
-2 3
-2 4
-fileName= .java
-
-
-
-52.prime range in 1 to 100 numbers?
-fileName= .java
-
-
-
-
-53.Palindrome range from 1 to 100 numbers?
-fileName= .java
-
-
-
-54.Factorial in range from 1 to 100 numbers?
-fileName= .java
-
-
-55.Armstrong range in 1 to 10000 numbers?
-fileName= .java
-
-
-56.Print tables 1 to 10 as 1X10=10 1X9==9......1X1=1
-..........................10X10=100...........10X1=10
-fileName= .java
-
-
-57.Print all the prime numbers in taken input number
-example num=987635 then print 5,3,7 are prime numbers
-fileName= digitPrime.java
-
-
-58.A number having even number of digits then split to half and add both of it
-example 456787 i.e 456+787
-fileName= splitSum.java
+58. **Split and Add Even/Odd Digits**
+   - **58.** Split a number and add even and odd parts - `splitSum.java`
 
 
 
@@ -412,7 +316,7 @@ $ $ $ $ $                                $                          $ $ $ $ $
 
 
 --------Recursion--------
-
+A method calling itself is said to be a Recursion
 
 
 

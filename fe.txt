@@ -1,0 +1,20 @@
+\033[1;34m[Heading: Basic Programs]\033[0m
+
+1. \033[1;32m**Swapping Numbers**\033[0m
+   - 1a. Swapping Two numbers using third variable (without scanner) - `swap.java`
+   - 1b. Swapping Two numbers without using third variable - `swap.java`
+   - 1c. Swapping Two numbers using Bitwise XOR - `swap.java`
+
+2. \033[1;32m**Character Classification**\033[0m
+   - 2. Classify a character as "Capital Letter", "Small Letter", or "Special Symbol" - `char.java`
+
+\033[1;34m[Heading: Loops - While Loop]\033[0m
+
+16. \033[1;32m**Multiplication Table of 3**\033[0m
+   - 16. Print the table of 3 (3x1=3, 3x10=30) - `t1.java`
+
+17. \033[1;32m**Prime Check in Multiplication Table**\033[0m
+   - 17. Print the 3 table and check whether each result is prime or not - `primeInTable.java`
+
+38. \033[1;32m**Armstrong Numbers**\033[0m
+   - 38. Check if a number is an Armstrong number (e.g., 153) - `armstrong.java`

@@ -1,18 +1,18 @@
-Certainly! Below is a comprehensive and organized list of **all the patterns, programs, and topics** you have requested, from the start to the end. This includes all questions (including placeholders, patterns, loops, methods, recursion, arrays, and additional topics).
+Certainly! Below is a comprehensive and organized list of **all the patterns, programs, and topics**This includes all questions (including placeholders, patterns, loops, methods, recursion, arrays, and additional topics).
 
 ---
 
 ### **Basic Programs**
 
-1. **Swapping Numbers**
+**Swapping Numbers**
    - **1a.** Swapping Two numbers using third variable (without scanner) - `swap.java`
    - **1b.** Swapping Two numbers without using third variable - `swap.java`
    - **1c.** Swapping Two numbers using Bitwise XOR - `swap.java`
 
-2. **Character Classification**
+**Character Classification**
    - **2.** Classify a character as "Capital Letter", "Small Letter", or "Special Symbol" - `char.java`
 
-3. **Even or Odd**
+**Even or Odd**
    - **3.** Check if input is even or odd - `loc.java`
 
 4. **Age Classification**

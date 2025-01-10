@@ -4,77 +4,77 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 
 ### **Basic Programs**
 
-**Swapping Numbers**
-   - **1a.** Swapping Two numbers using third variable (without scanner) - `swap.java`
-   - **1b.** Swapping Two numbers without using third variable - `swap.java`
-   - **1c.** Swapping Two numbers using Bitwise XOR - `swap.java`
+1. **Swapping Numbers**
+   - **a.** Swapping Two numbers using third variable (without scanner) - `swap.java`
+   - **b.** Swapping Two numbers without using third variable - `swap.java`
+   - **c.** Swapping Two numbers using Bitwise XOR - `swap.java`
 
-**Character Classification**
-   - **2.** Classify a character as "Capital Letter", "Small Letter", or "Special Symbol" - `char.java`
+2. **Character Classification**
+   - ** Classify a character as "Capital Letter", "Small Letter", or "Special Symbol" - `char.java`
 
-**Even or Odd**
-   - **3.** Check if input is even or odd - `loc.java`
+3. **Even or Odd**
+   - ** Check if input is even or odd - `loc.java`
 
 4. **Age Classification**
-   - **4.** Accept age and check if the person is a major, minor, or senior citizen - `age.java`
+   - ** Accept age and check if the person is a major, minor, or senior citizen - `age.java`
 
 5. **FizzBuzz Problem**
-   - **5.** Accept a number and print "Fizz" if divisible by 3, "Buzz" if divisible by 5, and "FizzBuzz" if divisible by both - `fb.java`
+   - ** Accept a number and print "Fizz" if divisible by 3, "Buzz" if divisible by 5, and "FizzBuzz" if divisible by both - `fb.java`
 
 6. **Switch Case Explanation**
-   - **6.** Use switch-case with a comparison to `if-else`, explaining `break` and `continue`
+   - ** Use switch-case with a comparison to `if-else`, explaining `break` and `continue`
 
 7. **Eligibility Based on Age**
-   - **7.** Check age for job eligibility and apply different conditions for various job eligibility like UPSC, SSC - `ageCheck.java`
+   - ** Check age for job eligibility and apply different conditions for various job eligibility like UPSC, SSC - `ageCheck.java`
 
 8. **Find Largest Among Three Numbers**
-   - **8.** Take three numbers and find the largest - `large.java`
+   - ** Take three numbers and find the largest - `large.java`
 
 9. **Ternary Operator Example**
-   - **9.** Add or subtract using the ternary operator - `terny.java`
+   - ** Add or subtract using the ternary operator - `terny.java`
 
 10. **Sample Program (Placeholder)**
-   - **10.** Placeholder for a general program - `w1.java`
+   - ** Placeholder for a general program - `w1.java`
 
 11. **Sample Program (Placeholder)**
-   - **11.** Placeholder for a general program - `w2.java`
+   - ** Placeholder for a general program - `w2.java`
 
 12. **Sample Program (Placeholder)**
-   - **12.** Placeholder for a general program - `w3.java`
+   - ** Placeholder for a general program - `w3.java`
 
 13. **Sample Program (Placeholder)**
-   - **13.** Placeholder for a general program - `w4.java`
+   - ** Placeholder for a general program - `w4.java`
 
 14. **Sample Program (Placeholder)**
-   - **14.** Placeholder for a general program - `w5.java`
+   - ** Placeholder for a general program - `w5.java`
 
 15. **Predefined Program Example**
-   - **15.** Example for predefined code - `pre1.java`
+   - ** Example for predefined code - `pre1.java`
 
 ---
 
 ### **Loops - While Loop**
 
 16. **Multiplication Table of 3**
-   - **16.** Print the table of 3 (3x1=3, 3x10=30) - `t1.java`
+   - ** Print the table of 3 (3x1=3, 3x10=30) - `t1.java`
 
 17. **Prime Check in Multiplication Table**
-   - **17.** Print the 3 table and check whether each result is prime or not - `primeInTable.java`
+   - ** Print the 3 table and check whether each result is prime or not - `primeInTable.java`
 
 18. **Even or Odd Results in 3 Table**
-   - **18.** Check if the result of the 3 table is even or odd - `evenOddTable.java`
+   - ** Check if the result of the 3 table is even or odd - `evenOddTable.java`
 
 19. **Count Even and Odd Numbers in 3 Table**
-   - **19.** Count how many even and odd numbers are in the 3 table - `countEvenOddTable.java`
+   - ** Count how many even and odd numbers are in the 3 table - `countEvenOddTable.java`
 
 20. **Collatz Conjecture**
-   - **20.** Implement Collatz conjecture and print the sequence - `collatzConjecture.java`
+   - ** Implement Collatz conjecture and print the sequence - `collatzConjecture.java`
 
 21. **Fibonacci Sequence**
-   - **21.** Print Fibonacci series - `fibo.java`
+   - ** Print Fibonacci series - `fibo.java`
 
 22. **Power of a Number**
-   - **22.** Calculate the power of a number without using `Math.pow()` - `powe.java`
+   - ** Calculate the power of a number without using `Math.pow()` - `powe.java`
 
 23. **Last Digit of Numbers from 10 to 20**
    - **23.** Print the last digit in the range of 10 to 20 numbers - `l1.java`

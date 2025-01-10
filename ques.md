@@ -125,22 +125,22 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
    -  Extract and sum the digits of a number - `extractSum.java`
 
 38. **Armstrong Numbers**
-   -  Check if a number is an Armstrong number (e.g., 153) - `armstrong.java`
+   -  Check if a number is an Armstrong number (e.g., 153) - `armstrongWithOutCount.java`
 
 39. **Sum and Product of Even and Odd Digits**
    -  For a number, sum even digits and multiply odd digits - `evenSum.java`
 
 40. **Largest and Smallest Digits**
-   -  Find largest and smallest digits in a number - `largestSmallestDigits.java`
+   -  Find largest and smallest digits in a number - `largestSmallestDigits.java` //pending
 
 41. **Reverse a Number**
-   -  Reverse a number and check if it’s a palindrome - `reverseNum.java`
+   -  Reverse a number twice(eg.,123 then 321 then 123) - `reverseNumWithOutZero.java`
 
 42. **Print Digits with Even Position Sum**
-   -  Print digits and sum even positions only - `digitSumEvenPositions.java`
+   -  Print digits and sum even positions only(eg.,123556 then 5+3+1) - `digitSumEvenPositions.java` //pending
 
 43. **Reverse with Zeros**
-   -  Reverse number but preserve zeros - `reverseNumWithZero.java`
+   -  Reverse number but preserve zeros(eg., 12300 print 12300) - `reverseNumWithZero.java`
 
 44. **Palindrome Check**
    -  Check if a number is a palindrome - `palindrome.java`
@@ -149,47 +149,47 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
    -  Check if a number is a palindrome prime - `palindromePrime.java`
 
 46. **Min and Max Digits in Number**
-   -  Find minimum and maximum digits in a number - `minMaxDigits.java`
+   -  Find minimum and maximum digits in a number - `minMaxDigits.java` //pending
 
 47. **Second Minimum and Maximum Digits**
-   -  Find second minimum and maximum digits in a number - `secondMinMax.java`
+   -  Find second minimum and maximum digits in a number - `secondMinMax.java` //pending
 
 48. **Twin Primes**
    -  Find twin primes - `twinPrimes.java`
 
 49. **Armstrong Prime Check**
-   -  Check if a number is an Armstrong prime - `armstrongPrime.java`
+   -  Check if a number is an Armstrong prime - `armstrongPrime.java` //pending
 
 50. **Twisted Prime Check**
-   -  Check if a number is a twisted prime - `twistedPrime.java`
+   -  Check if a number is a twisted prime - `twistedPrime.java` //pending
 
 ---
 
 ### **Using For Loops**
 
 51. **Pattern with For Loops (1,1; 1,2; 1,3)**
-   -  Print a pattern using nested loops - `pattern1.java`
+   -  Print a pattern using nested loops - `pattern1.java` //pending
 
 52. **Prime Numbers from 1 to 100**
-   -  Print prime numbers from 1 to 100 - `primeRange.java`
+   -  Print prime numbers from 1 to 100 - `primeRange.java` //pending
 
 53. **Palindrome Numbers from 1 to 100**
-   -  Print palindrome numbers from 1 to 100 - `palindromeRange.java`
+   -  Print palindrome numbers from 1 to 100 - `palindromeRange.java`  //pending
 
 54. **Factorial of Numbers from 1 to 100**
-   -  Print factorial of numbers from 1 to 100 - `factorialRange.java`
+   -  Print factorial of numbers from 1 to 100 - `factorialRange.java`    //pending
 
 55. **Armstrong Numbers from 1 to 10000**
-   -  Print Armstrong numbers from 1 to 10000 - `armstrongRange.java`
+   -  Print Armstrong numbers from 1 to 10000 - `armstrongRange.java`  //pending
 
 56. **Print Tables from 1 to 10**
-   -  Print multiplication tables from 1 to 10 - `tables1to10.java`
+   -  Print multiplication tables from 1 to 10 - `tables1to10.java`  //pending
 
 57. **Prime Digits in a Number**
-   -  Extract and print prime digits from a number - `digitPrime.java`
+   -  Extract and print prime digits from a number - `digitPrime.java`  //pending
 
 58. **Split and Add Even/Odd Digits**
-   -  Split a number and add even and odd parts - `splitSum.java`
+   -  Split a number and add even and odd parts - `splitSum.java`  //pending
 
 ---
 
@@ -202,7 +202,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 ```
 # # # # #
 # # # # #
-# # # # #                               kiran
+# # # # #                               
 ```
 **60.**
 `p2.java`
@@ -239,8 +239,8 @@ $ $ $ $ $
 # $ $ $ #
 # # # # #
 ```
-
 **64.**
+`p6.java`
 ```
 # # # # #
 #       #
@@ -248,8 +248,8 @@ $ $ $ $ $
 #       #
 # # # # #
 ```
-
 **65.**
+`p7.java`
 ```
 # $ $ $ $
 $ # $ $ $
@@ -257,8 +257,8 @@ $ $ # $ $
 $ # $ $ $
 # $ $ $ $
 ```
-
 **66.**
+`p8.java`
 ```
 $ $ $ $ #
 $ $ $ # $
@@ -266,124 +266,123 @@ $ $ # $ $
 $ # $ $ $
 # $ $ $ $
 ```
-
 **67.**
+`p9.java`
 ```
 1 1 1 1 1
 2 2 2 2 2
 3 3 3 3 3
 4 4 4 4 4
 ```
-
 **68.a**
+`p10.java`
 ```
 1 2 3 4 5
 1 2 3 4 5
 1 2 3 4 5
 1 2 3 4 5
 ```
-
 **68.b**
+`p11.java`
 ```
 1 2 3 4 5
 1       5
 1       5
 1 2 3 4 5
 ```
-
 **69.**
+`p12.java`
 ```
 1 # # #
 # 2 # #
 # # 3 #
 # # # 4
 ```
-
 **70.**
+`p13.java`
 ```
 # # # 1
 # # 2 #
 # 3 # #
 4 # # #
 ```
-
 **71.**
+`p14.java`
 ```
 1 # # 1
 # 2 2 #
 # 3 3 3
 4 4 4 4
 ```
-
 **72.**
+`p15.java`
 ```
 1 2 3 4 5
 1 2 3 4 5
 1 2 3 4 5
 1 2 3 4 5
 ```
-
 **73.**
+`p16.java`
 ```
 1 1 1 1
 2 2 2 2
 3 3 3 3
 ```
-
 **74.**
+`p17.java`
 ```
 1 1 1 1
 2 2 2 2
 3 3 3 3
 4 4 4 4
 ```
-
 **75.**
+`p18.java`
 ```
 1 2 3
 4 5 6
 7 8 9
 ```
-
-
 **76.**
+`p19.java`
 ```
 1 2 3 4
 2 3 4 5
 3 4 5 6
 4 5 6 7
 ```
-
 **77.**
+`p20.java`
 ```
 A A A A A
 B B B B B
 C C C C C
 D D D D D
 ```
-
 **78.**
+`p21.java`
 ```
 A B C D
 A B C D
 A B C D
 ```
-
 **79.**
+`p22.java`
 ```
 A B C D
 E F G H
 I J K L
 ```
-
 **80.**
+`p23.java`
 ```
 A B C D
 B C D E
 C D E F
 ```
-
 **81.**
+`p1.java`
 ```
 #
 # #
@@ -391,8 +390,8 @@ C D E F
 # # # #
 # # # # #
 ```
-
 **82.**
+`p2.java`
 ```
 #
 # #
@@ -400,8 +399,8 @@ C D E F
 # $ $ #
 # # # # #
 ```
-
 **83.**
+`p3.java`
 ```
 1
 1 2
@@ -409,8 +408,8 @@ C D E F
 1 2 3 4
 1 2 3 4 5
 ```
-
 **84.**
+`p4.java`
 ```
 1
 2 1
@@ -418,16 +417,16 @@ C D E F
 4 3 2 1
 5 4 3 2 1
 ```
-
 **85.**
+`p5.java`
 ```
 1
 2 3
 4 5 6
 7 8 9 10
 ```
-
 **86.**
+`p6.java`
 ```
 1
 1 2
@@ -435,8 +434,8 @@ C D E F
 1     2
 1 2 3 4 5
 ```
-
 **87.**
+`p7.java`
 ```
 1
 2 1
@@ -444,8 +443,8 @@ C D E F
 4     1
 5 4 3 2 1
 ```
-
 **88.**
+`p1.java`
 ```
 # # # # #
 # # # #
@@ -453,8 +452,8 @@ C D E F
 # #
 #
 ```
-
 **89.**
+`p2.java`
 ```
 A B C D E
 a b c d
@@ -462,8 +461,8 @@ C D E
 c d
 E
 ```
-
 **90.**
+`p3.java`
 ```
 1 2 3 4 5
 2 1 0 -1
@@ -471,8 +470,8 @@ E
 4 3
 5
 ```
-
 **91.**
+`p4.java`
 ```
 1 2 3 4 5
 5 4 3 2
@@ -482,7 +481,10 @@ E
 ```
 
 ---
+
+
 aKankKr
+
 ---
 
 ### **Recursion**

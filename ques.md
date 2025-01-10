@@ -5,9 +5,9 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 ### **Basic Programs**
 
 1. **Swapping Numbers**
-   - **a.** Swapping Two numbers using third variable (without scanner) - `swap.java`
-   - **b.** Swapping Two numbers without using third variable - `swap.java`
-   - **c.** Swapping Two numbers using Bitwise XOR - `swap.java`
+   - **a.** Swapping Two numbers using third variable (without scanner) - `swapThird.java` //filename should update
+   - **b.** Swapping Two numbers without using third variable - `swapOperation.java`       //pending
+   - **c.** Swapping Two numbers using Bitwise XOR - `swapBitwise.java`    //pending  
 
 2. **Character Classification**
    -  Classify a character as "Capital Letter", "Small Letter", or "Special Symbol" - `char.java`
@@ -25,13 +25,16 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
    -  Use switch-case with a comparison to `if-else`, explaining `break` and `continue`
 
 7. **Eligibility Based on Age**
-   -  Check age for job eligibility and apply different conditions for various job eligibility like UPSC, SSC - `ageCheck.java`
+   -  Check age for job eligibility and apply different conditions for various job eligibility like UPSC, SSC - `ageCheck.java` //pending
 
 8. **Find Largest Among Three Numbers**
    -  Take three numbers and find the largest - `large.java`
 
 9. **Ternary Operator Example**
    -  Add or subtract using the ternary operator - `terny.java`
+---
+
+### **Loops - While Loop**
 
 10. **Sample Program (Placeholder)**
    -  Placeholder for a general program - `w1.java`
@@ -51,21 +54,17 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 15. **Predefined Program Example**
    -  Example for predefined code - `pre1.java`
 
----
-
-### **Loops - While Loop**
-
 16. **Multiplication Table of 3**
    -  Print the table of 3 (3x1=3, 3x10=30) - `t1.java`
 
 17. **Prime Check in Multiplication Table**
-   -  Print the 3 table and check whether each result is prime or not - `primeInTable.java`
+   -  Print the 3 table and check whether each result is prime or not - `primeInTable.java` //pending
 
 18. **Even or Odd Results in 3 Table**
-   -  Check if the result of the 3 table is even or odd - `evenOddTable.java`
+   -  Check if the result of the 3 table is even or odd - `evenOddTable.java` //pending
 
 19. **Count Even and Odd Numbers in 3 Table**
-   -  Count how many even and odd numbers are in the 3 table - `countEvenOddTable.java`
+   -  Count how many even and odd numbers are in the 3 table - `countEvenOddTable.java` //pending
 
 20. **Collatz Conjecture**
    -  Implement Collatz conjecture and print the sequence - `collatzConjecture.java`

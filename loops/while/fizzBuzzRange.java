@@ -1,4 +1,4 @@
-class fizzBuzz 
+class fizzBuzzRange 
 {
     public static void main(String[] args)
     {

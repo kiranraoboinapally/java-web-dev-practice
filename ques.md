@@ -198,7 +198,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 
 #### **Rectangle or Square**
 
-**59.** 
+**59.**`p1.java`
 ```
 # # # # #
 # # # # #
@@ -206,7 +206,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 ```
 `p1.java`
 
-**60.**
+**60.**`p1.java`
 ```
 # # # #
 # $ # $

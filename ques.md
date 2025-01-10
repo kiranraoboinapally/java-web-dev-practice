@@ -100,7 +100,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
    -  Print factors of a number - `factors.java`
 
 31. **Perfect Number**
-   -  Find if a number is perfect by summing its factors - `per.java`
+   -  Find if a number is perfect by summing its factors other than that - `per.java`
 
 32. **Count Factors of a Number**
    -  Count the number of factors of an input number - `factorsCount.java`
@@ -491,8 +491,8 @@ aKankKr
 
 ### **Recursion**
 
-1. **Recursion Explanation**
-   -  A method calling itself is said to be a recursion - `recursion.java`
+   **Recursion Explanation**
+   -  A method calling itself is said to be a recursion - 
 
 ---
 

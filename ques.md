@@ -203,7 +203,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 ```
 # # # # #
 # # # # #
-# # # # #
+# # # # #                                     `p1.java`
 ```
 **60.**
 `p2.java`

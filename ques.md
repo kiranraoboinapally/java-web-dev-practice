@@ -536,10 +536,10 @@ aKankKr
    -  Check if a number is a strong number (e.g., `145 = 1! + 4! + 5!`) - `strongNumber.java`
 
 2. **Evil Number Check**
-   -  Check if a number is an evil number by squaring it and summing the digits - `evilNumber.java`
+   -  Check if a number is an evil number by squaring it and summing the digits(eg., 9 input 9^2=81 then 8+1=9 match input) - `evilNumber.java`
 
 3. **Power Number Check**
-   -  Check if a number is a power number (product of digits equals sum of digits) - `powerNumber.java`
+   -  Check if a number is a power number (product of digits equals sum of digits e.g., 132 input then 1*3*2==1+3+2) - `powerNumber.java`
 
 4. **Print First 10 Prime Numbers**
    -  Print the first 10 prime numbers - `primeNumbers.java`
@@ -558,22 +558,13 @@ aKankKr
    -  Check if a number is an automatic number (e.g., `76^2 = 5776` and last two digits match input) - `automaticNumber.java`
 
 7. **Technology Number Check**
-   -  Check if a number is a technology number (split and sum the two parts, then square the result) - `technologyNumber.java`
+   -  Check if a number is a technology number (split and sum the two parts, then square the result e.g.,`2025 makes 20+25=45 becomes 45^2= 2025` math input) - `technologyNumber.java`
 
 ---
 
 ### **Optional Practice Questions**
-
-1. **Sum of Even and Odd Digits from Input**
-   -  For input `17453`, sum digits at even and odd positions - `evenOddSum.java`
-
-2. **Sum of Powers of Digits**
+1. **Sum of Powers of Digits**
    -  For input `17543`, calculate `3^1 + 4^2 + 5^3 + 7^4 + 1^5` - `digitPowers.java`
 
-3. **Sum of Split Digits**
-   -  For input `1678`, calculate `16 + 78` - `splitSum.java`
-
-4. **Prime Digits Extraction**
-   -  Extract prime digits from input `28753` - `primeDigits.java`
 
 ---

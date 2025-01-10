@@ -504,47 +504,47 @@ aKankKr
    -  Copy elements from array `a[]` to array `b[]` of the same size - `copyAB.java`
 
 4. **Reverse Storing of Array Elements**
-   - **4.** Given `a[] = {1, 2, 3, 4, 5}`, reverse the elements into `b[] = {5, 4, 3, 2, 1}` - `reverseStoringAB.java`
+   -  Given `a[] = {1, 2, 3, 4, 5}`, reverse the elements into `b[] = {5, 4, 3, 2, 1}` - `reverseStoringAB.java`
 
 5. **Merging Two Arrays into One**
-   - **5.** Merge arrays `a[] = {10, 30, 20, 50, 40}` and `b[] = {10, 30, 30, 40}` into `c[]` - `storingABc.java`
+   -  Merge arrays `a[] = {10, 30, 20, 50, 40}` and `b[] = {10, 30, 30, 40}` into `c[]` - `storingABc.java`
 
 6. **Find Maximum and Minimum Elements**
-   - **6.** Find maximum and minimum elements in an array - `maxElement.java` and `minElement.java`
+   -  Find maximum and minimum elements in an array - `maxElement.java` and `minElement.java`
 
 7. **Linear Search in Array**
-   - **7.** Check if an element exists in an array - `linearSearch.java`
+   -  Check if an element exists in an array - `linearSearch.java`
 
 8. **Arrange Even and Odd Elements**
-   - **8.** Given an array, arrange the even elements first, followed by the odd elements - `evenOddSort.java` (Problem Pending)
+   -  Given an array, arrange the even elements first, followed by the odd elements - `evenOddSort.java` (Problem Pending)
 
 9. **Find Second Maximum Element**
-   - **9.** Find the second maximum element in an array without sorting - `secondMax.java`
+   -  Find the second maximum element in an array without sorting - `secondMax.java`
 
 10. **Array Transformation Based on Sum of Adjacent Elements**
-    - **10.** Given array `a[]`, create a new array `b[]` with transformation rules - `arrayTransformation.java`
+    -  Given array `a[]`, create a new array `b[]` with transformation rules - `arrayTransformation.java`
 
 11. **Array Operation: Sum and Divide**
-    - **11.** Create an array `b[]` where each element is the quotient of the sum of all elements in `a[]` excluding `a[i]`, divided by `a[i]` - `arrayOperation.java`
+    -  Create an array `b[]` where each element is the quotient of the sum of all elements in `a[]` excluding `a[i]`, divided by `a[i]` - `arrayOperation.java`
 
 ---
 
 ### **Test Questions**
 
 1. **Strong Number Check**
-   - **1.** Check if a number is a strong number (e.g., `145 = 1! + 4! + 5!`) - `strongNumber.java`
+   -  Check if a number is a strong number (e.g., `145 = 1! + 4! + 5!`) - `strongNumber.java`
 
 2. **Evil Number Check**
-   - **2.** Check if a number is an evil number by squaring it and summing the digits - `evilNumber.java`
+   -  Check if a number is an evil number by squaring it and summing the digits - `evilNumber.java`
 
 3. **Power Number Check**
-   - **3.** Check if a number is a power number (product of digits equals sum of digits) - `powerNumber.java`
+   -  Check if a number is a power number (product of digits equals sum of digits) - `powerNumber.java`
 
 4. **Print First 10 Prime Numbers**
-   - **4.** Print the first 10 prime numbers - `primeNumbers.java`
+   -  Print the first 10 prime numbers - `primeNumbers.java`
 
 5. **Pattern Printing**
-   - **5.** Print the following number pattern:
+   -  Print the following number pattern:
      ```
      1 2 3 4 5
        2 3 4 5
@@ -554,25 +554,25 @@ aKankKr
      ``` - `numberPattern.java`
 
 6. **Automatic Number Check**
-   - **6.** Check if a number is an automatic number (e.g., `76^2 = 5776` and last two digits match input) - `automaticNumber.java`
+   -  Check if a number is an automatic number (e.g., `76^2 = 5776` and last two digits match input) - `automaticNumber.java`
 
 7. **Technology Number Check**
-   - **7.** Check if a number is a technology number (split and sum the two parts, then square the result) - `technologyNumber.java`
+   -  Check if a number is a technology number (split and sum the two parts, then square the result) - `technologyNumber.java`
 
 ---
 
 ### **Optional Practice Questions**
 
 1. **Sum of Even and Odd Digits from Input**
-   - **1.** For input `17453`, sum digits at even and odd positions - `evenOddSum.java`
+   -  For input `17453`, sum digits at even and odd positions - `evenOddSum.java`
 
 2. **Sum of Powers of Digits**
-   - **2.** For input `17543`, calculate `3^1 + 4^2 + 5^3 + 7^4 + 1^5` - `digitPowers.java`
+   -  For input `17543`, calculate `3^1 + 4^2 + 5^3 + 7^4 + 1^5` - `digitPowers.java`
 
 3. **Sum of Split Digits**
-   - **3.** For input `1678`, calculate `16 + 78` - `splitSum.java`
+   -  For input `1678`, calculate `16 + 78` - `splitSum.java`
 
 4. **Prime Digits Extraction**
-   - **4.** Extract prime digits from input `28753` - `primeDigits.java`
+   -  Extract prime digits from input `28753` - `primeDigits.java`
 
 ---

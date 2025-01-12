@@ -7,7 +7,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 1. **Swapping Numbers**
    - **a.** Swapping Two numbers using third variable (without scanner) - `swapThird.java` 
    - **b.** Swapping Two numbers without using third variable - `swapOperation.java`      
-   - **c.** Swapping Two numbers using Bitwise XOR - `swapBitwise.java`    //pending  
+   - **c.** Swapping Two numbers using Bitwise XOR - `swapBitwise.java`      
 
 2. **Character Classification**
    -  Classify a character as "Capital Letter", "Small Letter", or "Special Symbol" - `char.java`

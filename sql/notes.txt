@@ -1,0 +1,34 @@
+first open cmd in C:/Program Files/MySqL/bin
+next enter in cmd as >mysql -u root -p 
+next eneter >password //my password is kira
+
+To see databases in my system Syntax
+mysql>show databases;
+
+To create a new database Syntax
+mysql>create database databasename;
+Ex: create database college;
+
+To use a database Syntax
+mysql>use databasename;
+Ex:use college;
+
+To delete a database syntax
+drop database databasename;
+Ex:drop database college;
+
+To create a table syntax:
+
+create table tablename
+(
+col_name data_type, ......
+);
+
+Ex:
+create table student
+(
+    sno int,
+    name varchar(45),
+    mobile int,
+    email varchar(45)
+);

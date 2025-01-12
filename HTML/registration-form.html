@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<title>Registration Form</title>
+<head></head>
+<body>
+
+    <!-- Heading of the page -->
+    <h1> Registration Form</h1>
+
+    <!-- Form starts here. It sends data to a local file (login-form.html) -->
+    <form action="file:///C:/Users/arunk/Desktop/chub/HTML/login-form.html">
+
+        <!-- Fieldset to group the "Information Data" section -->
+        <fieldset>
+            <legend><b>Information Data</b></legend>
+
+            <!-- Input for First Name -->
+            First Name: <input type="text"><br><br>
+
+            <!-- Input for Last Name -->
+            Last Name: <input type="text"><br><br>
+
+            <!-- Input for Email with a placeholder and required validation -->
+            Email: <input type="email" required placeholder="abc@gmail.com">
+        </fieldset><br>
+
+        <!-- Password input fields -->
+        Password: <input type="password"><br><br>
+        Confirm Password: <input type="password"><br><br>
+
+        <!-- Mobile Number: Dropdown for country code and input for phone number -->
+        Mobile Number: 
+        <select>
+            <option value="">+91</option>
+            <option value="">+92</option>
+            <option value="">+93</option>
+        </select>
+        <input type="tel" pattern="[0-9]{10}"><br><br>
+
+        <!-- OTP (One-Time Password) input field -->
+        OTP: <input type="tel" pattern="[0-9]{6}"><br><br>
+
+        <!-- Date of Birth input field -->
+        Date Of Birth: <input type="date"><br><br>
+
+        <!-- Profile Picture upload input -->
+        Profile Pic: <input type="file" accept="image/*"><br><br>
+
+        <!-- Work Experience input (number between 0 and 3) -->
+        Work Experience: <input type="number" min="0" max="3"><br><br>
+
+        <!-- Gender options with radio buttons -->
+        <p>Choose Your Gender</p>
+        <input type="radio" name="gender" checked>Male<br>
+        <input type="radio" name="gender">Female<br>
+        <input type="radio" name="gender">Others<br>
+
+        <!-- Languages Known options with checkboxes -->
+        <p>Languages Known</p>
+        <input type="checkbox" name="lan">English<br>
+        <input type="checkbox" name="lan">Telugu<br>
+        <input type="checkbox" name="lan">Hindi<br>
+        <input type="checkbox" name="lan">Tamil<br>
+        <input type="checkbox" name="lan">Kannada<br><br>
+
+        <!-- Address input as a textarea -->
+        Address <textarea style="resize:none;"></textarea><br><br>
+
+        <!-- Dropdown to choose a stream -->
+        <span>Choose Your Stream</span>
+        <select>
+            <option value="Mechanical">Mech</option>
+            <option value="Computer Science">CSE</option>
+            <option value="">Civil</option>
+            <option value="" selected>EEE</option>
+            <option value="">ECE</option>
+        </select><br><br>
+
+        <!-- Input for College Name with datalist for suggestions -->
+        Choose Your College Name :
+        <input list="clg">
+        <datalist id="clg">
+            <option value="JNTU"></option>
+            <option value="MGIT"></option>
+            <option value="CBIT"></option>
+            <option value="KU"></option>
+            <option value="OU"></option>
+            <option value="MVSR"></option>
+            <option value="KITS"></option>
+        </datalist><br><br>
+
+        <!-- Audio input for media -->
+        Audio :<audio controls>
+            <source src="">
+        </audio><br><br>
+
+        <!-- Video input for media -->
+        Video :<video controls>
+            <source src="">
+        </video><br><br>
+
+        <!-- Embedding a YouTube video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DDBUrQ8bdlc?si=H5EdciSrXXuzHLuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>
+
+        <!-- Embedding a website (Coding Hub) inside an iframe -->
+        <iframe src="https://codinghub.co.in" frameborder="0" width="500px" height="500px"></iframe><br><br>
+
+        <!-- Submit and reset buttons -->
+        <input type="Submit" value="Register"><br><br>
+        <input type="reset" value="Clear"><br>
+
+    </form>
+
+</body>
+</html>

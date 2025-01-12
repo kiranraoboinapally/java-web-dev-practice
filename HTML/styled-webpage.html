@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My WebPage</title>
+
+    <!-- Preconnect to external fonts for faster load times -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Linking external fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Styling for <h1> elements to use the "Playwrite AU SA" font */
+        h1 {
+            font-family: "Playwrite AU SA", serif;
+        }
+
+        /* Removing default underline from <a> (anchor) tags */
+        a {
+            text-decoration: none;
+        }
+
+        /* Adding underline when <a> is hovered */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Changing color to purple when <a> is visited */
+        a:visited {
+            color: purple;
+        }
+
+        /* Changing color to red for normal (unvisited) links */
+        a:link {
+            color: red;
+        }
+
+        /* Changing color to blue when <a> is active (clicked) */
+        a:active {
+            color: blue;
+        }
+
+        /* Styling for the button with class "abc" */
+        .abc {
+            background-color: grey; /* Sets background color */
+            border-style: double; /* Double border */
+            padding: 2px; /* Padding inside the button */
+            margin: 2px; /* Margin outside the button */
+            border-radius: 10px; /* Rounded corners for the button */
+            color: whitesmoke; /* White color text */
+            border: none; /* No border */
+            cursor: pointer; /* Changes the cursor to a pointer (indicating it's clickable) */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading with custom font (Playwrite AU SA) -->
+    <h1>I am h1</h1>
+
+    <!-- Second heading (default font) -->
+    <h2>I am h2</h2>
+
+    <!-- Links to various websites with different styles applied based on their state -->
+    <a href="https://www.amazon.com/">Amazon</a>
+    <a href="https://www.flipkart.com/">Flipkart</a>
+    <a href="https://www.myntra.com/">Myntra</a>
+    <a href="https://www.meesho.com/">Meesho</a>
+
+    <!-- A form with input fields for First Name, Last Name and a submit button -->
+    <form action="">
+        First Name <input type="text"><br><br>
+        Last Name <input type="text"><br><br>
+        <input type="Submit" value="Submit" class="abc"><br><br>
+    </form>
+
+</body>
+</html>

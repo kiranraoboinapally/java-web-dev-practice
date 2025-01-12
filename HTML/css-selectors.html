@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* CSS for elements with class "sample" and "abc" */
+        .sample, .abc {
+            color: blue; /* Sets the text color to blue */
+        }
+
+        /* CSS for element with ID "one" */
+        #one {
+            color: red; /* Sets the text color to red */
+        }
+
+        /* Universal selector: applies to all elements on the page */
+        * {
+            background-color: black; /* Sets the background color of all elements to black */
+            color: white; /* Sets the text color of all elements to white */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Div element: Default background is black, text is white (from the "*" selector) -->
+    <div>I am a div</div>
+
+    <!-- h1 element with class "abc": This element has blue text due to the ".abc" class -->
+    <h1 class="abc">I am h1</h1>
+
+    <!-- p element: The paragraph text will be white due to the "*" selector, and the background will be black -->
+    <p>I am Paragraph</p>
+
+    <!-- preformatted text: It has the class "sample", which makes the text blue -->
+    <pre class="sample">I am preformatted text</pre>
+
+    <!-- h1 element with ID "one": This element has red text because of the "#one" ID selector -->
+    <h1 id="one">Another h1</h1>
+
+</body>
+</html>

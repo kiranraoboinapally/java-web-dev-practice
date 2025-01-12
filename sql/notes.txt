@@ -33,3 +33,83 @@ create table student
     email varchar(45),             //it also written in single quotes
     gender char                  //last should not keep comma char is written in single quotes as single character
 );
+
+Example:
+
+create table jobs
+(
+    Jid int,
+    Jname varchar(45),
+    Jcategory varchar(45),
+    Jqualification varchar(45)
+);
+
+mysql>expalin jobs;
+
+Inserting in a table syntax
+insert into tablename values(col1value,col2value...);
+
+Example:
+mysql>insert into jobs values(121,'Software','IT','Btech');
+mysql>select * from jobs; //for selecting and displaying all coulmns in a table
+mysql>select Jid,Jname from jobs; //for selecting and displaying specific coulmns in a table
+
+Data types:
+1.Numeric(only numbers)
+---a.int
+---b.double
+---c.bigint
+2.String(includes words or characters must be enclosed with in single quotes)
+---a.char
+---b.varchar() 
+3.Date types: These should be compulsory null
+---a.date
+---b.datetime
+---c.timestamp
+---d.time
+
+
+ Virtual Generation: Calculating the column values virtually
+ (as is used for virtually generated column)
+
+Virtually generated doesnt take constraints like not null,unique
+
+Multiple insert :
+It is a query which is used to insert multiple rows and omits default,virtually generated coulmns
+Syntax
+
+Insert into Tablename(cols) values(rowvalues)
+Ex:
+
+Create a student table with marks total marks virtually generated and percentage also
+
+create table student
+(
+    roll int,
+    name varchar(45),
+    section char,
+    mobile bigint,
+    maxmarks int,
+    s1 int,
+    s2 int,
+    s3 int,
+    total int as (s1+s2+s3),   //virtually generated
+    percentage double as (total/maxmarks*100)   //virtually generated
+);
+
+
+Multiple Insert:
+
+mysql>insert into student(roll,name,section,mobile,maxmarks,s1,s2,s3) values(1,'Arjun','A',9893938,90,25,22,28),
+-->(2,'Balu','B',982928,90,22,22,28);
+
+
+
+Constraints:
+Conditions that are applied over coulmns
+1.NOT NULL
+2.CHECK
+3.Default
+4.Unique
+5.Primary key
+6.Foreign key

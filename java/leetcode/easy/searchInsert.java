@@ -1,3 +1,4 @@
+package easy;
 class searchInsert 
 {
     public static void main(String[] args)

@@ -1,3 +1,4 @@
+package easy;
 class removeElement 
 {
     public static void main(String[] args)

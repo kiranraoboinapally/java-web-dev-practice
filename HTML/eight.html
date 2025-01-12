@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <!-- Title of the webpage reflecting the content -->
+        <title>
+            CSS Examples: Inline, Internal, and External
+        </title>
+        <!-- Linking to an external CSS file (first.css) -->
+        <link href="first.css" rel="stylesheet">
+        <style>
+            /* Internal CSS: Styles applied to h2, h3, and p elements */
+            h2, h3, p {
+                color: rgb(0, 255, 255); /* Cyan color for these elements */
+            }           
+        </style>
+    </head>
+    <body>
+        <!-- Inline CSS: Direct styling applied to this specific h1 element -->
+        <h1 style="color: brown; text-decoration: underline;" title="h1">Inline Css</h1>
+        <!--
+        Advantages of Inline CSS:
+        1. Can apply styles to a specific element without affecting others.
+        2. Quick for testing small changes or overrides.
+        
+        Disadvantages of Inline CSS:
+        1. Not reusable across multiple elements or pages.
+        2. Makes HTML code cluttered and harder to maintain.
+        3. Overrides external and internal styles, making the code less consistent.
+        -->
+        
+        <!-- Internal CSS: Styles applied to these elements from <style> in <head> -->
+        <h2>Internal Css</h2>
+        <h3>Internal Css</h3>
+        
+        <!--
+        Advantages of Internal CSS:
+        1. Good for styling a single document without external dependencies.
+        2. Keeps styling close to the HTML content, easy to manage for smaller projects.
+        
+        Disadvantages of Internal CSS:
+        1. Can increase page size by adding CSS rules within the HTML file.
+        2. Not reusable across multiple pages unless copied into each page.
+        3. Can lead to conflicts if the same elements are styled differently across different pages.
+        -->
+        
+        <!-- External CSS: External file 'first.css' is used, but not shown here -->
+        <h4>External Css</h4>
+        <!--
+        Advantages of External CSS:
+        1. Can be reused across multiple HTML files, making the website easier to maintain.
+        2. Reduces the size of the HTML files by separating styles.
+        3. CSS rules can be cached by the browser, improving page load times.
+        
+        Disadvantages of External CSS:
+        1. Requires an additional HTTP request to load the CSS file (can impact performance).
+        2. More complex to manage for smaller websites.
+        3. Dependency on external files, meaning a broken or missing CSS file could affect the website's appearance.
+        -->
+        
+        <!-- Internal CSS: The <p> tag is styled with internal CSS as defined in <style> -->
+        <p>Internal Css</p>
+    </body>
+</html>

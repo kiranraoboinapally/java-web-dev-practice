@@ -1,0 +1,208 @@
+Basic Level 1 
+15)   int x=0;
+         if(x==0)
+             System.out.println("zero");
+            System.out.println("one");
+24)  boolean b=15%2!=0;
+        if(y)
+           System.out.println(y);
+          else
+            System.out.println("false");
+27)   boolean y=true,x=y;         
+          if(!y)
+                System.out.println("x");
+           else
+                    System.out.println("y");
+42)  write the while loop code to iterate infinite number of times
+ 3) What does the JRE do?  
+25)
+     if(true)
+          System.out.println("coding hub");
+2)  What does JDK stand for, and what is its purpose?  
+23)  boolean b;
+         if(b)
+           { 
+               System.out.println(1);
+               System.out.println(2);
+            }
+       System.out.println("hii");
+
+19)  int x=9;
+        if(x>10){
+              System.out.println("x");
+         }
+          System.out.println(x+" "+ x++);
+        else
+            System.out.println(" ");
+              
+    
+47) for (int i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+        System.out.print(i + " ");
+    }
+}
+8) What is datatype? 
+21)   byte b=189,y;
+          if(b==y)
+              System.out.println(b+y);
+           else
+                 System.out.println(y);
+31)  int num=0;
+        while(num!=0)
+       {
+          System.out.println("coding hub");
+         }
+      System.out.println("chipl");
+10)Which type of  value is returned by  relational operator?
+37) int x=3;
+      while(x!=0)
+      {
+           if(x==3)
+            {
+               continue;
+              }
+         System.out.println(x);
+ 
+       }
+11)What is the difference between logical && and logical || 
+50)     int x=0;
+          switch(x)
+           case 0 : System.out.print("zero");
+                            break;
+            case 1:   System.out.print("zero");
+                            break;
+       
+35) for( int x=0;x<7;x++)
+        {
+             System.out.println(x);
+          } ;
+39) int b=5;
+int   c=b-- + --b+ b++;
+ int c1=c++;
+ int d=c%10+c1;
+System.out.println(b);
+System.out.println(c);
+System.out.println(c1);
+
+49) if(!true)
+           System.out.print(" test is about to complete");
+      else
+            System.out.print(" one more question left");
+29)  while(1){
+          System.out.println("while hi");
+       }
+43) int a=10;
+        int b=50;
+       int a1=a>b? a: b;
+         System.out.println(a);
+36) for( ; ;)
+{
+System.out.println(" for loop");
+}
+
+40)  what is break and continue
+38) int a=10;
+        a=a++ + --a + ++a + a;
+        System.out.println(a);
+ 4) What is the JVM, and what role does it play in Java?  
+26)  boolean x1=true;
+     if(x1)
+        System.out.println("true");
+      else
+           System.out.println("false");
+     else if(!x1)
+            System.out.println("false");
+       else
+               System.out.println("else");
+13) int x=4;
+      boolean b=true;
+      if(b)
+          System.out.println(x++);
+    else
+       System.out.println(--x);
+      System.out.println(x+x);
+32)   int x=1;
+        while(x<10)
+        {
+             if(x==6){
+                    continue;
+             }
+            x++;
+          }
+14) if(true)
+         {
+          System.out.println(x);
+         System.out.println("hi");
+        }
+18)    if(false)
+          System.out.println("how");
+           System.out.println("are");
+     else
+          System.out.println("you?"); 
+33)  for(int x=1;x<=10;x++)
+        {
+            break;
+           System.out.println("for");
+         }
+ 7) What is implicit typecasting and explicit type casting?  
+12) Predict the output for the following
+int x=10;
+if(x)
+   System.out.println("hi");
+else
+    System.out.println("hello");
+ 5) What are identifiers in Java and mention rules?  
+45) int large = 130;
+      boolean small = (byte) large;
+       System.out.println(small);
+6)  What is typecasting in Java?  
+1)what do you know about  java? 
+28) while(true){
+               System.out.println("while");
+}
+22) if(true);
+           System.out.println("hi");
+   else
+            System.out.println("hello");
+44) for (int i = 0; i < 5; i--) {
+    System.out.println("Infinite");
+}
+37) int x=3;
+      while(x<=5)
+      {
+           if(x==3)
+            {
+               i++;
+               continue;
+              }
+         System.out.println(x);
+          i++;
+ 
+       }
+46) int 2_Value = 10; 
+System.out.println(2_Value);
+30) while(false);
+       System.out.println("hello");
+16) if(x=0){
+         System.out.println("java");
+         }
+17)boolean b=10>20;
+   if(x==true)
+        System.out.println("true");
+  else
+       System.out.println("false");
+
+34)  for(int x=1;x<=10;x++);
+               System.out.println(x);
+
+48) while()
+{
+      System.out.print(i + " ");
+   }
+
+20)   int  x=0;
+           if(x>10)
+                 System.out.println(x);
+            else
+                   System.out.println(x++);
+9) How can you declare and initialize a variable?

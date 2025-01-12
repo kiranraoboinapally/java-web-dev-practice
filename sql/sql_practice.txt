@@ -1,0 +1,214 @@
+
+Like operator usage  
+
+step 1
+select * from like_operator;
++-----+---------+
+| sid | sname   |
++-----+---------+
+|   1 | kiran   |
+|   2 | mahesh  |
+|   3 | arjun   |
+|   4 | sandeep |
+|   5 | ax      |
+|   6 | dxy     |
+|   7 | xda     |
+|   8 | xad     |
+|   9 | xa      |
++-----+---------+
+
+step 2
+select * from like_operator where sname like 'x_';
++-----+-------+
+| sid | sname |
++-----+-------+
+|   9 | xa    |
++-----+-------+
+
+step 3
+select * from like_operator where sname like '_x';
++-----+-------+
+| sid | sname |
++-----+-------+
+|   5 | ax    |
++-----+-------+
+
+step 4
+select * from like_operator where sname like 'x%_'; // or x%
++-----+-------+
+| sid | sname |
++-----+-------+
+|   7 | xda   |
+|   8 | xad   |
+|   9 | xa    |
++-----+-------+
+
+step 5
+select * from like_operator where sname like '%x_';
++-----+-------+
+| sid | sname |
++-----+-------+
+|   6 | dxy   |
+|   9 | xa    |
++-----+-------+
+
+step 6
+select * from like_operator where sname like '%e_';
++-----+---------+
+| sid | sname   |
++-----+---------+
+|   4 | sandeep |
++-----+---------+
+
+
+select * from like_operator where sname like '%n' or 'm%'; 
+//i want names ending with n or starting with m
+
+Between Operator usage (step 8)
+// add column mobile number using alter to existing table
+
+alter table like_operator add column smobile bigint not null;
+
+step 7
+inserting smboile values in already existing table i.e updating it 
+
+update like_operator set smobile=9876;
+
+update like_operator set smobile=9500 where sid=2;
+
+
+
+Step 8
+select * from like_operator where smobile between 2000 and 5000;
+// after between only and used or cannot be used.
++-----+-------+---------+
+| sid | sname | smobile |
++-----+-------+---------+
+|   6 | dxy   |    2500 |
+|   7 | xda   |    2500 |
+|   8 | xad   |    4500 |
++-----+-------+---------+
+
+In operator usage
+
+Step 9
+select *from like_operator where smobile in(2500,5000);
++-----+-------+---------+
+| sid | sname | smobile |
++-----+-------+---------+
+|   6 | dxy   |    2500 |
+|   7 | xda   |    2500 |
++-----+-------+---------+
+
+
+select *from like_operator where smobile in(2500,10500);
++-----+-------+---------+
+| sid | sname | smobile |
++-----+-------+---------+
+|   5 | ax    |   10500 |
+|   6 | dxy   |    2500 |
+|   7 | xda   |    2500 |
++-----+-------+---------+
+
+select *from like_operator where sname in('ax');
++-----+-------+---------+
+| sid | sname | smobile |
++-----+-------+---------+
+|   5 | ax    |   10500 |
++-----+-------+---------+
+
+
+ select *from like_operator where sname in('ax','xda');
++-----+-------+---------+
+| sid | sname | smobile |
++-----+-------+---------+
+|   5 | ax    |   10500 |
+|   7 | xda   |    2500 |
++-----+-------+---------+
+
+
+
+
+
+mysql> select * from customer where c_id IN (Select c_id from purchase where c_id=1);
++------+--------+----------+
+| c_id | c_name | c_mobile |
++------+--------+----------+
+|    1 | Arjun  |    98494 |
+
+
+
+joins
+
+mysql> select * from employees;
++--------+----------+---------------+--------+------------+
+| emp_id | emp_name | department_id | salary | hire_date  |
++--------+----------+---------------+--------+------------+
+|      1 | john     |             1 |  50000 | 2022-01-10 |
+|      2 | alice    |             2 |  60000 | 2021-06-25 |
+|      3 | bob      |             3 |  55000 | 2020-11-15 |
+|      4 | charlie  |             1 |  45000 | 2019-04-30 |
+|      5 | david    |             4 |  70000 | 2023-02-20 |
+|      6 | eve      |          NULL |  52000 | 2023-08-12 |
++--------+----------+---------------+--------+------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from departments;
++---------------+-----------------+
+| department_id | department_name |
++---------------+-----------------+
+|             1 | hr              |
+|             2 | it              |
+|             3 | marketing       |
+|             4 | finance         |
+|             5 | sales           |
++---------------+-----------------+
+5 rows in set (0.00 sec)
+
+mysql> select emp_name, department_name from employees inner join departments on employees.department_id=departments.department_id;
++----------+-----------------+
+| emp_name | department_name |
++----------+-----------------+
+| john     | hr              |
+| alice    | it              |
+| bob      | marketing       |
+| charlie  | hr              |
+| david    | finance         |
++----------+-----------------+
+5 rows in set (0.00 sec)
+
+mysql> select emp_name, department_name from employees left outer join departments on employees.department_id=departments.department_id;
++----------+-----------------+
+| emp_name | department_name |
++----------+-----------------+
+| john     | hr              |
+| alice    | it              |
+| bob      | marketing       |
+| charlie  | hr              |
+| david    | finance         |
+| eve      | NULL            |
++----------+-----------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT emp_name, department_name FROM Employees RIGHT OUTER JOIN Departments ON Employees.department_id = Departments.department_id;
++----------+-----------------+
+| emp_name | department_name |
++----------+-----------------+
+| charlie  | hr              |
+| john     | hr              |
+| alice    | it              |
+| bob      | marketing       |
+| david    | finance         |
+| NULL     | sales           |
++----------+-----------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT emp_name, department_name, salary FROM Employees RIGHT OUTER JOIN Departments ON Employees.department_id = Departments.department_id WHERE department_name LIKE 'M%' OR salary > 60000;
++----------+-----------------+--------+
+| emp_name | department_name | salary |
++----------+-----------------+--------+
+| bob      | marketing       |  55000 |
+| david    | finance         |  70000 |
++----------+-----------------+--------+
+2 rows in set (0.00 sec)
+

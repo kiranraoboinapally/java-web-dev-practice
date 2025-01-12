@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="icon" href="7.png" id="favicon">
+        <style>
+            #favicon {
+             border-radius: 100%;
+            }
+
+            body {
+                background-color: greenyellow;
+                display: flex;
+                background-image: url(7.png);
+                background-position: 80%;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            form {
+                text-align: center;
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 300px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                margin-bottom: 5px;
+                text-align: left;
+                font-weight: bold;
+            }
+
+            .xyz {
+                padding: 10px;
+                width: 100%;
+                margin-top: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .abc {
+                background-color: rgb(58, 0, 56);
+                border-style: double;
+                cursor: pointer;
+                border-radius: 10px;
+                border-color: rgb(119, 169, 223);
+                color: rgb(19, 186, 215);
+                padding: 10px 20px;
+                margin-top: 10px;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .links {
+                margin-top: 15px;
+                font-size: 14px;
+            }
+
+            .links a {
+                color: rgb(0, 12, 173);
+                text-decoration: none;
+                margin: 0 10px;
+            }
+            .links a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="xyz" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="xyz" id="password" name="password">
+            </div>
+            <input type="submit" value="Login" class="abc">
+
+            <div class="links">
+                <a href="#">Forgot your password?</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </form>
+    </body>
+</html>

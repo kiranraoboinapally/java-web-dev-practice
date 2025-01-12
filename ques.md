@@ -23,6 +23,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 
 6. **Switch Case Explanation**
    -  Use switch-case with a comparison to `if-else`, explaining `break` and `continue`
+      //in basics folder eight.java has used switch case for leap year
 
 7. **Eligibility Based on Age**
    -  Check age for job eligibility and apply different conditions for various job eligibility like UPSC, SSC - `ageCheck.java` //pending
@@ -446,6 +447,15 @@ C D E F
 5 4 3 2 1
 ```
 **88.**
+`p8.java`
+```
+1
+1 2
+1 a 2
+1 a b 2
+1 2 3 4 5 
+```
+**89.**
 `p1.java`
 ```
 # # # # #
@@ -454,7 +464,7 @@ C D E F
 # #
 #
 ```
-**89.**
+**90.**
 `p2.java`
 ```
 A B C D E
@@ -463,7 +473,7 @@ C D E
 c d
 E
 ```
-**90.**
+**91.**
 `p3.java`
 ```
 1 2 3 4 5
@@ -472,7 +482,7 @@ E
 4 3
 5
 ```
-**91.**
+**92.**
 `p4.java`
 ```
 1 2 3 4 5
@@ -481,6 +491,126 @@ E
 2 1
 7
 ```
+**93.**
+`p5.java`
+```
+# # # # #
+# # # #
+# # #
+# #
+#
+# #
+# # #
+# # # #
+# # # # #
+```
+**94.**
+`p6.java`
+```
+#
+# #
+# # #
+# # # #
+# # # # #
+# # # #
+# # #
+# #
+#
+```
+**95.**
+`p7.java`
+```
+# $ $ $ $ $ & &
+# # $ $ $ $ & &
+# # # $ $ $ & &
+# # # # $ $ & &
+# # # # # $ & &
+```
+**96.**
+`p8.java`
+```
+-----$
+----$$
+---$$$
+--$$$$
+-$$$$$
+$$$$$$
+```
+**97.**
+`p9.java`
+```
+-----$
+----$$
+---$ $
+--$  $
+-$   $
+$$$$$$
+```
+**98.**
+`p10.java`
+```
+$ $ $ $ $
+  $     $
+    $   $
+      $ $ 
+        $ 
+```
+**99.**
+`p11.java`
+```
+      *
+    * * *
+  * * * * *
+* * * * * * *
+```
+**100.**
+`p12.java`
+```
+      * *
+    * * * *
+  * * * * * *
+* * * * * * * *
+```
+**101.**
+`p13.java`
+```
+       *          //single
+      * *         //two
+    * * * *       //four
+  * * * * * *
+* * * * * * * *
+  * * * * * *
+    * * * * 
+      * *
+       *
+```
+**102.**
+`p14.java`
+```
+       *             //single
+    *     *          //three
+  *         *        //five
+*             *
+  *         *
+    *     * 
+       *
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 

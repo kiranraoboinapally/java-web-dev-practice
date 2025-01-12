@@ -30,5 +30,6 @@ create table student
     sno int,
     name varchar(45),
     mobile int,
-    email varchar(45)
+    email varchar(45),             //it also written in single quotes
+    gender char                  //last should not keep comma char is written in single quotes as single character
 );

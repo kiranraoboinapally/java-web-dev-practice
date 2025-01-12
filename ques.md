@@ -5,8 +5,8 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 ### **Basic Programs**
 
 1. **Swapping Numbers**
-   - **a.** Swapping Two numbers using third variable (without scanner) - `swapThird.java` //filename should update
-   - **b.** Swapping Two numbers without using third variable - `swapOperation.java`       //pending
+   - **a.** Swapping Two numbers using third variable (without scanner) - `swapThird.java` 
+   - **b.** Swapping Two numbers without using third variable - `swapOperation.java`      
    - **c.** Swapping Two numbers using Bitwise XOR - `swapBitwise.java`    //pending  
 
 2. **Character Classification**
@@ -23,7 +23,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
 
 6. **Switch Case Explanation**
    -  Use switch-case with a comparison to `if-else`, explaining `break` and `continue`
-      //in basics folder eight.java has used switch case for leap year
+      //in basics folder switchEx.java has used switch case for leap year
 
 7. **Eligibility Based on Age**
    -  Check age for job eligibility and apply different conditions for various job eligibility like UPSC, SSC - `ageCheck.java` //pending

@@ -1,5 +1,5 @@
 /*Swapping two numbers using third variable*/
-class swapping
+class swapThird
 {
     public static void main(String args[])
     {

@@ -1,4 +1,4 @@
-class eight {
+class switchEx {
 
 public static void main(String args[]){
 

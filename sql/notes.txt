@@ -107,9 +107,37 @@ mysql>insert into student(roll,name,section,mobile,maxmarks,s1,s2,s3) values(1,'
 
 Constraints:
 Conditions that are applied over coulmns
+
 1.NOT NULL
-2.CHECK
+2.CHECK:
+specific condition to be applied on a column
 3.Default
-4.Unique
-5.Primary key
-6.Foreign key
+4.Unique:
+Different value from all the remaining in that specific column
+5.Primary key:
+it must have not null and unique
+not null+unique
+In a table we must have zero or one primary key
+
+6.Foreign key:
+it can have duplicate values
+in a table can have any number of foreign keys
+a foreign key is a primary key in another table
+a foreign key is used to join two or more tables
+In child table primary key can have only one column
+
+**NULL:
+Which specifies that the value is not known
+null value is not zero
+
+
+create table student 
+(
+    roll int not null,
+    name varchar(45) not null,
+    email varchar(45) not null unique,
+    gender char not null default 'm',  //if we have default we use multiple insert if not mismatch in columns and rowvalues
+    age int not null check(age>=18)
+);
+
+

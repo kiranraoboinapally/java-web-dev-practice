@@ -1,4 +1,4 @@
-package easy;
+
 class transpose 
 {
         public static void main(String[] args)

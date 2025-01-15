@@ -1,4 +1,4 @@
-package easy;
+
 class searchInsert 
 {
     public static void main(String[] args)
@@ -28,25 +28,7 @@ class searchInsert
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 
 class Solution {
     public int searchInsert(int[] nums, int target) {
@@ -73,3 +55,4 @@ class Solution {
     }
 }
 
+*/

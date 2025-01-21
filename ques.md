@@ -659,11 +659,11 @@ largeAscElement.java
 largeDescElement.java
 
 3.first store negative elemnts and next positive elements order doesnt matter(eg.,a[]={8,-2,3,-1,0,9} then output {-2,-1,8,3,0,9} )
-negPos.java
+negPos.java//penindg
 
 4.if a[]={10,20,30,40,50,60,70,80,90} is of odd or even length then b[] even postitons of a[] should have to print {10,30,50,70,90}
 and c[] odd positions should print {20,40,60,80}
-arr12.java
+arr1.java//pending
 
 5.prime numbers in an array print those
 primeArray.java
@@ -671,9 +671,9 @@ primeArray.java
 6.Take two arrays as input check whether the elements are same or not? order doesnt matter
 if both arrays same length then check it if not then print not equal (eg.,a[]={10,30,50,70} b[]={10,50,70,30} then op equal)
 with predefined
-equalArray1.java
+equalArray1.java //pending
 without predefined(userdefined)
-equalArray2.java
+equalArray2.java//pending
 
 ---
 

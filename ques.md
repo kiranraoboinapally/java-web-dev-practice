@@ -597,21 +597,6 @@ $ $ $ $ $
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 
@@ -660,6 +645,35 @@ aKankKr
 
 11. **Array Operation: Sum and Divide**
     -  Create an array `b[]` where each element is the quotient of the sum of all elements in `a[]` excluding `a[i]`, divided by `a[i]` - `arrayOperation.java`
+
+
+Arrays
+
+
+1.Sorting elements in an array without using predefined
+sortAsc.java
+sortDesc.java
+
+2.Largest Element in a sorted array and second largest elment in an array which is having repeated values of first largest(eg.,after sorting a[]={10,20,30,40,50,50} then op 50 largest second largest should print 40)
+largeAscElement.java
+largeDescElement.java
+
+3.first store negative elemnts and next positive elements order doesnt matter(eg.,a[]={8,-2,3,-1,0,9} then output {-2,-1,8,3,0,9} )
+negPos.java
+
+4.if a[]={10,20,30,40,50,60,70,80,90} is of odd or even length then b[] even postitons of a[] should have to print {10,30,50,70,90}
+and c[] odd positions should print {20,40,60,80}
+arr12.java
+
+5.prime numbers in an array print those
+primeArray.java
+
+6.Take two arrays as input check whether the elements are same or not? order doesnt matter
+if both arrays same length then check it if not then print not equal (eg.,a[]={10,30,50,70} b[]={10,50,70,30} then op equal)
+with predefined
+equalArray1.java
+without predefined(userdefined)
+equalArray2.java
 
 ---
 

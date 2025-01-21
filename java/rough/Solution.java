@@ -3,9 +3,7 @@ class Solution
 public static void main(String args[])
 	{
 	Demo demo=new Demo();
-	System.out.println("Case 1 for ODD Length:");
-		
-		
+	System.out.println("Case 1 for ODD Length:");	
 	demo.method(new int[]{10,20,30,40,50,60,70,80,90},0,0);
 	System.out.println("Case 2 for EVEN Length:");
 	demo.method(new int[]{1,2,3,4,5,6},0,0);
@@ -21,12 +19,12 @@ void method(int a[],int j,int k)
 		if(a.length%2!=0)
 		{	
 		size=a.length/2+1;
-		 b=new int[size];
+		 //b=new int[size];
 		}
 	else
 		{
 		size=a.length/2;
-		 b=new int[size];
+		 //b=new int[size];
 		}
 		
 	for(int i=0;i<a.length;i++)

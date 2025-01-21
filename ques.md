@@ -659,7 +659,7 @@ largeAscElement.java
 largeDescElement.java
 
 3.first store negative elemnts and next positive elements order doesnt matter(eg.,a[]={8,-2,3,-1,0,9} then output {-2,-1,8,3,0,9} )
-negPos.java//penindg
+negPos.java//pendindg
 
 4.if a[]={10,20,30,40,50,60,70,80,90} is of odd or even length then b[] even postitons of a[] should have to print {10,30,50,70,90}
 and c[] odd positions should print {20,40,60,80}

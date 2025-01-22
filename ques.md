@@ -676,11 +676,14 @@ without predefined(userdefined)
 equalArray2.java//pending
 
 7.
-binarySearchAsc.java
-binarySearchDesc.java
+binarySearchAsc.java//pending
+binarySearchDesc.java//pending
 
 8.
+leftRotate.java
 
+9.
+rightRotate.java
 
 ---
 

@@ -20,7 +20,7 @@ public static void main(String args[])
 		{
 		if(i%2==0)
 			{
-			b[j++]=a[i];
+			b[j++]=a[i];//b[0]=10,b[1]=30,b[2]=40
 			}
 		}
 	System.out.print("b[] Array elements are ");
@@ -29,7 +29,7 @@ public static void main(String args[])
 		System.out.print(b[i]+" ");
 		}
 	System.out.println();
-	int c[]=new int[a.length-j];
+	int c[]=new int[a.length-j];//9-5=4
 	int k=0;
 	for(int i=0;i<a.length;i++)
 		{

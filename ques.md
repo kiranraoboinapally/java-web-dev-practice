@@ -805,48 +805,82 @@ aKankKr
 
 
 ---
-
 ### **Test Questions**
 
 1. **Strong Number Check**
-   -  Check if a number is a strong number (e.g., `145 = 1! + 4! + 5!`) - `strongNumber.java`
+   - Check if a number is a strong number 
+   - **Test Case**:
+     - Input: `145`
+     - Output: `True` (since 1! + 4! + 5! = 145)
+   - **File**: `strongNumber.java`
 
 2. **Evil Number Check**
-   -  Check if a number is an evil number by squaring it and summing the digits(eg., 9 input 9^2=81 then 8+1=9 match input) - `evilNumber.java`
+   - Check if a number is an evil number by squaring it and summing the digits 
+   - **Test Case**:
+     - Input: `9`
+     - Output: `True` (since 9^2 = 81 and 8 + 1 = 9)
+   - **File**: `evilNumber.java`
 
 3. **Power Number Check**
-   -  Check if a number is a power number (product of digits equals sum of digits e.g., 132 input then 1*3*2==1+3+2) - `powerNumber.java`
+   - Check if a number is a power number
+   - **Test Case**:
+     - Input: `132`
+     - Output: `True` (since 1 * 3 * 2 = 6 and 1 + 3 + 2 = 6)
+   - **File**: `powerNumber.java`
 
 4. **Print First 10 Prime Numbers**
-   -  Print the first 10 prime numbers - `primeNumbers.java`
+   - Print the first 10 prime numbers.
+   - **Test Case**:
+     - Input: `2` (just print the first 10 primes)
+     - Output: `2 3 5 7 11 13 17 19 23 29`
+   - **File**: `primeNumbers.java`
 
 5. **Pattern Printing**
-   -  Print the following number pattern:
+   - Print the following number pattern:
      ```
      1 2 3 4 5
        2 3 4 5
          3 4 5
            4 5
              5
-     ``` - `numberPattern.java`
+     ``` 
+   - **File**: `numberPattern.java`
 
 6. **Automatic Number Check**
-   -  Check if a number is an automatic number (e.g., `76^2 = 5776` and last two digits match input) - `automaticNumber.java`
+   - Check if a number is an automatic number (e.g., `76^2 = 5776` and the last two digits match the input).
+   - **Test Case**:
+     - Input: `76`
+     - Output: `True` (since 76^2 = 5776 and the last two digits are 76)
+   - **File**: `automaticNumber.java`
 
 7. **Technology Number Check**
-   -  Check if a number is a technology number (split and sum the two parts, then square the result e.g.,`2025 makes 20+25=45 becomes 45^2= 2025` math input) - `technologyNumber.java`
+   - Check if a number is a technology number .
+   - **Test Case**:
+     - Input: `2025`
+     - Output: `True` (since 20 + 25 = 45 and 45^2 = 2025)
+   - **File**: `technologyNumber.java`
 
 ---
 
 ### **Optional Practice Questions**
-1. **Sum of Powers of Digits**
-   -  For input `17543`, calculate `3^1 + 4^2 + 5^3 + 7^4 + 1^5` - `digitPowers.java`
 
+1. **Sum of Powers of Digits**
+   - For input `17543`.
+   - **Test Case**:
+     - Input: `17543`
+     - Output: `3^1 + 4^2 + 5^3 + 7^4 + 1^5 = 3 + 16 + 125 + 2401 + 1 = 2546`
+   - **File**: `digitPowers.java`
 
 ---
 
 
+## Additional Information
+
+- **File Names**: Each problem has an associated Java file for the solution. For example, `arrayTransformation.java` corresponds to the solution for the 10th problem.
+- **Test Cases**: For each problem, test cases are provided to help validate the solution and understand the expected behavior.
+- **Implementation Notes**: Some problems may require specific handling, such as boundary conditions or edge cases, and these have been included in the test cases.
 
 
+Feel free to refer to the respective Java files for the implementation of each problem. If any problem requires additional clarification or modification, don't hesitate to ask for help.
 
-**Kiran**
+---

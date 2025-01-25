@@ -612,39 +612,91 @@ aKankKr
 ---
 
 ### **ARRAYS**
+# Array Problems in Java
 
 1. **Run Time Initialization (Forward and Backward Insertion)**
-   -  Run-time initialization of array elements using forward and backward insertion - `runTimeInit.java`
+   - Run-time initialization of array elements using forward and backward insertion.
+   - **Test Case**:
+     - Input: Initialize array of size 5 using forward insertion: `a[] = {1, 2, 3, 4, 5}`
+     - Output: `a[] = {1, 2, 3, 4, 5}` (Forward) and `a[] = {5, 4, 3, 2, 1}` (Backward)
+   - **File**: `runTimeInit.java`
 
 2. **Compile Time Initialization**
-   -  Array elements initialized at compile-time - `CompileTimeInit.java`
+   - Array elements initialized at compile-time.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50}`
+     - Output: `a[] = {10, 20, 30, 40, 50}`
+   - **File**: `CompileTimeInit.java`
 
 3. **Copying Elements from a[] to b[]**
-   -  Copy elements from array `a[]` to array `b[]` of the same size - `copyAB.java`
+   - Copy elements from array `a[]` to array `b[]` of the same size.
+   - **Test Case**:
+     - Input: `a[] = {1, 2, 3, 4, 5}`
+     - Output: `b[] = {1, 2, 3, 4, 5}`
+   - **File**: `copyAB.java`
 
 4. **Reverse Storing of Array Elements**
-   -  Given `a[] = {1, 2, 3, 4, 5}`, reverse the elements into `b[] = {5, 4, 3, 2, 1}` - `reverseStoringAB.java`
+   - Given `a[] = {1, 2, 3, 4, 5}`, reverse the elements into `b[] = {5, 4, 3, 2, 1}`.
+   - **Test Case**:
+     - Input: `a[] = {1, 2, 3, 4, 5}`
+     - Output: `b[] = {5, 4, 3, 2, 1}`
+   - **File**: `reverseStoringAB.java`
 
 5. **Merging Two Arrays into One**
-   -  Merge arrays `a[] = {10, 30, 20, 50, 40}` and `b[] = {10, 30, 30, 40}` into `c[]` - `storingABc.java`
+   - Merge arrays `a[] = {10, 30, 20, 50, 40}` and `b[] = {10, 30, 30, 40}` into `c[]`.
+   - **Test Case**:
+     - Input: `a[] = {10, 30, 20, 50, 40}`, `b[] = {10, 30, 30, 40}`
+     - Output: `c[] = {10, 30, 20, 50, 40, 10, 30, 30, 40}`
+   - **File**: `storingABc.java`
 
 6. **Find Maximum and Minimum Elements**
-   -  Find maximum and minimum elements in an array - `maxElement.java` and `minElement.java`
+   - Find maximum and minimum elements in an array.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50}`
+     - Output: 
+       - Maximum: `50`
+       - Minimum: `10`
+   - **File**: `maxElement.java`, `minElement.java`
 
 7. **Linear Search in Array**
-   -  Check if an element exists in an array - `linearSearch.java`
+   - Check if an element exists in an array.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50}`, Search for `30`
+     - Output: Found at index `2`
+   - **File**: `linearSearch.java`
 
 8. **Arrange Even and Odd Elements**
-   -  Given an array, arrange the even elements first, followed by the odd elements - `evenOddSort.java` (Problem Pending)
+   - Given an array, arrange the even elements first, followed by the odd elements.
+   - **Test Case**:
+     - Input: `a[] = {10, 21, 4, 15, 6}`
+     - Output: `{10, 4, 6, 21, 15}`
+   - **File**: `evenOddSort.java` (Problem Pending)
 
 9. **Find Second Maximum Element**
-   -  Find the second maximum element in an array without sorting - `secondMax.java`
+   - Find the second maximum element in an array without sorting.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50}`
+     - Output: `Second Maximum = 40`
+   - **File**: `secondMax.java`
 
 10. **Array Transformation Based on Sum of Adjacent Elements**
-    -  Given array `a[]`, create a new array `b[]` with transformation rules - `arrayTransformation.java`
+    - Given array `a[]`, create a new array `b[]` where each element `b[i]` is the sum of the previous and next elements of `a[i]`.
+    - **Test Case**:
+      - Input: `a[] = {1, 2, 3, 4, 5}`
+      - Output: `b[] = {3, 4, 6, 8, 9}`
+    - **File**: `arrayTransformation.java`
+
 
 11. **Array Operation: Sum and Divide**
-    -  Create an array `b[]` where each element is the quotient of the sum of all elements in `a[]` excluding `a[i]`, divided by `a[i]` - `arrayOperation.java`
+    - Create an array `b[]` where each element is the quotient of the sum of all elements in `a[]` excluding `a[i]`, divided by `a[i]`.
+    - **Test Case**:
+      - Input: `a[] = {10, 20, 30, 40}`
+      - Output: 
+        - Sum of all elements: `100`
+        - `b[] = {(100-10)/10, (100-20)/20, (100-30)/30, (100-40)/40}`
+        - Output: `b[] = {9, 4, 2, 1}`
+    - **File**: `arrayOperation.java`
+
 
 12. **Sorting elements in an array without using predefined sort**
    - Sorting elements of an array in ascending and descending order without using predefined methods. 

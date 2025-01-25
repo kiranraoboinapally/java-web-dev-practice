@@ -2,6 +2,8 @@
 
 This repository contains a collection of Java practice programs and coding challenges aimed at helping learners strengthen their problem-solving and Java programming skills. The programs cover a range of topics from basic to intermediate levels, including loops, recursion, arrays, sorting algorithms, pattern generation, and much more.
 
+> **Note**: The **`ques.md`** file, located in the `java/` folder, contains a complete list of all the questions and problems in this repository. It serves as a central reference point for all the challenges.
+
 ## Table of Contents
 
 - [Folder Structure](#folder-structure)
@@ -18,10 +20,13 @@ This repository contains a collection of Java practice programs and coding chall
 
 ## Folder Structure
 
-The programs are organized into different categories and sub-categories within the following folder structure:
+At the root of the `java/` folder, you'll find a **`ques.md`** file, which contains a comprehensive list of all the questions and problems included in this repository. This file serves as the primary reference for navigating the collection of problems.
+
+The rest of the folder structure is organized as follows:
 
 ```
 java/
+├── ques.md          # A Markdown file listing all the questions/problems (Top Priority)
 ├── arrays/
 │   └── (Java files related to array-based problems)
 ├── basics/
@@ -34,11 +39,11 @@ java/
 │   └── (Java files for generating patterns)
 ├── recursion/
 │   └── (Java files for recursive problems)
-└── ques.md          # A Markdown file listing all the questions/problems
 ```
 
 Each folder contains Java files corresponding to specific problems or categories.
 
+- **ques.md**: The file that contains a complete list of all the questions/problems available in this repository.
 - **arrays/**: Contains solutions to problems involving arrays.
 - **basics/**: Includes fundamental Java programs covering basic concepts.
 - **loops/**: Contains programs categorized by different types of loops:
@@ -46,7 +51,6 @@ Each folder contains Java files corresponding to specific problems or categories
   - **do-while/**: Programs using the `do-while` loop.
   - **while/**: Programs using the `while` loop.
 - **patterns/**: Programs for generating various patterns.
-- **ques.md**: This file contains a complete list of all the questions and problems available in this repository.
 
 ---
 
@@ -115,12 +119,10 @@ The **Arrays** section includes practice problems related to arrays, covering ta
 ## Additional Information
 
 - **File Names**: Each problem has an associated Java file for the solution. For example, `arrayTransformation.java` corresponds to the solution for the 10th problem.
-
+  
 - **Test Cases**: For each problem, test cases are provided to help validate the solution and understand the expected behavior. These test cases will allow you to check the correctness of your implementation and ensure that edge cases are handled properly.
 
 - **Implementation Notes**: Some problems may require specific handling, such as boundary conditions or edge cases. These details have been included in the respective test cases, so be sure to review them for a better understanding of how to tackle different situations.
-
-- **Questions List**: All the questions/problems are listed in a `ques.md` file located inside the `java/` folder. You can refer to this file for a complete list of problems available in this repository. This will help you easily identify which programs you want to work on.
 
 Feel free to refer to the respective Java files for the implementation of each problem. If any problem requires additional clarification or modification, don't hesitate to ask for help.
 
@@ -134,7 +136,7 @@ To run the Java programs in this repository:
    ```bash
    git clone https://github.com/kiranraoboinapally/java-practice-problems.git
    ```
-
+   
 2. **Navigate to the Program Directory**:
    Go into the folder that contains the Java program you want to run.
 

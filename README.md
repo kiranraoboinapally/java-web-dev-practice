@@ -132,7 +132,7 @@ To run the Java programs in this repository:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/kiranraoboinapally/effective-octo-fortnight.git
+   git clone https://github.com/kiranraoboinapally/java-practice-problems.git
    ```
    
 2. **Navigate to the Program Directory**:

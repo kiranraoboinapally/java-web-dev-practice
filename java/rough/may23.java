@@ -1,4 +1,4 @@
-class may 
+class may23
 {
 public static void main(String[] args)
 	{
@@ -14,7 +14,7 @@ public static void main(String[] args)
 				count++;
 				}
 			}
-		if(count!=1)
+		if(count==1)
 		System.out.print(a[x]+" ");
 		}
     	}

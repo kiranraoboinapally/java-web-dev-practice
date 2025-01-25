@@ -646,44 +646,111 @@ aKankKr
 11. **Array Operation: Sum and Divide**
     -  Create an array `b[]` where each element is the quotient of the sum of all elements in `a[]` excluding `a[i]`, divided by `a[i]` - `arrayOperation.java`
 
+12. **Sorting elements in an array without using predefined sort**
+   - Sorting elements of an array in ascending and descending order without using predefined methods. 
+   - **Test Case**:
+     - Input: `a[] = {10, 5, 30, 15, 20}`
+     - Output (Ascending): `{5, 10, 15, 20, 30}`
+     - Output (Descending): `{30, 20, 15, 10, 5}`
+   - **File**: `sortAsc.java`, `sortDesc.java`
 
-Arrays
+13. **Largest Element in a sorted array and second largest element in an array which is having repeated values of the first largest**
+   - After sorting, find the largest and second largest elements, considering repeated values.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50, 50}`
+     - Output: Largest = `50`, Second Largest = `40`
+   - **File**: `largeAscElement.java`, `largeDescElement.java`
 
+14. **First store negative elements and next positive elements (order doesn't matter)**
+   - Rearrange the array such that all negative elements appear first, followed by positive elements (order doesn't matter).
+   - **Test Case**:
+     - Input: `a[] = {8, -2, 3, -1, 0, 9}`
+     - Output: `{-2, -1, 8, 3, 0, 9}` (Order may vary)
+   - **File**: `negPos.java` (Pending)
 
-1.Sorting elements in an array without using predefined
-sortAsc.java
-sortDesc.java
+15. **Extract elements at even and odd positions from an array**
+   - Given an array, store elements at even indices in one array and elements at odd indices in another.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50, 60, 70, 80, 90}`
+     - Output (Even positions): `{10, 30, 50, 70, 90}`
+     - Output (Odd positions): `{20, 40, 60, 80}`
+   - **File**: `arr1.java` (Pending)
 
-2.Largest Element in a sorted array and second largest elment in an array which is having repeated values of first largest(eg.,after sorting a[]={10,20,30,40,50,50} then op 50 largest second largest should print 40)
-largeAscElement.java
-largeDescElement.java
+16. **Prime numbers in an array**
+   - Identify and print all prime numbers in a given array.
+   - **Test Case**:
+     - Input: `a[] = {10, 13, 20, 23, 30, 7}`
+     - Output: `13, 23, 7`
+   - **File**: `primeArray.java`
 
-3.first store negative elemnts and next positive elements order doesnt matter(eg.,a[]={8,-2,3,-1,0,9} then output {-2,-1,8,3,0,9} )
-negPos.java//pending
+17. **Check if two arrays contain the same elements (order doesn't matter)**
+   - Check if two arrays contain the same elements, regardless of order.
+   - **Test Case**:
+     - Input: `a[] = {10, 30, 50, 70}`, `b[] = {10, 50, 70, 30}`
+     - Output: `Equal`
+   - **With predefined method**: `equalArray1.java` (Pending)
+   - **Without predefined method (user-defined)**: `equalArray2.java` (Pending)
 
-4.if a[]={10,20,30,40,50,60,70,80,90} is of odd or even length then b[] even postitons of a[] should have to print {10,30,50,70,90}
-and c[] odd positions should print {20,40,60,80}
-arr1.java//pending
+18. **Binary Search (Ascending and Descending)**
+   - Implement binary search for an array sorted in both ascending and descending order.
+   - **Test Case** (Ascending):
+     - Input: `a[] = {10, 20, 30, 40, 50}`, Search for `30`
+     - Output: Index = `2`
+   - **Test Case** (Descending):
+     - Input: `a[] = {50, 40, 30, 20, 10}`, Search for `30`
+     - Output: Index = `2`
+   - **File**: `binarySearchAsc.java` (Pending), `binarySearchDesc.java` (Pending)
 
-5.prime numbers in an array print those
-primeArray.java
+19. **Left Rotate an array**
+   - Rotate an array to the left by one position.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50}`
+     - Output: `{20, 30, 40, 50, 10}`
+   - **File**: `leftRotate.java`
 
-6.Take two arrays as input check whether the elements are same or not? order doesnt matter
-if both arrays same length then check it if not then print not equal (eg.,a[]={10,30,50,70} b[]={10,50,70,30} then op equal)
-with predefined
-equalArray1.java //pending
-without predefined(userdefined)
-equalArray2.java//pending
+20. **Right Rotate an array**
+   - Rotate an array to the right by one position.
+   - **Test Case**:
+     - Input: `a[] = {10, 20, 30, 40, 50}`
+     - Output: `{50, 10, 20, 30, 40}`
+   - **File**: `rightRotate.java`
 
-7.
-binarySearchAsc.java//pending
-binarySearchDesc.java//pending
+21. **Missing elements in an array**
+   - Identify and print the missing elements from a given range in an array.
+   - **Test Case**:
+     - Input: `a[] = {1, 2, 2, 5}`
+     - Output: `{3, 4}`
+   - **File**: `missingElement.java` (Pending, method in `uniqueElements`)
 
-8.
-leftRotate.java
+22. **Unique elements to be printed in an array**
+   - Print the unique elements in an array and their frequencies.
+   - **Test Case**:
+     - Input: `a[] = {1, 2, 3, 2, 1, 3, 3, 5}`
+     - Output: `{1, 2, 3, 5}`
+     - Frequencies: `{1 => 2 times, 2 => 2 times, 3 => 3 times, 5 => 1 time}`
+   - **File**: `uniqueElements.java` (Pending)
 
-9.
-rightRotate.java
+23. **Sum of duplicate elements in an array**
+   - Calculate the sum of elements that appear more than once in an array.
+   - **Test Case**:
+     - Input: `a[] = {1, 2, 2, 2, 1, 3}`
+     - Output: `3` (Sum of duplicates: `1 + 2 = 3`)
+   - **File**: `sumDuplicatesRepeated.java` (Pending)
+
+24. **Zeroes should be moved to the last in an array**
+   - Move all zero elements in an array to the end, while maintaining the order of non-zero elements.
+   - **Test Case**:
+     - Input: `a[] = {1, 2, 0, 2, 0, 2, 1, 3}`
+     - Output: `{1, 2, 2, 2, 1, 3, 0, 0}`
+   - **File**: `uniqueElements.java` (Pending, Zeroes method)
+
+25. **Maximum duplicate element repeated in an array**
+   - Find and print the element that is repeated the most in an array.
+   - **Test Case**:
+     - Input: `a[] = {1, 2, 1, 1, 1, 2, 2}`
+     - Output: `1` (Most frequent element)
+   - **File**: `maxDuplicate.java` (Pending for GitHub .md file)
+
 
 ---
 

@@ -5,6 +5,10 @@ public static void main(String args[])
 	Sort s=new Sort();
 	int[] a=new int[]{50,60,-20,30,10,40};
 	int[] r=s.sortingUsingSingleLoop(a);
+	for(int x=0;x<a.length-1;x++)
+	{
+	System.out.println(a[x]);
+	}
 	for(int temp:r)
 		{
 		System.out.print(temp+" ");
@@ -19,7 +23,7 @@ public static void main(String args[])
 			int t=b[x];
 			b[x]=b[x+1];
 			b[x+1]=t;
-			x=2;
+			x=-1;
 			}
 		}
 	return b;

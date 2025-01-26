@@ -39,6 +39,8 @@ java/
 │   └── (Java files for generating patterns)
 ├── recursion/
 │   └── (Java files for recursive problems)
+├+(-_-)+
+
 ```
 
 Each folder contains Java files corresponding to specific problems or categories.

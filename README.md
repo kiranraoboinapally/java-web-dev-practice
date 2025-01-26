@@ -143,8 +143,8 @@ To run the Java programs in this repository:
 3. **Compile and Run the Program**:
    To compile and run any program, use the following commands in the terminal:
    ```bash
-   javac ProgramName.java    # Compile the program
-   java ProgramName          # Run the program
+   javac programName.java    # Compile the program
+   java programName          # Run the program
    ```
    For example:
    ```bash

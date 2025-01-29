@@ -805,9 +805,54 @@ ONLY PRACTICE QUESTIONS FROM BASCIS TO INTERMEDIATE LEVEL
 
 
 
+inserting an element in an array
+int a[]={10,30,50,60,40}
+a.put index 4th element as 20.
+b.deleting an element in array at 4th index.
+c.updating an element in an array at 4th index.
+
+
+left rotate an array 3 times
+int a[]={1,2,3,4,5,6,7,8,9};
+
+
+right rotate an array 3 times
+int a[]={1,2,3,4,5,6,7,8,9};
 
 
 
+int a[]={1,2,3,4,5,6};
+output {2,1,4,3,6,5};
+swapAdjacent.java
+
+selectionSort.java
+
+
+2D arrays:
+
+complie time init
+rowCols.java
+
+rowp1.java
+1   3
+  5
+7   9
+rowp2.java
+2  4  6
+8  
+
+
+rowp3.java
+output as 
+Max elemnt in 1 row is: 3
+Max elemnt in 2 row is: 6
+Max elemnt in 3 row is: 10
+
+transpose of a matrix of 2d array
+transpose.java (pending)
+
+
+stringDataTypesConvert.java
 
 
 

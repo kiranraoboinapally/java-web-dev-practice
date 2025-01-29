@@ -1,0 +1,7 @@
+class transopse
+{
+public static void main(String args[])
+	{
+	
+	}
+}

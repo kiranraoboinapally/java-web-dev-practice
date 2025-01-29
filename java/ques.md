@@ -820,6 +820,16 @@ right rotate an array 3 times
 int a[]={1,2,3,4,5,6,7,8,9};
 
 
+without using length property try to find length of an array
+hint:usinng for-each loop
+input a[]={2,1,3,4} then output as 4
+lengthArr.java
+
+divide array into two equal halves 
+first ascending next descending
+int a[]={9,2,4,8,3,1,7,6,5} then output as {1,2,3,4,9,8,7,6,5} 
+
+
 
 int a[]={1,2,3,4,5,6};
 output {2,1,4,3,6,5};

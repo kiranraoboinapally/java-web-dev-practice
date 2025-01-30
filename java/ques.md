@@ -600,7 +600,7 @@ $ $ $ $ $
 ---
 
 
-ONLY PRACTICE QUESTIONS FROM BASCIS TO INTERMEDIATE LEVEL
+ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
 
 ---
 
@@ -804,6 +804,8 @@ ONLY PRACTICE QUESTIONS FROM BASCIS TO INTERMEDIATE LEVEL
    - **File**: `maxDuplicate.java` (Pending for GitHub .md file)
 
 
+bubbleSort.java //pending.
+
 
 inserting an element in an array
 int a[]={10,30,50,60,40}
@@ -811,14 +813,16 @@ a.put index 4th element as 20.
 b.deleting an element in array at 4th index.
 
 
-
 left rotate an array 3 times
 int a[]={1,2,3,4,5,6,7,8,9};
+case 1 using 2 loops.
+case 2 using 1 loop.
 
 
 right rotate an array 3 times
 int a[]={1,2,3,4,5,6,7,8,9};
-
+case 1 using 2 loops.
+case 2 using 1 loop.
 
 without using length property try to find length of an array
 hint:using for-each loop
@@ -828,8 +832,28 @@ lengthArr.java
 
 
 divide array into two equal halves 
-first ascending next descending
-int a[]={9,2,4,8,3,1,7,6,5} then output as {1,2,3,4,9,8,7,6,5} 
+first half ascending next remaining print descedning.
+int a[]={9,2,4,8,3,1,7,6,5} then output as {2,3,4,8,9,7,6,5,1} 
+p8.java
+
+
+
+a[]={8,7,1,5,6,2,3,9,4,10}
+divide array into two equal halves 
+sort odd indexed arrays in ascending order and even indexed arrays in descedning order
+7 5 2 9 10 ascend it 2 5 7 9 10 and 8 1 6 3 4 descend it 8 6 4 3 1
+ouput as 2 5 7 9 10 8 6 4 3 1
+p9.java //not perfect its need to be corrected.
+
+
+
+a[]={8,7,1,5,6,2,3,9,4,10}
+even indexed elements in ascending order and odd indexed elements in descending order.
+8 1 6 3 4 even ascending=>1 3 4 6 8 
+7 5 2 9 10 odd index descending=> 10 9 7 5 2
+1 3 4 6 8 10 9 7 5 2
+p11.java //pending need to modify
+
 
 
 

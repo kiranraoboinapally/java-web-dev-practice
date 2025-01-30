@@ -893,6 +893,7 @@ case 2.case insensitive
 
 check 125 in it..its a palindrome or not?
 (eg., String name="Ma1laya2lam5")
+p6.java in arrays folder
 
 
 char runtime initialisation

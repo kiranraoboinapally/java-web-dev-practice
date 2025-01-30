@@ -804,7 +804,13 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
    - **File**: `maxDuplicate.java` (Pending for GitHub .md file)
 
 
-bubbleSort.java //pending.
+
+sorting in ascedning order using Single Loop
+Sort.java
+
+
+
+bubbleSort.java //done in arrays folder.
 
 
 inserting an element in an array
@@ -813,16 +819,19 @@ a.put index 4th element as 20.
 b.deleting an element in array at 4th index.
 
 
-left rotate an array 3 times
+left rotate an array 2 times
 int a[]={1,2,3,4,5,6,7,8,9};
 case 1 using 2 loops.
 case 2 using 1 loop.
+pk12.java //need to modify this code.
+
 
 
 right rotate an array 3 times
 int a[]={1,2,3,4,5,6,7,8,9};
 case 1 using 2 loops.
 case 2 using 1 loop.
+
 
 without using length property try to find length of an array
 hint:using for-each loop
@@ -886,7 +895,7 @@ Max elemnt in 2 row is: 6
 Max elemnt in 3 row is: 10
 
 transpose of a matrix of 2d array
-transpose.java (pending)
+transpose.java //need to modify.
 
 
 stringDataTypesConvert.java
@@ -910,8 +919,9 @@ Write a code to print the String in reverse order after reversing store it into 
 
 check a given string is a palindrome or not?
 (eg., String name="malayalam" then its a palindrome)
-case 1.case sensitive
+case 1.case sensitive 
 case 2.case insensitive
+p4.java //check once its correct but make it better texts.
 
 
 
@@ -921,6 +931,7 @@ p6.java in arrays folder
 
 
 char runtime initialisation
+p10.java //need to modify.
 
 
 string runtime initialisation

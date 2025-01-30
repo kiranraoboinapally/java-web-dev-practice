@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bank Document</title>
+    <style>
+        body{
+            background-color: greenyellow;
+            display: flex;
+            background-position: 80%;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        button{
+            /*background-color: blue;*/
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height:50px;
+            flex-wrap: wrap;
+            position:-webkit-sticky;
+        }
+        h1,button{
+            background-color: cornflowerblue;
+            margin:2px 2px 2px 2px;
+            padding: 5px;
+            border-radius:10px;
+        }
+    </style>
+    <script>
+        'use strict'
+        let totalAmount =1000;
+        function withdraw()
+        {
+            var withdrawl_Amount=prompt('enter amount to withdraw')
+            if(withdrawl_Amount<=0)
+                {
+                    alert('Please Enter valid Amount');
+                }
+            else if(withdrawl_Amount>=totalAmount)
+                {
+                    alert('Please Enter valid Amount');
+                }
+            else
+                {
+                    totalAmount=totalAmount-parseInt(withdrawl_Amount)
+                    alert('Total Amount '+ totalAmount);
+                }
+        }
+        function deposit()
+        {
+            var deposit_Amount=prompt('Enter Amount To Deposit');
+            if(deposit_Amount<=0)
+                {
+                    alert('please enter valid amount')
+                }
+            else
+                {
+                    totalAmount=totalAmount+parseInt(deposit_Amount);
+                    alert('Deposit succesful available balance is '+ totalAmount)
+                }
+        }
+        function balancEnquiry()
+        {
+            var pin=prompt('Enter pin to check balance');
+            if(pin==1007)
+                {
+                    pin=parseInt(pin)
+                    alert('available balance is '+ totalAmount)
+                 }
+            else
+                 {
+                    alert('please enter correct pin')
+                 }
+        }
+       
+    </script>
+</head>
+<body align="center" background="../7.png">
+    <h1 style="background-color: rgb(0, 255, 38);">BANK APPLICATION</h1><br><br>
+    <button onclick="deposit()">Deposit</button><br><br>
+    <button onclick="withdraw()">WithDraw</button><br><br>
+    <button onclick="balancEnquiry()">BalancEnquiry</button><br><br>
+</body>

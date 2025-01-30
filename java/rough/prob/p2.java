@@ -1,3 +1,5 @@
+//prints 5 4 3 2 1 6 7 8 9 10
+
 class p2
 {
 public static void main(String args[])

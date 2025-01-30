@@ -7,22 +7,25 @@ class p9
 {
 public static void main(String args[])
 	{
-	int a[]=new int[]{8,7,1,5,6,2,3,9,4,10};//5 7 2 9 10
-	int size=a.length;
+	int a[]=new int[]{8,7,1,5,6,2,3,9,4,10};//8 5 1 2 6 7 3 9 4 10
 	int a_size=0;
-	if(size%2!=0)
-	a_size=(size/2)+1;
+	if(a.length%2!=0)
+	a_size=(a.length/2)+1;
 	else
-	a_size=size/2;//5
+	a_size=a.length/2;
 	for(int x=0;x<=a_size;x++)
-		{//0<=5
+		{
 		if(x%2!=0)
 			{
 			if(a[x]>a[x+2])
 				{
-				
+				int temp=a[x];
+				a[x]=a[x+2];
+				a[x+2]=temp;
 				}
 			}
 		}
+	for(int t:a)
+	System.out.print(t+" ");
 	}
 }

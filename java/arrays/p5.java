@@ -1,4 +1,4 @@
-//in Ma1laya2lam5
+ //in Ma1laya2lam5
 //check 125 is palindorme or not?
 
 class p5

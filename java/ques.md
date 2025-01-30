@@ -809,7 +809,7 @@ inserting an element in an array
 int a[]={10,30,50,60,40}
 a.put index 4th element as 20.
 b.deleting an element in array at 4th index.
-c.updating an element in an array at 4th index.
+
 
 
 left rotate an array 3 times
@@ -821,9 +821,11 @@ int a[]={1,2,3,4,5,6,7,8,9};
 
 
 without using length property try to find length of an array
-hint:usinng for-each loop
+hint:using for-each loop
 input a[]={2,1,3,4} then output as 4
 lengthArr.java
+
+
 
 divide array into two equal halves 
 first ascending next descending
@@ -864,6 +866,39 @@ transpose.java (pending)
 
 
 stringDataTypesConvert.java
+
+
+
+------Strings-----
+count no.of vowels in a string (eg., hello all good morning then output as 7 because it has eoaoooi) //pending
+
+count no.of capitals,small,spaces,digits,symbols and String length.
+(eg., input as String name ="Hello All goOd_moRniNg&1,2,3")//pending
+
+
+concatenation
+p6.java in arrays folder.
+
+
+Write a code to print the String in reverse order after reversing store it into it and print it
+
+
+
+check a given string is a palindrome or not?
+(eg., String name="malayalam" then its a palindrome)
+case 1.case sensitive
+case 2.case insensitive
+
+
+
+check 125 in it..its a palindrome or not?
+(eg., String name="Ma1laya2lam5")
+
+
+char runtime initialisation
+
+
+string runtime initialisation
 
 
 

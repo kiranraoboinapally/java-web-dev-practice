@@ -938,6 +938,32 @@ string runtime initialisation
 
 
 
+String  converting into char array
+char c[]=s.toCharArray();
+
+
+In a string Sort the characters using char array by String converting into char array
+
+
+Print unique characters in a string
+String s="Hello all";
+
+
+print anagram if given two strings have same chars and of equal length
+Using predefined and without using predefined
+(eg., s1="silent",s2="listen" its anagram if s1="silen",s2="listen" not anagram)
+
+
+
+Unique elements in a string s1="hello all good morning"
+using indexOf and lastIndexOf
+
+
+
+Duplicates in a string
+s1="hello all good morning"
+using indexOf and lastIndexOf
+
 
 
 ---

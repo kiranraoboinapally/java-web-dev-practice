@@ -4,38 +4,34 @@
         <style>
         </style>
         <script>
-        var amount=1000;
-        var amountDeposited;
-        function deposit()
-        {
-            if(amount>=0)
+            var a=[45,'Hello',
+                b=[1,2,3,4,5],
+                add()=>
+                {
+                    console.log('I am function');
+                }
+            ];
+            for(var temp of a)
             {
-            amountDeposited=prompt('Enter an amount: ');
-            document.write(" Total amount after Deposit is: "+(parseInt(amountDeposited)+amount));
+                if(typeof(temp)=="function")
+                {
+                    temp();
+                }
+                else if(typeof(temp)=="object")
+                {
+                    for(var x=0;x<temp.length;x++)
+                    {
+                        console.log(x+" "+temp[x]);
+                    }
             }
-            else if(amount<0)
+            else
             {
-            amountDeposited=prompt("Enter a valid amount : ");
+                console.log(temp);
             }
         }
-
-        function balanceEnquiry()
-        {
-
-        }
-
-        function balanceWithdrawal()
-        {
-
-        }
-
         </script>
     </head>
     <body>
-        <h1>Hello</h1>
-        <button onclick="deposit()">Deposit</button>
-        <button onclick="balanceEnquiry()">Balance Enquiry</button>
-        <button onclick="balanceWithdrawal()">Balance Withdrawal</button>
     </body>
 </html>
 

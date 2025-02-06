@@ -112,8 +112,10 @@ Conditions that are applied over coulmns
 2.CHECK:
 specific condition to be applied on a column
 3.Default
+gender varchar(45) not null default 'female'
 4.Unique:
 Different value from all the remaining in that specific column
+
 5.Primary key:
 it must have not null and unique
 not null+unique
@@ -125,6 +127,7 @@ in a table can have any number of foreign keys
 a foreign key is a primary key in another table
 a foreign key is used to join two or more tables
 In child table primary key can have only one column
+
 
 **NULL:
 Which specifies that the value is not known
@@ -139,6 +142,155 @@ create table student
     gender char not null default 'm',  //if we have default we use multiple insert if not mismatch in columns and rowvalues
     age int not null check(age>=18)
 );
+
+
+foreign key  and primary key usage
+example:
+flipkart 
+
+orders //(parent table)
+oid oname oprice oquantity olocation
+101 laptop 1200  1        hyd
+102 mobile 1000  2        vjd
+103 mouse  700   4        hyd
+
+flipkart //(child table)
+name email          mobile order_id cid
+abc  abc@gmail.com  9848   103      1
+pqr  pqr@gmail.com  9999   101      3
+xyz  xyz@gmail.com  8888   101      4
+
+customer
+cid customerfeedback
+1   good
+2   worst
+3   ok
+
+
+How do we know both tables are connected ?
+if we use delete row in parent table,If it doesnt delete records then it is said to be connected.
+
+CREATE TABLE orders(
+    oid INT PRIMARY KEY,
+    oname VARCHAR(45) NOT NULL,
+    oprice INT NOT NULL,
+    oquantity DOUBLE NOT NULL,
+    olocation VARCHAR(45) NOT NULL
+);
+
+INSERT INTO orders VALUES
+(103, 'Headphones', 150, 3, 'Chennai'),
+(106, 'Camera', 700, 1, 'Mumbai'),
+(102, 'Mobile', 1000, 2, 'Vijayawada'),
+(108, 'Smartphone', 700, 1, 'Hyderabad'),
+(104, 'Smartwatch', 250, 1, 'Bangalore'),
+(101, 'Laptop', 1200, 1, 'Hyderabad'),
+(107, 'Wireless Mouse', 25, 5, 'Pune'),
+(109, 'Smart TV', 800, 2, 'Chennai'),
+(105, 'Tablet', 400, 2, 'Delhi');
+
+
+CREATE TABLE flipkart(
+    name VARCHAR(45) NOT NULL,
+    email VARCHAR(45) PRIMARY KEY,
+    mobile BIGINT NOT NULL UNIQUE,
+    order_id INT NOT NULL,
+    cid INT NOT NULL,
+    FOREIGN KEY(order_id) REFERENCES orders(oid),
+    FOREIGN KEY(cid) REFERENCES customer(cid)
+);
+
+INSERT INTO flipkart(name, email, mobile, order_id, cid) VALUES
+('Maya Patel', 'maya.patel@hotmail.com', 9847564839, 104, 4),
+('Anil Yadav', 'anil.yadav@gmail.com', 9911223344, 107, 7),
+('Priya Mehta', 'priya.mehta@rediffmail.com', 9934567890, 106, 6),
+('Alex Green', 'alex.green@yahoo.com', 9865478234, 103, 3),
+('John Doe', 'john.doe@gmail.com', 9848123456, 101, 1),
+('Raj Kumar', 'raj.kumar@outlook.com', 9890123456, 105, 5),
+('Jane Smith', 'jane.smith@gmail.com', 9848123457, 102, 2),
+('John Doe', 'john.doe@gmail.com', 9848123456, 108, 1),
+('John Doe', 'john.doe@gmail.com', 9848123456, 109, 1);
+
+CREATE TABLE customer(
+    cid INT NOT NULL UNIQUE,
+    cfeedback VARCHAR(45) NOT NULL
+);
+
+INSERT INTO customer VALUES
+(5, 'Not good'),
+(2, 'Good quality'),
+(1, 'Good quality'),
+(6, 'Worth the price'),
+(4, 'Very happy'),
+(3, 'Average'),
+(7, 'Good quality'),
+(1, 'Great product'),
+(2, 'Great product');
+
+
+### Questions about the **Orders** Table:
+1. **What are the details of all orders placed in 'Hyderabad'?**
+   - Hint: Filter by `olocation = 'Hyderabad'`.
+
+2. **Which order has the highest price and what product was it for?**
+   - Hint: Use the `MAX` function on the `oprice` column.
+
+3. **How many items were ordered in total?**
+   - Hint: Sum the `oquantity` column.
+
+4. **Which product was ordered the most (i.e., highest quantity)?**
+   - Hint: Use `GROUP BY` and `ORDER BY` to find the most ordered product.
+
+5. **Which cities have orders that include the product 'Mobile'?**
+   - Hint: Filter by `oname = 'Mobile'`.
+
+### Questions about the **Flipkart** Table:
+1. **List all customers who have placed an order in 'Hyderabad'.**
+   - Hint: Join the `flipkart` and `orders` tables based on `order_id` and filter by `olocation`.
+
+2. **Which customer ordered the product 'Camera'?**
+   - Hint: Filter by `oname = 'Camera'` and join with `flipkart`.
+
+3. **How many different customers placed an order for a 'Tablet'?**
+   - Hint: Filter by `oname = 'Tablet'` and count distinct `email`.
+
+4. **What are the details of all orders placed by 'John Doe'?**
+   - Hint: Filter by `email = 'john.doe@gmail.com'` in the `flipkart` table.
+
+5. **How many customers have placed more than one order?**
+   - Hint: Use `GROUP BY` and `HAVING COUNT(order_id) > 1`.
+
+### Questions about the **Customer** Table:
+1. **What feedback did customer `cid = 2` leave?**
+   - Hint: Filter by `cid = 2` in the `customer` table.
+
+2. **How many customers left the feedback 'Good quality'?**
+   - Hint: Filter by `cfeedback = 'Good quality'` and count the rows.
+
+3. **List all feedback from customers who have placed an order in 'Chennai'.**
+   - Hint: Join the `flipkart` and `orders` tables and filter by `olocation = 'Chennai'`.
+
+4. **Which customers have given the feedback 'Great product'?**
+   - Hint: Filter by `cfeedback = 'Great product'` in the `customer` table.
+
+5. **How many unique feedback entries exist in the database?**
+   - Hint: Use `DISTINCT` to count the unique feedback values in the `customer` table.
+
+### More Advanced Questions (Join-Based):
+1. **Which products were purchased by customers who gave feedback 'Worth the price'?**
+   - Hint: Join `flipkart`, `orders`, and `customer` tables, and filter by `cfeedback = 'Worth the price'`.
+
+2. **Find all customers who ordered both 'Smartphone' and 'Tablet'.**
+   - Hint: Use a `GROUP BY` query with a `HAVING` clause to identify customers who have ordered both.
+
+3. **What is the total amount spent by customer `cid = 1` on all orders?**
+   - Hint: Join `flipkart` with `orders` on `order_id` and sum the `oprice` multiplied by `oquantity` for `cid = 1`.
+
+4. **Which cities have customers who left feedback 'Good quality' and placed orders?**
+   - Hint: Use a `JOIN` between `flipkart`, `orders`, and `customer`, and filter by `cfeedback = 'Good quality'`.
+
+5. **How many orders were placed by customers who live in 'Chennai' and gave 'Average' feedback?**
+   - Hint: Use a `JOIN` and filter by `olocation = 'Chennai'` and `cfeedback = 'Average'`.
 
 
 

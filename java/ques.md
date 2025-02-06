@@ -966,6 +966,9 @@ using indexOf and lastIndexOf
 
 
 
+
+in strings folder need to be write ques.md for all of it .java files
+
 ---
 ### **Test Questions**
 

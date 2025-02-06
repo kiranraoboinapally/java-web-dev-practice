@@ -294,3 +294,5 @@ INSERT INTO customer VALUES
 
 
 
+Operators:
+

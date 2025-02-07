@@ -8,6 +8,19 @@ public static void main(String args[])
 	Apple ae=new Apple();
 	String s2=ae.sub_String(s);
 	String a[]=s2.split(" ");
+	for(int x=0;x<a.length;x++)
+		{
+		String word=a[x];
+		int no_of_duplicates=ae.duplicates(word);
+		if(no_of_duplicates==0)
+			{
+			int vowels_count=ae.vowels(word);
+			if(vowels_count>=1)
+				{
+				System.out.println(word);
+				}
+			}
+		}
 	}
 	int vowels(String s)
 	{
@@ -25,9 +38,9 @@ public static void main(String args[])
 	String res="";
 	for(int x=0;x<s.length();x++)
 		{
-		for(int y=x+1;y<s.length()-1;y++)
+		for(int y=x+1;y<=s.length();y++)
 			{
-			String s2=s.substring(x+y);
+			String s2=s.substring(x,y);
 			res=res+s2+" ";
 			}
 		}

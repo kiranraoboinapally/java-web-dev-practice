@@ -718,7 +718,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
    - **Test Case**:
      - Input: `a[] = {8, -2, 3, -1, 0, 9}`
      - Output: `{-2, -1, 8, 3, 0, 9}` (Order may vary)
-   - **File**: `negPos.java` (Pending)
+   - **File**: `negPos.java` 
 
 15. **Extract elements at even and odd positions from an array**
    - Given an array, store elements at even indices in one array and elements at odd indices in another.

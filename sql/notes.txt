@@ -367,7 +367,7 @@ Update modifies a new record.
 Delete used to delete existing record.
 
 
-
+------------------------
 
 delete-from:
 
@@ -377,6 +377,7 @@ to delete multiple records we use or ( don't use comma it used only for columns.
 
 Update to the set can be done by using only primary key.
 
+-----------------------
 
 update-set:
 
@@ -401,3 +402,4 @@ update registration set password='pqr';
 i.e.,
 if we don't filter using where then the whole table will be update.
 
+------------------6---------------

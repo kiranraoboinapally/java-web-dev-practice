@@ -403,3 +403,35 @@ i.e.,
 if we don't filter using where then the whole table will be update.
 
 ------------------6---------------
+
+
+DDL:
+
+These commands are applied only to columns and tables. 
+We have to use a word called table in ddls.
+
+In table:
+
+1. create
+2. drop
+3. truncate
+4. rename
+
+For columns:
+used on columns 
+
+alter-add
+alter-modify
+alter-drop
+alter-rename
+
+
+
+rename table old to new;
+
+---------------------------------
+
+differences in 
+
+
+delete truncate drop

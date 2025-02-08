@@ -726,7 +726,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
      - Input: `a[] = {10, 20, 30, 40, 50, 60, 70, 80, 90}`
      - Output (Even positions): `{10, 30, 50, 70, 90}`
      - Output (Odd positions): `{20, 40, 60, 80}`
-   - **File**: `arr1.java` (Pending)
+   - **File**: `arr1.java` 
 
 16. **Prime numbers in an array**
    - Identify and print all prime numbers in a given array.

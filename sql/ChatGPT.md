@@ -244,6 +244,17 @@ These types are used to store date and time values.
   );
   ```
 
+
+### Summary of Use Cases:
+
+| Data Type   | Usage                                                   | Example Use Case                                      |
+|-------------|---------------------------------------------------------|-------------------------------------------------------|
+| **DATE**    | Stores only the date (year, month, day)                 | Birthdate, Event Date, Membership Start Date          |
+| **DATETIME**| Stores date and time (year, month, day, hours, minutes, seconds) | Order Timestamps, User Logins, Scheduled Events       |
+| **TIMESTAMP**| Stores date and time with automatic updates on insert/update | Record Creation/Modification Timestamps, Audit Logs |
+| **TIME**    | Stores only the time (hours, minutes, seconds)          | Working Hours, Task Durations, Event Duration         |
+
+
 ---
 
 ### **Additional Details:**

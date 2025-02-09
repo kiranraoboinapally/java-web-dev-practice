@@ -255,7 +255,7 @@ These types are used to store date and time values.
 
 ---
 
-### ** Virtual Columns (Virtually Generated Columns)**
+### **Virtual Columns (Virtually Generated Columns)**
 
 A **virtual column** is a column in a database table that doesn't physically store data but is **calculated dynamically** when queried. These columns are especially useful for derived values that are based on expressions involving other columns in the table.
 

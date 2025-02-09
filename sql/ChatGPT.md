@@ -255,6 +255,14 @@ These types are used to store date and time values.
 | **TIME**    | Stores only the time (hours, minutes, seconds)          | Working Hours, Task Durations, Event Duration         |
 
 
+
+### Key Points:
+- **DATE** is perfect for when you only need the **date**.
+- **DATETIME** is used for **precise timestamps**.
+- **TIMESTAMP** is useful for **automatic tracking** of changes to records.
+- **TIME** is used for **time-related data** without dates, such as durations or specific times of day.
+
+
 ---
 
 ### **Additional Details:**
@@ -449,101 +457,3 @@ In this example:
 line 236 completed
 
 
-
-
-
-### 1. **DATE**:
-   **Usage**: The `DATE` type is used when you only need to store the **date** (year, month, day) without any time information. It is ideal for scenarios where the exact time is irrelevant.
-
-   **Real-World Examples**:
-   - **Birthdate**: You want to store the birthdates of people.
-   - **Event Date**: For events like conferences, parties, meetings, etc., where the date is important but the exact time is not.
-   
-   **SQL Example**:
-   ```sql
-   CREATE TABLE employees (
-     employee_id INT PRIMARY KEY,
-     name VARCHAR(100),
-     birthdate DATE
-   );
-   ```
-   - Here, the `birthdate` column stores only the date of birth.
-
-### 2. **DATETIME**:
-   **Usage**: The `DATETIME` type is used when you need to store both the **date and the exact time**. It’s useful when you want to know when something happened down to the second, like a transaction timestamp or user activity time.
-
-   **Real-World Examples**:
-   - **Order Timestamps**: Recording the exact moment when an order was placed.
-   - **User Logins**: Storing the exact date and time a user logged in.
-   
-   **SQL Example**:
-   ```sql
-   CREATE TABLE orders (
-     order_id INT PRIMARY KEY,
-     order_date DATETIME,
-     total_amount DECIMAL(10, 2)
-   );
-   ```
-   - In this case, the `order_date` column will store both the date and time the order was placed.
-
-### 3. **TIMESTAMP**:
-   **Usage**: The `TIMESTAMP` data type is used for **automatic date and time recording**. It updates itself automatically when a record is inserted or updated. It's commonly used for tracking when a record was created or modified, making it useful for **audit logs**.
-
-   **Real-World Examples**:
-   - **Audit Trails**: Tracking when a record was created or modified.
-   - **Record Creation Time**: Automatically recording the time when a user or admin adds or updates a record.
-   
-   **SQL Example**:
-   ```sql
-   CREATE TABLE blog_posts (
-     post_id INT PRIMARY KEY,
-     title VARCHAR(255),
-     content TEXT,
-     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
-   ```
-   - Here, the `created_at` column automatically stores the timestamp when a blog post is created.
-
-   **Another example with automatic update on modification**:
-   ```sql
-   CREATE TABLE employees (
-     employee_id INT PRIMARY KEY,
-     name VARCHAR(100),
-     last_modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-   );
-   ```
-   - In this table, `last_modified` will update automatically whenever the record is updated.
-
-### 4. **TIME**:
-   **Usage**: The `TIME` type is used to store only the **time part** (hours, minutes, seconds), without the date information. It is often used when you need to store durations or time of the day for events or operations.
-
-   **Real-World Examples**:
-   - **Working Hours**: Storing the time when an employee starts and ends their shift.
-   - **Duration of Events**: For measuring the duration of a process, such as how long a video plays or the time spent on a task.
-   
-   **SQL Example**:
-   ```sql
-   CREATE TABLE working_hours (
-     employee_id INT,
-     shift_start TIME,
-     shift_end TIME
-   );
-   ```
-   - Here, `shift_start` and `shift_end` columns will store only the times (hours and minutes) for the employee’s working hours.
-
-### Summary of Use Cases:
-
-| Data Type   | Usage                                                   | Example Use Case                                      |
-|-------------|---------------------------------------------------------|-------------------------------------------------------|
-| **DATE**    | Stores only the date (year, month, day)                 | Birthdate, Event Date, Membership Start Date          |
-| **DATETIME**| Stores date and time (year, month, day, hours, minutes, seconds) | Order Timestamps, User Logins, Scheduled Events       |
-| **TIMESTAMP**| Stores date and time with automatic updates on insert/update | Record Creation/Modification Timestamps, Audit Logs |
-| **TIME**    | Stores only the time (hours, minutes, seconds)          | Working Hours, Task Durations, Event Duration         |
-
-### Key Points:
-- **DATE** is perfect for when you only need the **date**.
-- **DATETIME** is used for **precise timestamps**.
-- **TIMESTAMP** is useful for **automatic tracking** of changes to records.
-- **TIME** is used for **time-related data** without dates, such as durations or specific times of day.
-
-By understanding these types, you can make better choices on which data type to use based on your application's needs for handling time-based data.

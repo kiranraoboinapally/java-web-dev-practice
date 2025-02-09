@@ -417,6 +417,9 @@ In table:
 3. truncate
 4. rename
 
+
+truncate used to delete all the records existing in table.
+
 For columns:
 used on columns 
 
@@ -428,10 +431,115 @@ alter-rename
 
 
 rename table old to new;
+rename table student to new_student;
 
 ---------------------------------
 
-differences in 
+differences in delete truncate drop?
+
+delete
+1.It is a DML
+truncate
+1.It is a DDL
+drop
+1.It is a DDL
+
+delete
+2.Used to delete records in table
+truncate
+2.Used to delete data and keep the table structure as it is.
+drop
+2.Used to drop table as well as table structure.
+
+delete
+3.Use the where clause to delete particular records.
+truncate
+3.Cant use where clause to delete particular data.
+drop
+3.It cant use where clause.
+
+delete
+4.This statement can be rollback before the commit.
+truncate
+4.This statement cant rollback.
+drop
+4.This statement cant rollback.
+
+delete
+5.Delete is slower as compare to truncate. 
+truncate
+5.This is faster as compare to delete. 
+drop
+5.Drop removes table from database.
+
+delete
+6.It records deleted rows in the transactions log.
+truncate
+6.Since it removes the page where our tables data is stored,it stores the page in the transactions log.
+drop
+6.
+
+delete
+7.Trigger is fired.
+truncate
+7.Trigger is not fired
+drop
+7.
 
 
-delete truncate drop
+------------------
+
+DDL commands for columns:
+
+Alter:
+Syntax
+alter table table_name operation column column_name
+
+example:
+alter table student add column gender varchar(45) not null;
+
+alter table student drop column gender;
+//existing column will be deleted permanently.
+
+alter table student modify column mobile bigint not null;
+
+alter table student rename column gender to sgender;
+
+
+alter table student add unique(email);
+alter table student drop index mobile;
+alter table student modify column mobile bigint not null unique;
+alter table student drop primary key;
+alter table student add primary key(roll);
+--------------------
+
+TCL Commands:
+Commit: saves the transaction.
+Rollback:transaction will be rolled back.
+Save point: A savepoint is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction.
+
+>set autocommit=0;---->it doesnt save automatically
+---->temporary delete.
+
+>set autocommit=1;---->permanently delete
+
+>rollback;
+
+Only DML should apply for autocommit i.e., TCL.
+
+----------------------------------------------
+
+Logical Operators:
+--between
+--in
+--like
+--or
+--and
+--not
+--
+
+
+
+
+----------------------------------------------
+

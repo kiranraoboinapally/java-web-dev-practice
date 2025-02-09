@@ -255,3 +255,181 @@ These types are used to store date and time values.
 
 ---
 
+### ** Virtual Columns (Virtually Generated Columns)**
+
+A **virtual column** is a column in a database table that doesn't physically store data but is **calculated dynamically** when queried. These columns are especially useful for derived values that are based on expressions involving other columns in the table.
+
+**Key Points:**
+- They are **not stored** in the table but are computed **on the fly** during a query.
+- Virtual columns are **read-only** and can’t be updated directly.
+- You cannot apply constraints like `NOT NULL`, `DEFAULT`, `UNIQUE`, or `CHECK` on virtual columns.
+
+**Example:**
+Imagine a student table where we want to calculate the total marks from three subjects and the percentage of the total marks.
+
+```sql
+CREATE TABLE student (
+    roll INT,
+    name VARCHAR(45),
+    section CHAR,
+    mobile BIGINT,
+    maxmarks INT,
+    s1 INT,
+    s2 INT,
+    s3 INT,
+    total INT AS (s1 + s2 + s3),   -- Virtual column
+    percentage DOUBLE AS (total / maxmarks * 100)  -- Virtual column
+);
+```
+
+- The `total` column is calculated as `s1 + s2 + s3`.
+- The `percentage` column is calculated as `(total / maxmarks) * 100`.
+
+These columns do not need to be stored in the database, saving space.
+
+---
+
+### **2. Multiple Insert**
+
+In SQL, you can insert multiple rows of data into a table in one `INSERT` statement. This improves performance compared to inserting each row separately.
+
+**Syntax:**
+```sql
+INSERT INTO table_name (col1, col2, col3, ...) 
+VALUES 
+(value1a, value2a, value3a, ...), 
+(value1b, value2b, value3b, ...),
+...
+```
+
+**Example:**
+If you want to insert multiple students into the `student` table:
+
+```sql
+INSERT INTO student (roll, name, section, mobile, maxmarks, s1, s2, s3) 
+VALUES 
+(1, 'Arjun', 'A', 9893938, 90, 25, 22, 28),
+(2, 'Balu', 'B', 982928, 90, 22, 22, 28);
+```
+
+This inserts two records in one go. The **virtual columns** (`total`, `percentage`) will be calculated automatically without needing to specify them in the `INSERT` statement.
+
+---
+
+### **3. Constraints in SQL**
+
+SQL constraints are used to define rules that the data must follow in the database to ensure data integrity and consistency. 
+
+#### **Types of Constraints:**
+
+- **NOT NULL**: Ensures that a column cannot have a `NULL` value.
+  ```sql
+  CREATE TABLE student (
+      roll INT NOT NULL,
+      name VARCHAR(45) NOT NULL
+  );
+  ```
+
+- **CHECK**: Ensures that the values in a column satisfy a specific condition.
+  ```sql
+  CREATE TABLE student (
+      age INT CHECK (age >= 18)
+  );
+  ```
+
+- **DEFAULT**: Assigns a default value to a column if no value is provided.
+  ```sql
+  CREATE TABLE student (
+      gender VARCHAR(45) DEFAULT 'female'
+  );
+  ```
+
+- **UNIQUE**: Ensures that all values in a column are distinct.
+  ```sql
+  CREATE TABLE student (
+      email VARCHAR(45) UNIQUE
+  );
+  ```
+
+- **PRIMARY KEY**: A combination of `NOT NULL` and `UNIQUE`, used to uniquely identify each record in a table.
+  ```sql
+  CREATE TABLE student (
+      roll INT PRIMARY KEY
+  );
+  ```
+
+- **FOREIGN KEY**: Establishes a link between two tables. The foreign key in one table points to the primary key of another table, enforcing referential integrity.
+  ```sql
+  CREATE TABLE orders (
+      oid INT PRIMARY KEY,
+      oname VARCHAR(45)
+  );
+
+  CREATE TABLE flipkart (
+      order_id INT,
+      FOREIGN KEY (order_id) REFERENCES orders(oid)
+  );
+  ```
+
+---
+
+### **4. NULL Values in SQL**
+
+A **NULL** in SQL indicates the absence of a value or an unknown value. It is **not** the same as an empty string or zero. 
+
+- A column with `NULL` means that the value is either not known or not applicable.
+  
+**Example:**
+```sql
+CREATE TABLE student (
+    name VARCHAR(45),
+    age INT
+);
+```
+- In this table, the `age` column can have a `NULL` value if the age is not provided.
+
+---
+
+### **5. Primary and Foreign Keys**
+
+Primary keys and foreign keys are fundamental in relational databases for maintaining data integrity and defining relationships between tables.
+
+- **Primary Key**: A column (or a combination of columns) that uniquely identifies each record in the table. Every table can have only one primary key.
+  
+- **Foreign Key**: A column in one table that uniquely identifies a row in another table. It establishes a relationship between the two tables.
+
+#### **Example:**
+
+Consider a simple e-commerce system with three tables: `orders`, `flipkart`, and `customer`.
+
+1. **Orders Table**: Contains order information. `oid` is the primary key.
+2. **Flipkart Table**: Contains customer details, including an `order_id` that references `orders(oid)` and a `cid` that references `customer(cid)`.
+3. **Customer Table**: Contains customer feedback. `cid` is the primary key.
+
+```sql
+CREATE TABLE orders (
+    oid INT PRIMARY KEY,
+    oname VARCHAR(45),
+    oprice INT
+);
+
+CREATE TABLE customer (
+    cid INT PRIMARY KEY,
+    feedback VARCHAR(45)
+);
+
+CREATE TABLE flipkart (
+    name VARCHAR(45),
+    email VARCHAR(45) PRIMARY KEY,
+    order_id INT,
+    cid INT,
+    FOREIGN KEY (order_id) REFERENCES orders(oid),
+    FOREIGN KEY (cid) REFERENCES customer(cid)
+);
+```
+
+In this example:
+- The `flipkart` table has foreign keys that link to the `orders` table and the `customer` table, ensuring that the customer and the order exist before an entry is made in the `flipkart` table.
+- The `customer` table has feedback linked to the `cid`, which is used as a reference in `flipkart`.
+
+--- 

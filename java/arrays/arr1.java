@@ -15,6 +15,7 @@ public static void main(String[] args)
             System.out.print(a[x]+" ");
             }
         }
+    System.out.println();
     for(int x=0;x<a.length;x++)
         {
         if(x%2!=0)

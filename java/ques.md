@@ -53,7 +53,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
    -  Placeholder for a general program - `w5.java`
 
 15. **Predefined Program Example**
-   -  Example for predefined code - `pre1.java`
+   -  Example for predefined code - `pre1.java`(pre increment,post increment)
 
 16. **Multiplication Table of 3**
    -  Print the table of 3 (3x1=3, 3x10=30) - `t1.java`
@@ -740,7 +740,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
    - **Test Case**:
      - Input: `a[] = {10, 30, 50, 70}`, `b[] = {10, 50, 70, 30}`
      - Output: `Equal`
-   - **With predefined method**: `equalArray1.java` (Pending)
+   - **With predefined method**: `equalArray1.java`
    - **Without predefined method (user-defined)**: `equalArray2.java` (Pending)
 
 18. **Binary Search (Ascending and Descending)**

@@ -68,11 +68,15 @@ Data types:
 ---c.timestamp
 ---d.time
 
+-----------+++---------------
+
 
  Virtual Generation: Calculating the column values virtually
  (as is used for virtually generated column)
 
 Virtually generated doesnt take constraints like not null,unique
+
+---------------------------
 
 Multiple insert :
 It is a query which is used to insert multiple rows and omits default,virtually generated coulmns
@@ -97,13 +101,15 @@ create table student
     percentage double as (total/maxmarks*100)   //virtually generated
 );
 
+-------_------------
+
 
 Multiple Insert:
 
 mysql>insert into student(roll,name,section,mobile,maxmarks,s1,s2,s3) values(1,'Arjun','A',9893938,90,25,22,28),
 -->(2,'Balu','B',982928,90,22,22,28);
 
-
+---------------------
 
 Constraints:
 Conditions that are applied over coulmns
@@ -292,7 +298,140 @@ INSERT INTO customer VALUES
 5. **How many orders were placed by customers who live in 'Chennai' and gave 'Average' feedback?**
    - Hint: Use a `JOIN` and filter by `olocation = 'Chennai'` and `cfeedback = 'Average'`.
 
-
+---------------
 
 Operators:
 
+A operator is a symbol which is used to specify an operation that is being performed
+there are 3 operators.
+
+1.Arithmetic (+,-,/,%,x)
+2.Relational (>,<,>=,<=,==,!=)
+3.Logical (AND,OR,NOT)
+
+Operators must be used only for columns
+using select we can use all operators
+using columns we can apply all operators 
+
+
+mysql>select 17>10;
+select 1+2;
+...
+
+
+-------------
+Where is a clause which is used to filter the data. 
+
+example: 
+select * from zomato where id=102 or price=170;
+select * from registration where not id=101;
+
+AND operator is only used for row
+OR operator will effect multiple rows. 
+
+
+--------------
+
+
+In multiple insert omitting
+1. default
+2. virtually generated
+3. auto_increment
+
+
+---------------------------
+
+
+
+create table registration 
+(
+id int primary key auto_increment,
+name varchar(45) not null,
+email varchar(45) not null unique,
+password varchar(45) not null, 
+mobile bigint not null unique, 
+gender char(1) not null
+);
+
+
+
+--------------------------------
+
+
+
+DML:
+Works with only records.
+
+Insert a new record in the table.
+Update modifies a new record.
+Delete used to delete existing record.
+
+
+------------------------
+
+delete-from:
+
+delete from registration where id=102;
+
+to delete multiple records we use or ( don't use comma it used only for columns.)
+
+Update to the set can be done by using only primary key.
+
+-----------------------
+
+update-set:
+
+Syntax:
+update tablename set colname=value where condition;
+
+case-1: updating single column.
+
+mysql>update registration set password='password' where id=101;
+
+case-2: updating two or multiple columns in a one row
+
+update registration set password='abcd123', mobile='9845' where id=102;
+
+case-3: updating multiple records. 
+
+update registration set password='xyz' where id=102 or 103;
+
+case-4: updating whole table. 
+
+update registration set password='pqr';
+i.e.,
+if we don't filter using where then the whole table will be update.
+
+------------------6---------------
+
+
+DDL:
+
+These commands are applied only to columns and tables. 
+We have to use a word called table in ddls.
+
+In table:
+
+1. create
+2. drop
+3. truncate
+4. rename
+
+For columns:
+used on columns 
+
+alter-add
+alter-modify
+alter-drop
+alter-rename
+
+
+
+rename table old to new;
+
+---------------------------------
+
+differences in 
+
+
+delete truncate drop

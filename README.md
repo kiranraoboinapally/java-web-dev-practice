@@ -74,7 +74,7 @@ The Java files are organized into subfolders based on the type of problems:
 
 The **SQL Concepts** section is housed in the **`sql/`** folder and contains daily updated materials to help you improve your SQL knowledge.
 
-- **`chatgpt.md`**: This file includes SQL concepts, explanations, and examples that are updated regularly to provide you with fresh content to learn and practice SQL queries.
+- **`ChatGPT.md`**: This file includes SQL concepts, explanations, and examples that are updated regularly to provide you with fresh content to learn and practice SQL queries.
 
 ---
 

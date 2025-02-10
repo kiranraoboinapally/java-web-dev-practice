@@ -1,120 +1,4 @@
-# Java Practice Programs
 
-This repository contains a collection of Java practice programs and coding challenges aimed at helping learners strengthen their problem-solving and Java programming skills. The programs cover a range of topics from basic to intermediate levels, including loops, recursion, arrays, sorting algorithms, pattern generation, and much more.
-
-> **Note**: The **`ques.md`** file, located in the `java/` folder, contains a complete list of all the questions and problems in this repository. It serves as a central reference point for all the challenges.
-
-## Table of Contents
-
-- [Folder Structure](#folder-structure)
-- [Basic Programs](#basic-programs)
-- [Loops](#loops)
-- [Patterns](#patterns)
-- [Arrays](#arrays)
-- [Additional Information](#additional-information)
-- [How to Use](#how-to-use)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## Folder Structure
-
-At the root of the `java/` folder, you'll find a **`ques.md`** file, which contains a comprehensive list of all the questions and problems included in this repository. This file serves as the primary reference for navigating the collection of problems.
-
-The rest of the folder structure is organized as follows:
-
-```
-java/
-├── ques.md          # A Markdown file listing all the questions/problems (Top Priority)
-├── arrays/
-│   └── (Java files related to array-based problems)
-├── basics/
-│   └── (Java files for basic programs)
-├── loops/
-│   ├── for/
-│   ├── do-while/
-│   └── while/
-├── patterns/
-│   └── (Java files for generating patterns)
-├── recursion/
-│   └── (Java files for recursive problems)
-├+(-_-)+
-
-```
-
-Each folder contains Java files corresponding to specific problems or categories.
-
-- **ques.md**: The file that contains a complete list of all the questions/problems available in this repository.
-- **arrays/**: Contains solutions to problems involving arrays.
-- **basics/**: Includes fundamental Java programs covering basic concepts.
-- **loops/**: Contains programs categorized by different types of loops:
-  - **for/**: Programs using the `for` loop.
-  - **do-while/**: Programs using the `do-while` loop.
-  - **while/**: Programs using the `while` loop.
-- **patterns/**: Programs for generating various patterns.
-
----
-
-## Basic Programs
-
-These are fundamental programs that will help beginners get acquainted with the core concepts of Java. Some of the basic programs included are:
-
-- **Swapping Numbers** - Examples of swapping two numbers using various methods (third variable, bitwise XOR).
-- **FizzBuzz** - A simple program to print "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both.
-- **Even or Odd** - Program to check if a number is even or odd.
-- **Largest Among Three Numbers** - Program to find the largest of three numbers.
-- **Eligibility Based on Age** - Program to check job eligibility based on age.
-
-Each program is stored in a separate file, and the filenames generally follow the structure of the problem statement (e.g., `swapThird.java`, `fizzBuzz.java`, etc.).
-
----
-
-## Loops
-
-The **Loops** section contains practice programs that help you understand and work with different types of loops in Java (while loop, for loop, etc.). The loop programs are further categorized into:
-
-### for
-
-Programs that utilize the `for` loop to solve problems such as:
-
-- **Prime Numbers in a Range** - Program to print prime numbers from 1 to 100.
-- **Fibonacci Sequence** - Print Fibonacci series using a `for` loop.
-
-### do-while
-
-Programs that utilize the `do-while` loop, such as:
-
-- **Collatz Conjecture** - Implement the Collatz conjecture using a `do-while` loop.
-- **Menu-driven Program** - Implement a menu-driven program using a `do-while` loop.
-
-### while
-
-Programs that utilize the `while` loop to solve problems like:
-
-- **Sum of Digits** - Calculate the sum of digits of a number using a `while` loop.
-- **Factorial of a Number** - Calculate the factorial of a number using a `while` loop.
-
----
-
-## Patterns
-
-This section focuses on generating various patterns using nested loops. Pattern generation is a key exercise to improve your understanding of loops and problem-solving. Some of the patterns include:
-
-- **Rectangle Patterns** - Simple rectangle patterns using characters (e.g., `#` or `$`).
-- **Triangle Patterns** - Programs that print different types of triangles (e.g., star triangles, number pyramids).
-- **Diamond Patterns** - Programs that print diamond shapes with stars or numbers.
-
----
-
-## Arrays
-
-The **Arrays** section includes practice problems related to arrays, covering tasks like searching, sorting, and manipulating array elements. Example programs:
-
-- **Array Rotation** - Rotate an array to the left or right by a given number of positions.
-- **Array Search** - Implement linear search and binary search on arrays.
-- **Merge Two Arrays** - Merge two arrays into one.
-- **Find Maximum and Minimum Elements in an Array** - Program to find the largest and smallest elements in an array.
 
 ---
 
@@ -176,3 +60,131 @@ Steps for contributing:
 This repository is open-source and available under the [MIT License](LICENSE).
 
 ---
+
+# Java Practice Programs
+
+This repository contains a collection of Java practice programs and SQL concepts to help learners strengthen their problem-solving skills and coding abilities. The repository is organized into Java-based challenges and daily updated SQL concepts, allowing you to practice both Java programming and SQL queries.
+
+> **Note**: The **`ques.md`** file in the `java/` folder provides a complete list of problems and challenges in this repository.
+
+## Table of Contents
+
+- [Folder Structure](#folder-structure)
+- [Java Programs](#java-programs)
+- [SQL Concepts](#sql-concepts)
+- [How to Use](#how-to-use)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Folder Structure
+
+The repository is organized as follows:
+
+```
+java-practice-problems/
+├── java/
+│   ├── basics/            # Basic Java programs (e.g., Swapping Numbers, FizzBuzz)
+│   ├── loops/             # Programs for different types of loops (for, while, do-while)
+│   │   ├── for/           # Programs using 'for' loop
+│   │   ├── do-while/      # Programs using 'do-while' loop
+│   │   └── while/         # Programs using 'while' loop
+│   ├── patterns/          # Programs for generating patterns (e.g., stars, pyramids)
+│   ├── arrays/            # Array manipulation and algorithms (e.g., rotation, searching)
+│   ├── recursion/         # Recursive problems and solutions
+│   ├── strings/           # String manipulation and related problems
+│   ├── leetcode/          # Solutions to Leetcode problems
+│   ├── rough/             # Rough/experimental problem-solving code
+│   └── ques.md            # List of all practice problems in this folder
+│
+├── sql/
+│   └── chatgpt.md         # Daily updated SQL concepts, explanations, and examples
+│
+└── LICENSE                # Repository license file
+```
+
+---
+
+## Java Programs
+
+The **Java Programs** section contains coding challenges to help you practice core Java concepts, such as loops, arrays, recursion, strings, and more.
+
+Examples of included programs:
+
+- **Swapping Numbers** - Swap two numbers using various methods.
+- **FizzBuzz** - Print "Fizz" for multiples of 3, "Buzz" for multiples of 5, and "FizzBuzz" for multiples of both.
+- **Prime Numbers in a Range** - Print prime numbers within a given range.
+- **Fibonacci Sequence** - Generate the Fibonacci sequence using a `for` loop.
+
+The Java files are organized into subfolders based on the type of problems:
+
+- **`basics/`**: Fundamental Java programs.
+- **`loops/`**: Programs using different types of loops (`for`, `while`, `do-while`).
+- **`patterns/`**: Programs for generating patterns (e.g., triangles, diamonds).
+- **`arrays/`**: Programs that involve array manipulation and algorithms.
+- **`recursion/`**: Recursive problem solutions.
+- **`strings/`**: String manipulation and related challenges.
+- **`leetcode/`**: Solutions to various problems from Leetcode.
+- **`rough/`**: Rough or experimental problem-solving code.
+
+---
+
+## SQL Concepts
+
+The **SQL Concepts** section is housed in the **`sql/`** folder and contains daily updated materials to help you improve your SQL knowledge.
+
+- **`chatgpt.md`**: This file includes SQL concepts, explanations, and examples that are updated regularly to provide you with fresh content to learn and practice SQL queries.
+
+---
+
+## How to Use
+
+1. **Clone the Repository**:
+
+   Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/kiranraoboinapally/java-practice-problems.git
+   ```
+
+2. **Navigate to the Program Directory**:
+
+   Go to the directory that contains the Java or SQL program you want to run.
+
+3. **Compile and Run Java Programs**:
+
+   To compile and run any Java program:
+
+   ```bash
+   javac programName.java    # Compile the program
+   java programName          # Run the program
+   ```
+
+   Example:
+
+   ```bash
+   javac fizzBuzz.java
+   java fizzBuzz
+   ```
+
+4. **Access SQL Concepts**:
+
+   Open the **`sql/chatgpt.md`** file to explore daily updated SQL concepts.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or want to add new practice problems, please follow these steps:
+
+1. Fork this repository.
+2. Create a new branch: `git checkout -b feature-name`
+3. Make your changes.
+4. Commit your changes: `git commit -m 'Add new feature'`
+5. Push to your branch: `git push origin feature-name`
+6. Open a pull request to the main repository.
+
+---
+
+

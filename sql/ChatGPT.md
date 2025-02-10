@@ -454,8 +454,7 @@ In this example:
 --- 
 
 
-//line 236 completed in sql/notes.txt
-//need to add more....wait for more updates to be  
-//extracted from sql/notes.txt 
-//should make clear and clean code over here.
+/*line 236 completed in sql/notes.txt
+need to add more...wait for additional updates to be extracted from sql/notes.txt 
+should make clear and clean code over here.*/
 

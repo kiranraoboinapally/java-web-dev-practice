@@ -2,65 +2,6 @@
 
 ---
 
-## Additional Information
-
-- **File Names**: Each problem has an associated Java file for the solution. For example, `arrayTransformation.java` corresponds to the solution for the 10th problem.
-  
-- **Test Cases**: For each problem, test cases are provided to help validate the solution and understand the expected behavior. These test cases will allow you to check the correctness of your implementation and ensure that edge cases are handled properly.
-
-- **Implementation Notes**: Some problems may require specific handling, such as boundary conditions or edge cases. These details have been included in the respective test cases, so be sure to review them for a better understanding of how to tackle different situations.
-
-Feel free to refer to the respective Java files for the implementation of each problem. If any problem requires additional clarification or modification, don't hesitate to ask for help.
-
----
-
-## How to Use
-
-To run the Java programs in this repository:
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/kiranraoboinapally/java-practice-problems.git
-   ```
-   
-2. **Navigate to the Program Directory**:
-   Go into the folder that contains the Java program you want to run.
-
-3. **Compile and Run the Program**:
-   To compile and run any program, use the following commands in the terminal:
-   ```bash
-   javac programName.java    # Compile the program
-   java programName          # Run the program
-   ```
-   For example:
-   ```bash
-   javac fizzBuzz.java
-   java fizzBuzz
-   ```
-
----
-
-## Contributing
-
-Contributions are welcome! If you have any suggestions or new practice programs to add, feel free to fork the repository, create a new branch, and submit a pull request.
-
-Steps for contributing:
-
-1. Fork this repository.
-2. Create a new branch: `git checkout -b feature-name`
-3. Make your changes.
-4. Commit your changes: `git commit -m 'Add new feature'`
-5. Push to your branch: `git push origin feature-name`
-6. Open a pull request to the main repository.
-
----
-
-## License
-
-This repository is open-source and available under the [MIT License](LICENSE).
-
----
-
 # Java Practice Programs
 
 This repository contains a collection of Java practice programs and SQL concepts to help learners strengthen their problem-solving skills and coding abilities. The repository is organized into Java-based challenges and daily updated SQL concepts, allowing you to practice both Java programming and SQL queries.
@@ -187,4 +128,8 @@ Contributions are welcome! If you have suggestions or want to add new practice p
 
 ---
 
+## License
 
+This repository is open-source and available under the [MIT License](LICENSE).
+
+---

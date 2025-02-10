@@ -1,8 +1,7 @@
 
-
 ---
 
-# Java Practice Programs
+## Java Practice Programs
 
 This repository contains a collection of Java practice programs and SQL concepts to help learners strengthen their problem-solving skills and coding abilities. The repository is organized into Java-based challenges and daily updated SQL concepts, allowing you to practice both Java programming and SQL queries.
 
@@ -36,11 +35,11 @@ java-practice-problems/
 │   ├── recursion/         # Recursive problems and solutions
 │   ├── strings/           # String manipulation and related problems
 │   ├── leetcode/          # Solutions to Leetcode problems
-│   ├── rough/             # Rough/experimental problem-solving code
+│   ├── rough/             # Rough/experimental problem-solving code (Feel free to add problems here)
 │   └── ques.md            # List of all practice problems in this folder
 │
 ├── sql/
-│   └── chatgpt.md         # Daily updated SQL concepts, explanations, and examples
+│   └── ChatGPT.md         # Daily updated SQL concepts, explanations, and examples
 │
 └── LICENSE                # Repository license file
 ```
@@ -67,7 +66,7 @@ The Java files are organized into subfolders based on the type of problems:
 - **`recursion/`**: Recursive problem solutions.
 - **`strings/`**: String manipulation and related challenges.
 - **`leetcode/`**: Solutions to various problems from Leetcode.
-- **`rough/`**: Rough or experimental problem-solving code.
+- **`rough/`**: Rough or experimental problem-solving code (Feel free to add new problems to experiment and explore here).
 
 ---
 
@@ -111,7 +110,7 @@ The **SQL Concepts** section is housed in the **`sql/`** folder and contains dai
 
 4. **Access SQL Concepts**:
 
-   Open the **`sql/chatgpt.md`** file to explore daily updated SQL concepts.
+   Open the **`sql/ChatGPT.md`** file to explore daily updated SQL concepts.
 
 ---
 
@@ -125,6 +124,8 @@ Contributions are welcome! If you have suggestions or want to add new practice p
 4. Commit your changes: `git commit -m 'Add new feature'`
 5. Push to your branch: `git push origin feature-name`
 6. Open a pull request to the main repository.
+
+> **Note**: Feel free to experiment and add new problems to the **`rough/`** folder for practice.
 
 ---
 

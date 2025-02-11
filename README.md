@@ -33,7 +33,7 @@ The repository is organized as follows:
 │   ├── arrays/            # Array manipulation and algorithms (e.g., rotation, searching)
 │   ├── recursion/         # Recursive problems and solutions
 │   ├── strings/           # String manipulation and related problems
-│   ├── oops/              # Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
+│   ├── OOPS/              # Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
 │   ├── leetcode/          # Solutions to Leetcode problems
 │   ├── rough/             # Rough/experimental problem-solving code (Feel free to add problems here)
 │   └── ques.md            # List of all practice problems in this folder

@@ -19,7 +19,7 @@ char section;
 
 Student()//default parameters.
 	{
-	
+	this.college="JNTU";
 	}
 Student(String name)
 	{

@@ -64,6 +64,7 @@ The Java files are organized into subfolders based on the type of problems:
 - **`arrays/`**: Programs that involve array manipulation and algorithms.
 - **`recursion/`**: Recursive problem solutions.
 - **`strings/`**: String manipulation and related challenges.
+- **`OOPS/`**: Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
 - **`leetcode/`**: Solutions to various problems from Leetcode.
 - **`rough/`**: Rough or experimental problem-solving code (Feel free to add new problems to experiment and explore here).
 

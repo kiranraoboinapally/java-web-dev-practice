@@ -1,5 +1,5 @@
----
 
+---
 
 ## Java Practice Programs
 
@@ -34,7 +34,6 @@ java-practice-problems/
 │   ├── arrays/            # Array manipulation and algorithms (e.g., rotation, searching)
 │   ├── recursion/         # Recursive problems and solutions
 │   ├── strings/           # String manipulation and related problems
-│   ├── oops/              # Object-Oriented Programming concepts and examples (e.g., classes, inheritance, polymorphism)
 │   ├── leetcode/          # Solutions to Leetcode problems
 │   ├── rough/             # Rough/experimental problem-solving code (Feel free to add problems here)
 │   └── ques.md            # List of all practice problems in this folder
@@ -66,7 +65,6 @@ The Java files are organized into subfolders based on the type of problems:
 - **`arrays/`**: Programs that involve array manipulation and algorithms.
 - **`recursion/`**: Recursive problem solutions.
 - **`strings/`**: String manipulation and related challenges.
-- **`oops/`**: Programs covering Object-Oriented Programming concepts.
 - **`leetcode/`**: Solutions to various problems from Leetcode.
 - **`rough/`**: Rough or experimental problem-solving code (Feel free to add new problems to experiment and explore here).
 
@@ -136,3 +134,4 @@ Contributions are welcome! If you have suggestions or want to add new practice p
 This repository is open-source and available under the [MIT License](LICENSE).
 
 ---
+

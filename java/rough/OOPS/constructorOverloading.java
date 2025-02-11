@@ -20,7 +20,8 @@ char section;
 Student()//default parameters.
 {}
 Student(String name)
-{}
+{this.name=name//local variable parameterised will be stored in instance variable.
+}
 Student(int roll,char section)
 {}
 }

@@ -1,5 +1,6 @@
 ---
 
+
 ## Java Practice Programs
 
 This repository contains a collection of Java practice programs and SQL concepts to help learners strengthen their problem-solving skills and coding abilities. The repository is organized into Java-based challenges and daily updated SQL concepts, allowing you to practice both Java programming and SQL queries.

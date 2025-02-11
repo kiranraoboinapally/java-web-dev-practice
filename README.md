@@ -21,9 +21,8 @@ This repository contains a collection of Java practice programs and SQL concepts
 ## Folder Structure
 
 The repository is organized as follows:
-
 ```
-java-practice-problems/
+ java-practice-problems/
 ├── java/
 │   ├── basics/            # Basic Java programs (e.g., Swapping Numbers, FizzBuzz)
 │   ├── loops/             # Programs for different types of loops (for, while, do-while)
@@ -34,6 +33,7 @@ java-practice-problems/
 │   ├── arrays/            # Array manipulation and algorithms (e.g., rotation, searching)
 │   ├── recursion/         # Recursive problems and solutions
 │   ├── strings/           # String manipulation and related problems
+│   ├── oops/              # Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
 │   ├── leetcode/          # Solutions to Leetcode problems
 │   ├── rough/             # Rough/experimental problem-solving code (Feel free to add problems here)
 │   └── ques.md            # List of all practice problems in this folder
@@ -42,8 +42,7 @@ java-practice-problems/
 │   └── ChatGPT.md         # Daily updated SQL concepts, explanations, and examples
 │
 └── LICENSE                # Repository license file
-```
-
+```       
 ---
 
 ## Java Programs

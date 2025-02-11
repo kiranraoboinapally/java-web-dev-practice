@@ -53,7 +53,7 @@ Certainly! Below is a comprehensive and organized list of **all the patterns, pr
    -  Placeholder for a general program - `w5.java`
 
 15. **Predefined Program Example**
-   -  Example for predefined code - `pre1.java`(pre increment,post increment)
+   -  Example for predefined code - `pre1.java` (pre increment,post increment)
 
 16. **Multiplication Table of 3**
    -  Print the table of 3 (3x1=3, 3x10=30) - `t1.java`

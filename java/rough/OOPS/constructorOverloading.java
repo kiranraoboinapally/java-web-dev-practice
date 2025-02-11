@@ -24,4 +24,7 @@ Student(String name)
 Student(int roll,char section)
 {}
 }
-/*If there is none of the constructors but we called it in constructorOverloading class then it will create one constructor as default constructor in jvm we can see it by using super keyword*/
+/*If there is none of the constructors but we called it in constructorOverloading class
+
+as Student s1=new Student(); if there is no constructors not only this there is not there any 
+ then it will create one constructor as default constructor in jvm we can see it by using super keyword*/

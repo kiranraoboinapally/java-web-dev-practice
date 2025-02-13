@@ -35,7 +35,7 @@ Book()
 	}
 void display(String title,String author)
 	{
-	System.out.println(this.title+" "+this.author);
+	System.out.println(title+" "+author);//don't use this keyword over here for calling different object names.book2.title and book1.author
 	}
 void display()
 	{

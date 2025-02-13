@@ -1,4 +1,5 @@
-class constructorMethodProblem
+
+class m
 {
 public static void main(String args[])
 	{

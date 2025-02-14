@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <script>
+        class abc{
+            constructor(name,roll)
+            {
+                this.name=name;
+                this.roll=roll;
+            }
+            add()
+            {
+                console.log(this.name+" "+this.roll);
+            }
+        }
+        var obj=new abc('xyz',123);
+        obj.add();
+        obj.name;
+        class pqr extends abc{
+            constructor(name, roll,section)
+            {
+                super(name, roll);
+                this.section = section;
+                console.log(this.section);
+            }
+        }
+        var obj2=new pqr('abc', 456, 'a');
+        obj2.name;
+    </script>
+    <body>
+
+    </body>
+</html>

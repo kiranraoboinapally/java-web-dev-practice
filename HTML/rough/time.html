@@ -1,0 +1,48 @@
+<html>
+    <head></head>
+    <script>
+        function add()
+        {
+            console.log(x+y);
+        }
+        add(x,y)
+        var z;
+        var[x,y]=[10,20];
+        console.log(x+" "+y);
+        [x,y]=[y,x]
+        console.log(x+" "+y);
+        var arr=[1,2,3,4,5];
+        [x,y=-1]=arr
+        console.log("array values are " + x + " " + y);
+        [x,z,...y]=arr;
+        console.log("array values are "+x+"and"+z+"and"+y);
+        var obj={
+            name:"abc",
+            roll:1,
+            section:'A',
+            arr1:[1,2,3,4,5]
+        }
+        var{section,roll,name}=obj;
+        var{section:s,roll:r,name:n,arr1:[a,b,c,d,e]}=obj;
+        console.log(s+" "+r+" "+n+" "+a+" "+b+" "+c+" "+d+" "+e);
+
+        class abc{
+
+            constructor(name,roll,section){
+                this.name=name;
+                this.roll=roll;
+                this.section=section;
+            }
+            display(){
+                console.log(this.name+" "+this.roll+" "+this.section);
+            }
+        }
+        var obk=new abc("Aryan",11222,"Gandhi");
+        obk.display();
+        var{section,roll,name}=obk;
+        console.log(section+" "+roll+" "+name);
+        var{section:s,roll:r,name:n}=obk;
+        console.log(s+" "+r+" "+n);
+        
+    </script><body></body>
+</html>

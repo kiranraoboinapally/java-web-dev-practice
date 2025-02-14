@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <script>
+        var obj = {
+            name: "sandesh",
+            marks: 100,
+            age: 20,
+            a: [1, 2, 3, 4, 5],
+            obj1: {
+                name: "desh",
+                marks1: 100,
+                sub: function() {
+                    console.log('sub ' + this);
+                }
+            },
+            add: function() {
+                console.log('add ' + this);
+            }
+        };
+
+        console.log(typeof obj);
+        var data = JSON.stringify(obj);
+        console.log(data);
+        console.log(typeof data);
+
+        var data2 = JSON.stringify([1, 2, 3, 4, 5, 6]);
+        console.log(data2);
+        console.log(typeof data2);
+
+        var temp = JSON.parse(data);
+        console.log(temp);
+        console.log(typeof temp);
+
+        var temp2 = JSON.parse('[1, 2, 3, 4, 5]');
+        console.log(temp2);
+        console.log(typeof temp2);
+
+        // Calling functions within the object
+        for (var temp in obj) {
+            if (typeof obj[temp] === 'function') {
+                obj[temp]();
+            }
+        }
+    </script>
+</body>
+</html>

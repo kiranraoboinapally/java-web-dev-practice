@@ -1,0 +1,27 @@
+
+git config --global -e 
+to edit username and email information in it.
+
+for insert we press i in it
+for exit press esc+shift+:wq then enter(wq means write and quit)
+
+git config --global user.name "github_username"
+
+
+pwd
+
+ls
+
+git status
+
+git add .
+
+git status
+
+git commit -m "new" 
+#m means message
+git status
+
+git remote add origin  url
+
+git push -u origin main or git push origin master

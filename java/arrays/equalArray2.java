@@ -2,8 +2,8 @@ class equalArray2
 {
     public static void main(String args[])
 	{
-		int arrayOne={1,3,2,4,5};
-		int arrayTwo={3,1,2,5,4};
+		int[] arrayOne={1,3,2,4,5};
+		int[] arrayTwo={3,1,2,5,4};
 		boolean equalOrNot = true;
 		int temp=0;
 		if(arrayOne.length == arrayTwo.length)

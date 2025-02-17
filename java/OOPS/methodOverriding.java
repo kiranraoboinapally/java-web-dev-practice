@@ -22,4 +22,8 @@ void sub()
 	System.out.println("I am sub of parent");
 	}
 @Override
+void add()
+	{
+	System.out.println("I am add of parent");
+	}
 }

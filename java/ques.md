@@ -670,7 +670,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
    - **Test Case**:
      - Input: `a[] = {10, 21, 4, 15, 6}`
      - Output: `{10, 4, 6, 21, 15}`
-   - **File**: `evenOddSort.java` (Problem Pending)
+   - **File**: `evenOddSort.java` 
 
 9. **Find Second Maximum Element**
    - Find the second maximum element in an array without sorting.
@@ -741,7 +741,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
      - Input: `a[] = {10, 30, 50, 70}`, `b[] = {10, 50, 70, 30}`
      - Output: `Equal`
    - **With predefined method**: `equalArray1.java`
-   - **Without predefined method (user-defined)**: `equalArray2.java` (Pending)
+   - **Without predefined method (user-defined)**: `equalArray2.java`
 
 18. **Binary Search (Ascending and Descending)**
    - Implement binary search for an array sorted in both ascending and descending order.
@@ -751,7 +751,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
    - **Test Case** (Descending):
      - Input: `a[] = {50, 40, 30, 20, 10}`, Search for `30`
      - Output: Index = `2`
-   - **File**: `binarySearchAsc.java` (Pending), `binarySearchDesc.java` (Pending)
+   - **File**: `binarySearchAsc.java` , `binarySearchDesc.java`
 
 19. **Left Rotate an array**
    - Rotate an array to the left by one position.
@@ -772,7 +772,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
    - **Test Case**:
      - Input: `a[] = {1, 2, 2, 5}`
      - Output: `{3, 4}`
-   - **File**: `missingElement.java` (Pending, method in `uniqueElements`)
+   - **File**: `missingElement.java` check for better solution
 
 22. **Unique elements to be printed in an array**
    - Print the unique elements in an array and their frequencies.

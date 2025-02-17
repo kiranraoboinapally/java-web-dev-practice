@@ -19,7 +19,7 @@ public static void main(String args[])
 		{
 		System.out.print(a[x]+" ");
 		}
-	int f=0,l=a.length-1,m,search=35;
+	int f=0,l=a.length-1,m,search=30;
 	for(;f<=l;)
 		{
 		m=(f+l)/2;

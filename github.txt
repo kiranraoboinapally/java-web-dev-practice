@@ -24,4 +24,9 @@ git status
 
 git remote add origin  url
 
-git push -u origin main or git push origin master
+
+git push -u origin main (or) git push origin master
+
+
+find . -type f -name "*.class" -exec git rm {} \;
+#used to delete certain files ends with .class extension to delete all

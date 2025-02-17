@@ -19,7 +19,7 @@ GrandParent(int x,double y)
 class Parent extends GrandParent
 {
 Parent(int x)
-	{
+	{this(); //rmeove this and try gets error
 	System.out.println("Parent with int");
 	}
 Parent()

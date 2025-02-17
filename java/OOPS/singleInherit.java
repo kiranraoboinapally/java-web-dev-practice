@@ -2,26 +2,29 @@ class Demo
 {
 public static void main(String args[])
 	{
-	SubClass subclass=new SubClass(30);
+	SubClass subclass=new SubClass(10);
 	}
 }
 class SuperClass
 {
 int x=10;
 SuperClass(int x)
-{
-this.x=x;
-System.out.println(this.x);
-}
+	{
+	this.x=x;
+	System.out.println(this.x);
+	}
 SuperClass()
-{
-System.out.println("SuPerClass");
-}
+	{
+	System.out.println("SuPerClass");
+	}
 }
 class SubClass extends SuperClass
 {
-SubClass(int x)
+SubClass(int y)
 	{
-	super(x+50);
+	super();
+	System.out.println("SubClass");
+	System.out.println(x);
+	SuperClass superclass=new SuperClass(50);
 	}
 }

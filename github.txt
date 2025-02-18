@@ -30,3 +30,8 @@ git push -u origin main (or) git push origin master
 
 find . -type f -name "*.class" -exec git rm {} \;
 #used to delete certain files ends with .class extension to delete all
+
+
+echo "*.class" >> .gitignore
+git rm --cached "*.class"
+#to avoid or ignoring .class in future commits 

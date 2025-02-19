@@ -35,3 +35,19 @@ find . -type f -name "*.class" -exec git rm {} \;
 echo "*.class" >> .gitignore
 git rm --cached "*.class"
 #to avoid or ignoring .class in future commits 
+
+
+
+git ls-files
+
+git rm -rf folder1
+
+git rm .
+
+git rm --cached file2.txt
+
+git restore --staged .
+
+
+
+

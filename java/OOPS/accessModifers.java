@@ -16,3 +16,6 @@ protected void add() //protected scope>default it runs perfect if reversed mehto
 	System.out.println("add in Child");
 	}
 }
+
+//if both has private causes error in override it differs one to other 
+//access modifiers are used in differnt classes

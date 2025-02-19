@@ -772,7 +772,7 @@ ONLY PRACTICE QUESTIONS FROM BASICS TO INTERMEDIATE LEVEL
    - **Test Case**:
      - Input: `a[] = {1, 2, 2, 5}`
      - Output: `{3, 4}`
-   - **File**: `missingElement.java` check for better solution
+   - **File**: `missingElement.java` check for better solution in unique.java
 
 22. **Unique elements to be printed in an array**
    - Print the unique elements in an array and their frequencies.

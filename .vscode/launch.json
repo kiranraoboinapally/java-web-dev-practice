@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Demo123",
+            "request": "launch",
+            "mainClass": "Demo123",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "Demo",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
             "name": "a1",
             "request": "launch",
             "mainClass": "a1",

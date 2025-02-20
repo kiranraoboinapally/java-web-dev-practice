@@ -70,5 +70,4 @@ class SubClass2 extends SubClass1
 void add() 
 	{
         System.out.println("add of SubClass2");
-    	}
-}
+    	

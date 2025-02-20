@@ -49,5 +49,16 @@ git rm --cached file2.txt
 git restore --staged .
 
 
+git branch 
+//to check branches
+*master
+main
 
+git branch branchname(main)
+
+
+git checkout main
+
+
+git checkout -b main1
 

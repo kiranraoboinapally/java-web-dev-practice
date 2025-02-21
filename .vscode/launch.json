@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "swapBitwise",
+            "request": "launch",
+            "mainClass": "swapBitwise",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
+            "name": "Product",
+            "request": "launch",
+            "mainClass": "Product",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
+            "name": "loc",
+            "request": "launch",
+            "mainClass": "loc",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
+            "name": "charB",
+            "request": "launch",
+            "mainClass": "charB",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
+            "name": "arr1",
+            "request": "launch",
+            "mainClass": "arr1",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
+            "name": "large",
+            "request": "launch",
+            "mainClass": "large",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
+            "name": "age",
+            "request": "launch",
+            "mainClass": "age",
+            "projectName": "chub_bf5b4252"
+        },
+        {
+            "type": "java",
             "name": "Demo123",
             "request": "launch",
             "mainClass": "Demo123",

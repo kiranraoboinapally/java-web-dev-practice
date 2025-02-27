@@ -7,16 +7,21 @@ console.log('This is my first JavaScript code')
 
 fullName = "John Doe";
 age=25;
+console.log(typeof fullName);
 console.log(fullName);
+console.log(typeof age);
 console.log(age);
 
 x=null;
+console.log('absence of an object '+typeof x);
 console.log(x);
 y=undefined;
+console.log(typeof y);
 console.log(y);
 
 
 isFollow=false;
+console.log(typeof isFollow);
 console.log(isFollow);
 
 fullName= 25;//dynamically typed language
@@ -53,3 +58,30 @@ console.log('let cannot be redeclared '+num1+" "+num2);
 let num3=60;
 num3=70;
 console.log('let can be updated '+num3);
+
+const num4=90;
+console.log('const cannot be updated '+num4);
+
+const PI=3.14;
+console.log('Using const for math which need not to be changed i.e fixed '+PI);
+
+
+let a;
+console.log('gets undefined because let not initialized'+a);
+
+//const b;
+//console.log('gets error because const not initialized'+b);
+
+
+//blocks
+{
+    let z=2;
+    console.log(z);
+}
+{
+    let z=3;
+    console.log(z);
+}
+
+
+//non-primitive data types are objects,arrays,functions

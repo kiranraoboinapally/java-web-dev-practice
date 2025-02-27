@@ -84,4 +84,26 @@ console.log('gets undefined because let not initialized'+a);
 }
 
 
-//non-primitive data types are objects,arrays,functions
+//non-primitive data types are objects()sub topics ->arrays,functions)
+//primitive data types are string,number,boolean,null,undefined,symbol
+//typeof operator is used to find the type of a variable
+//typeof null returns object which is a bug in js
+//typeof NaN returns number
+//objects are mutable and can be updated
+//objects are collection of different variables as key value pairs
+
+const person={
+    name:"Vicky",
+    age:35,
+    isFollow:true
+};
+
+console.log(person.name);
+console.log(person["name"]);
+console.log(person.age);
+console.log(person["age"]);
+
+person['age']=person['age']+1;
+console.log(person.age);
+
+//const objects can be updated but not re-declared

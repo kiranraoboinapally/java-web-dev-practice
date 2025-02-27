@@ -12,7 +12,7 @@ class secondMax
                 secondMax=max;
                 max=a[i];
             }
-            else if(a[i]>secondMax && a[i]!=max)
+           else if(a[i]>secondMax && a[i]!=max)
             {
                 secondMax=a[i];
             }

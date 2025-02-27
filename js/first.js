@@ -107,3 +107,26 @@ person['age']=person['age']+1;
 console.log(person.age);
 
 //const objects can be updated but not re-declared
+
+
+
+
+const product={
+    title: "Ball pen",
+    rating: 4.5,
+    offer: 5,
+    price: 270
+};
+
+console.log(product.title);
+
+
+
+const profile={
+    userName: "Shradha",
+    followers: 303,
+    following: 328,
+    isFollow:false
+};
+
+console.log(typeof profile["userName"]);

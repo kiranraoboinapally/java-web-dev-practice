@@ -1,5 +1,4 @@
-
-//hiding internal implementationhighlighting functonality
+//hiding internal implementation highlighting functonality
 //Abstract method means has no implementation
 //for an abstract class cannot create an object
 //to do abstraction we need inheritance and override

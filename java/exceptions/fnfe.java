@@ -16,9 +16,17 @@ class fnfe
             }
         }
         catch(FileNotFoundException e) //or Exception its parent class
-        {
+        	{
             System.out.println("File not found");
-        }
+        	}
+	finally 
+		{
+            // Manually close the resource to avoid resource leak
+            if (sc != null) 
+			{
+                	sc.close();
+            		}
+        	}
     }
 }
 

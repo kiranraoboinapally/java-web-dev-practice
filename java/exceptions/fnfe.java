@@ -7,6 +7,7 @@ class fnfe
     public static void main(String[] args) 
     {
         String path="C:/Users/arunk/Desktop/chub/java/exceptions/age789.java";
+	Scanner sc = null;
         try
         {
             Scanner sc=new Scanner(new File(path));

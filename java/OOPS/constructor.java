@@ -4,15 +4,17 @@ public static void main(String[] args)
 	{
 	Demo demo=new Demo();
 	Demo demo1=new Demo(10,20);
-    	}
-}
-class Demo
-{
-Demo()
-	{
-	System.out.println("No parameters");
+	System.out.println(demo.z);
 	}
-int x,y;
+}
+	class Demo
+	{
+	Demo()
+		{
+		System.out.println("No parameters");
+		}
+	int x,y;
+	int z=10;
 Demo(int a,int b)
 	{
 	System.out.println("Two Parameters");

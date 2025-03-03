@@ -1,4 +1,5 @@
 //compile time init char
+
 import java.util.Scanner;
 class a1
 {

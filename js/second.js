@@ -17,3 +17,5 @@ let xy="5";
 console.log(ab==xy);//returns true
 console.log(ab===xy);
 console.log(ab!==xy);
+
+

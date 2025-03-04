@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class practice {
+public class sets {
 
 	public static void main(String[] args) {
 		ArrayList<Object> al1=new ArrayList<Object>(Arrays.asList(10,20,30,40,50,60,"hello"));

@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class practice {
+public class prob1 {
 
 	public static void main(String[] args) {
 		//Set s=new TreeSet();

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class practice {
+public class itrator {
 
 	public static void main(String[] args) {
 		ArrayList<Object> al1=new ArrayList<Object>(Arrays.asList(10,20,50,30,40));
@@ -37,6 +37,7 @@ syso(li2.prev()+" ");}
 //it will not give any output becuase the pointer is at first eelement there is no previous element so nothing.
 
 
-//Iterator is a interface has only hasNext and next() method it should be stored in interface type 
+//Iterator is a interface has only hasNext and next() method it should be stored in interface type
+//iterator also known as cursor it has uni-directional and bi-directional
 */
 

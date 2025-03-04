@@ -1,18 +1,17 @@
-import java.util.LinkedHashSet;
-import java.util.ListIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.HashSet;
+import java.util.Collections;
+import java.util.Comparator;
 
-public class practice {
+public class student1 {
 
 	public static void main(String[] args) {
 		Student student1=new Student(107,"Kiran",9898,"kiran@gmail.com","Loyola","MCA",'a');
 		Student student2=new Student(102,"Arun",2228,"arun@gmail.com","TKR","Btech",'z');
 		Student student3=new Student(105,"Vinay",9383,"vinay@gmail.com","Badruka","MBA",'q');
 		Student student4=new Student(101,"Vijay",1234,"vijay@gmail.com","Vishwasanthi","Btech",'y');
-		ArrayList<Object> al1=new ArrayList<Object>(Arrays.asList(student1,student2,student3,student4,'b'));
+		ArrayList<Student> al1=new ArrayList<Student>(Arrays.asList(student1,student2,student3,student4));
 		Iterator i=al1.iterator();
 		while(i.hasNext())
 			{
@@ -20,10 +19,7 @@ public class practice {
 			}
 		System.out.println();
 		Collections.sort(al1);
-		while(i.hasNext())
-			{
-			System.out.println(i.next());
-			}
+		al1.forEach(x->System.out.println(x));
 		System.out.println();
 		NameSort ns=new NameSort();
 		Collections.sort(al1,ns);
@@ -43,11 +39,12 @@ public class practice {
 			this.emailId=emailId;
 			this.college=college;
 			this.branch=branch;
+			this.section=section;
 		}
 		@Override
 		public String toString()
 		{
-		return this.roll+" "+this.name+" "+this.mobile+" "+this.emailId+" "+this.college+" "+this.branch+" "this.section;
+		return this.roll+" "+this.name+" "+this.mobile+" "+this.emailId+" "+this.college+" "+this.branch+" "+this.section;
 		}
 		@Override
 		public int compareTo(Student o)
@@ -72,7 +69,7 @@ class SectionSort implements Comparator<Student>
 	public int compare(Student o1,Student o2)
 		
 		{
-		return Character.compare(o1.name,o2.name);
+		return Character.compare(o1.section,o2.section);
 		}
 	}
 

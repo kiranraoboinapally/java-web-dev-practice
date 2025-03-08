@@ -66,3 +66,15 @@ git checkout -b main1
 git merge main1 main
 //merging from main1 to main.
 
+
+
+npx create-react-app myapp
+npm start
+
+npm install -g json-server
+to run it 
+json-server --watch data.json -p 3030
+
+
+npm -i axios
+

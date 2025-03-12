@@ -1,6 +1,5 @@
 
 ---
-
 In this presentation, we will cover the essential Object-Oriented Programming (OOP) concepts, including key topics and definitions that are frequently asked in interviews. We will focus on the core concepts that tech companies often inquire about, such as:
 
 - **Access Modifiers** (e.g., private, public, default, protected, static, final, abstract)

@@ -1,7 +1,140 @@
 topics
  1.classes and objects 2.local variables vs instance varibles 3.polymorphism(compile time,run time) 4a..constructor over loading 4b.method overlaoding 5.this keyword 6 .method vs constructor 7.inheritance(single,multilevvel,heiarachical,hybrid,multiple)  8.method signature 9.run time polymorphism(method over riding) 10.this vs super 11.upcasting 12.final keyword 13.method hiding 14.covariant return types 15.final vs static 16.access modifers(private,default,protected,public) 17.Abstarction 18.multiple inheritance using interface 19.abtstarct calss vs interface 20.functional interface 21.lambda experssions 22.encapsulation 23.is a vs has a vs user a relationship
 
+---
 
+### **1. Classes and Objects**
+- **What is the difference between a class and an object in Java?**
+- **How do you create an object in Java?**
+- **What is a constructor in Java, and what is the difference between a constructor and a method?**
+- **Can constructors be overloaded? Explain with an example.**
+
+### **2. Local Variables vs Instance Variables**
+- **What is the difference between local variables and instance variables in Java?**
+- **Can local variables be initialized without a value? Why or why not?**
+- **What are the default values of instance variables in Java?**
+
+### **3. Polymorphism**
+- **What is polymorphism in Java?**
+- **Explain the difference between compile-time (method overloading) and run-time polymorphism (method overriding) in Java.**
+- **Can we achieve polymorphism using constructors? Why or why not?**
+
+### **4. Constructor Overloading**
+- **What is constructor overloading? Can we overload constructors in Java?**
+- **Can a constructor return a value? Why or why not?**
+
+### **5. Method Overloading**
+- **What is method overloading? How does it differ from method overriding?**
+- **Can we overload a method based on the return type alone in Java? Why or why not?**
+
+### **6. This Keyword**
+- **What is the purpose of the `this` keyword in Java?**
+- **When would you use `this` in a constructor?**
+- **What is the difference between `this()` and `super()` in Java?**
+
+### **7. Method vs Constructor**
+- **What is the difference between a method and a constructor in Java?**
+- **Can we call a constructor explicitly?**
+- **What happens if we don’t define a constructor in a class?**
+
+### **8. Inheritance**
+- **What is inheritance in Java?**
+- **What is the difference between single, multilevel, hierarchical, and hybrid inheritance in Java?**
+- **What is multiple inheritance, and how is it achieved in Java?**
+- **Can a subclass call a constructor of its parent class? How?**
+- **Can we inherit from a final class in Java?**
+
+### **9. Method Signature**
+- **What is a method signature in Java?**
+- **What components are included in a method signature?**
+- **Why is method signature important for overloading and overriding?**
+
+### **10. Run-Time Polymorphism (Method Overriding)**
+- **What is method overriding, and how does it achieve run-time polymorphism?**
+- **Can we override a private method in Java?**
+- **What happens if a subclass method has the same signature but a different return type from the superclass method?**
+
+### **11. This vs Super**
+- **What is the difference between `this` and `super` keywords in Java?**
+- **When would you use `super()` and `this()` in a constructor?**
+- **Can we call a superclass constructor from a subclass? How?**
+
+### **12. Upcasting**
+- **What is upcasting in Java?**
+- **Can we upcast an object to any type? Explain.**
+- **What is the significance of upcasting when working with polymorphism?**
+
+### **13. Final Keyword**
+- **What is the `final` keyword in Java? How is it used with variables, methods, and classes?**
+- **What happens if you declare a method as `final`?**
+- **Can you inherit from a final class?**
+- **What is the difference between `final`, `finally`, and `finalize` in Java?**
+
+### **14. Method Hiding vs Method Overriding**
+- **What is the difference between method hiding and method overriding?**
+- **Can you hide a method in Java? Explain with an example.**
+- **What is the effect of static methods on method hiding?**
+
+### **15. Covariant Return Types**
+- **What are covariant return types?**
+- **How is covariant return type useful in Java?**
+- **Can you have a covariant return type with an interface method?**
+
+### **16. Final vs Static**
+- **What is the difference between the `final` and `static` keywords in Java?**
+- **Can a static method be overridden? Why or why not?**
+- **What happens if you declare a variable as `final` and `static`?**
+
+### **17. Access Modifiers (Private, Default, Protected, Public)**
+- **What is the difference between `private`, `protected`, `default`, and `public access modifiers?**
+- **Can we access a private member of a class from another class in the same package?**
+- **What is the default access modifier for a class member if none is specified?**
+
+### **18. Abstraction**
+- **What is abstraction in Java, and why is it important?**
+- **What is the difference between an abstract class and an interface?**
+- **Can we instantiate an abstract class? Why or why not?**
+
+### **19. Multiple Inheritance Using Interface**
+- **What is the need for multiple inheritance in Java, and how is it achieved using interfaces?**
+- **Can a class implement multiple interfaces in Java?**
+- **What is the problem with multiple inheritance and how do interfaces solve it in Java?**
+
+### **20. Abstract Class vs Interface**
+- **What is the difference between an abstract class and an interface in Java?**
+- **Can an abstract class have abstract and non-abstract methods?**
+- **Can an interface have instance variables? Why or why not?**
+
+### **21. Functional Interface**
+- **What is a functional interface in Java?**
+- **Can we create a functional interface with multiple abstract methods?**
+- **What is the use of functional interfaces in lambda expressions?**
+
+### **22. Lambda Expressions**
+- **What are lambda expressions in Java?**
+- **How does a lambda expression differ from an anonymous inner class?**
+- **What is the syntax of a lambda expression?**
+- **Can we use lambda expressions with any type of interface?**
+
+### **23. Encapsulation**
+- **What is encapsulation in Java, and why is it important?**
+- **How do getter and setter methods support encapsulation?**
+- **What is the role of access modifiers in encapsulation?**
+
+### **24. Is-a vs Has-a vs Uses-a Relationship**
+- **What is the difference between an "Is-a" and a "Has-a" relationship in Java?**
+- **What does the "Uses-a" relationship mean in Java?**
+- **Can you give an example of "Is-a" and "Has-a" relationships in real-world programming?**
+
+---
+
+### **General Interview Tips:**
+1. **Understand OOP Concepts Thoroughly**: Interviewers often ask about inheritance, polymorphism, encapsulation, and abstraction.
+2. **Practice Coding**: Be prepared to write code for basic algorithms, data structures, and common patterns.
+3. **Explain Code**: Be able to explain your thought process and why you choose certain solutions.
+4. **Behavioral Questions**: In addition to technical questions, be ready for questions about teamwork, conflict resolution, and problem-solving.
+
+---
 
 
 

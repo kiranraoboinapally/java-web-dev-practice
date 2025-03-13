@@ -154,8 +154,8 @@ In summary, a **class** is a core concept in Java that helps organize and struct
 ---
 
 ### **Local Variables in Java:**
-
-No, **local variables** in Java cannot have **access modifiers** (like `private`, `public`, `protected`, etc.).
+Can access modifiers used for local variables?
+No,**local variables** in Java cannot have **access modifiers** (like `private`, `public`, `protected`, etc.).
 
 Access modifiers are used for **fields (instance or static variables)**, **methods**, and **classes** to control their visibility and accessibility across different classes or packages. However, local variables are only visible within the method, constructor, or block in which they are declared, so there is no need for access modifiers to restrict access to them.
 

@@ -1,3 +1,155 @@
+
+---
+
+### **Index of Topics**
+
+1. **Classes and Objects**
+   - Introduction to Classes and Objects
+   - How to Define a Class
+   - Creating and Using Objects
+   - Constructor in Classes
+
+2. **Local Variables vs Instance Variables**
+   - Definition of Local Variables
+   - Definition of Instance Variables
+   - Differences between Local and Instance Variables
+   - Use Cases for Each
+
+3. **Polymorphism**
+   - Compile-Time Polymorphism (Method Overloading)
+   - Run-Time Polymorphism (Method Overriding)
+   - Differences between Compile-Time and Run-Time Polymorphism
+
+4. **Constructor Overloading**
+   - Concept of Constructor Overloading
+   - How Constructor Overloading Works
+   - Example of Constructor Overloading
+
+5. **Method Overloading**
+   - Definition of Method Overloading
+   - How to Overload Methods
+   - Examples of Method Overloading
+
+6. **This Keyword**
+   - What is `this` Keyword?
+   - Use of `this` in Constructor
+   - Use of `this` in Methods
+   - Example of `this` Keyword
+
+7. **Method vs Constructor**
+   - What is a Method?
+   - What is a Constructor?
+   - Key Differences between Methods and Constructors
+
+8. **Inheritance**
+   - Single Inheritance
+   - Multilevel Inheritance
+   - Hierarchical Inheritance
+   - Hybrid Inheritance
+   - Multiple Inheritance (Using Interfaces)
+
+9. **Method Signature**
+   - Definition of Method Signature
+   - Components of a Method Signature
+   - Importance of Method Signature in Java
+
+10. **Run-Time Polymorphism (Method Overriding)**
+    - What is Method Overriding?
+    - How Method Overriding Works
+    - Example of Method Overriding
+    - Benefits of Run-Time Polymorphism
+
+11. **This vs Super**
+    - `this` Keyword
+    - `super` Keyword
+    - Differences between `this` and `super`
+    - Examples of Using `this` and `super`
+
+12. **Upcasting**
+    - What is Upcasting?
+    - When to Use Upcasting
+    - Example of Upcasting
+    - Benefits of Upcasting
+
+13. **Final Keyword**
+    - The `final` Keyword for Variables, Methods, and Classes
+    - Final Variables
+    - Final Methods
+    - Final Classes
+
+14. **Method Hiding vs Method Overriding**
+    - Method Hiding
+    - Method Overriding
+    - Key Differences between Method Hiding and Overriding
+    - Examples
+
+15. **Covariant Return Types**
+    - What is Covariant Return Type?
+    - How Covariant Return Type Works
+    - Example of Covariant Return Type
+
+16. **Method Hiding**
+    - What is Method Hiding?
+    - Key Differences between Method Overloading and Hiding
+    - Example of Method Hiding
+
+17. **Final vs Static**
+    - What is the `final` Keyword?
+    - What is the `static` Keyword?
+    - Key Differences between Final and Static
+    - Use Cases for Final and Static
+
+18. **Access Modifiers (Private, Default, Protected, Public)**
+    - Private Modifier
+    - Default Modifier
+    - Protected Modifier
+    - Public Modifier
+    - Key Differences between Modifiers
+
+19. **Abstraction**
+    - What is Abstraction?
+    - Abstract Classes
+    - Interfaces
+    - Differences between Abstract Classes and Interfaces
+    - Examples of Abstraction
+
+20. **Multiple Inheritance using Interface**
+    - What is Multiple Inheritance?
+    - How Interfaces Enable Multiple Inheritance
+    - Example of Multiple Inheritance using Interfaces
+
+21. **Abstract Class vs Interface**
+    - Key Differences between Abstract Classes and Interfaces
+    - Use Cases for Abstract Classes and Interfaces
+    - Example of Abstract Class and Interface
+
+22. **Functional Interface**
+    - What is a Functional Interface?
+    - Characteristics of a Functional Interface
+    - Examples of Functional Interfaces
+
+23. **Lambda Expressions**
+    - What are Lambda Expressions?
+    - Syntax of Lambda Expressions
+    - Benefits of Lambda Expressions
+    - Examples of Lambda Expressions
+
+24. **Encapsulation**
+    - What is Encapsulation?
+    - Benefits of Encapsulation
+    - Setter and Getter Methods
+    - Access Modifiers and Encapsulation
+    - Example of Encapsulation
+
+25. **Is-a vs Has-a vs Uses-a Relationship**
+    - Is-a Relationship (Inheritance)
+    - Has-a Relationship (Composition)
+    - Uses-a Relationship (Dependency)
+    - Comparison between Is-a, Has-a, and Uses-a
+    - When to Use Each Relationship
+
+---
+
 **Topic 1: Classes and Objects**.
 
 ### **Classes and Objects**

@@ -213,7 +213,7 @@ Here:
 
 
 
-Let's dive into **Topic 2: Local Variables vs Instance Variables** in detail.
+**Topic 2: Local Variables vs Instance Variables** in detail.
 
 ### **2. Local Variables vs Instance Variables**
 
@@ -342,9 +342,7 @@ In this example:
 
 ---
 
-Great! I’m glad that worked for you. Let’s continue with **Topic 3: Polymorphism (Compile-time and Run-time)**.
-
----
+**Topic 3: Polymorphism (Compile-time and Run-time)**.
 
 ### **3. Polymorphism (Compile-time and Run-time)**
 
@@ -479,10 +477,7 @@ Run-time polymorphism (method overriding) is **resolved at runtime** by the Java
 
 ---
 
-
-Thank you! Let's continue with **Topic 4: Constructor Overloading and Method Overloading**. I'll cover both topics in detail.
-
----
+**Topic 4: Constructor Overloading and Method Overloading**.
 
 ### **4a. Constructor Overloading**
 
@@ -619,11 +614,8 @@ In this example:
 
 ---
 
-### **Next Topic: The `this` Keyword**
+**Topic 5: The `this` Keyword**. 
 
-Now, let’s move on to **Topic 5: The `this` Keyword**. 
-
----
 
 ### **5. `this` Keyword**
 
@@ -709,9 +701,8 @@ In this example:
 
 
 
-Sure! Let's continue with **Topic 6: Method vs Constructor**.
+**Topic 6: Method vs Constructor**.
 
----
 
 ### **6. Method vs Constructor**
 
@@ -819,11 +810,7 @@ In this example:
 
 ---
 
-### **Next Topic: Inheritance (Single, Multilevel, Hierarchical, Hybrid, Multiple)**
-
-Let's move on to **Topic 7: Inheritance**. We'll explore the various types of inheritance in Java.
-
----
+**Topic 7: Inheritance**.
 
 ### **7. Inheritance (Single, Multilevel, Hierarchical, Hybrid, Multiple)**
 
@@ -1110,11 +1097,7 @@ In the above example:
 
 ---
 
-### **Next Topic: Run-Time Polymorphism (Method Overriding)**
-
-Now let's move on to **Topic 9: Run-Time Polymorphism (Method Overriding)**.
-
----
+**Topic 9: Run-Time Polymorphism (Method Overriding)**.
 
 ### **9. Run-Time Polymorphism (Method Overriding)**
 
@@ -1199,7 +1182,6 @@ In this example:
 ---
 
 **Topic 10: `this` vs `super`**. 
----
 
 ### **10. `this` vs `super`**
 
@@ -1759,13 +1741,6 @@ In this example:
 ---
 
 
-
-
-
-Sure! Here is **Topic 13: Method Hiding** explained in a well-organized, arranged manner:
-
----
-
 ### **13. Method Hiding**
 
 #### **Definition:**
@@ -1974,8 +1949,7 @@ public class Main {
 
 
 
-
-Let's move on to **Topic 15: `final` vs `static`**:
+**Topic 15: `final` vs `static`**:
 
 ### **15. `final` vs `static`**
 

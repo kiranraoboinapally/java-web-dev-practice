@@ -224,13 +224,9 @@ ________________________________________________________________________________
 
 
 
+---
 
-
-
-
-
-
-
+### Instance Variables vs Local Variables in Java
 
 | **Feature**                | **Instance Variables**                                   | **Local Variables**                                      |
 |----------------------------|-----------------------------------------------------------|----------------------------------------------------------|
@@ -243,6 +239,10 @@ ________________________________________________________________________________
 | **Initialization**          | Can be initialized directly or in a constructor.         | Must be initialized before use.                           |
 | **Life Cycle**              | Created when the object is created, destroyed when the object is garbage collected. | Created when the method/block is called, destroyed after the method/block finishes. |
 | **Access**                  | Can be accessed by any method of the class, including non-static and static methods (through object reference). | Only accessible within the method/block where declared.   |
+| **Access in Static Methods**| **Cannot be accessed directly** in static methods, but can be accessed using an object reference. | Not applicable (local variables cannot be accessed in static methods). |
+| **Access in Non-Static Methods** | Can be accessed **directly** in non-static methods. | Not applicable (local variables cannot be accessed outside the method/block). |
+
+---
 
 ### Example Comparison:
 
@@ -257,6 +257,9 @@ class MyClass {
 }
 ```
 
+In this example:
+- `instanceVar` is an **instance variable** and can be accessed directly within the `display()` method.
+
 #### Local Variable Example:
 ```java
 class MyClass {
@@ -268,8 +271,54 @@ class MyClass {
 }
 ```
 
-### Conclusion:
-- **Instance variables** belong to the class and are tied to the object's lifetime. They can be accessed throughout the class.
-- **Local variables** exist only within the scope of the method or block and must be initialized before use.
+In this example:
+- `localVar` is a **local variable** and can only be accessed within the `display()` method.
 
-Let me know if you'd like more details or examples!
+---
+
+### Example: Instance Variables in Both Static and Non-static Methods
+
+```java
+class MyClass {
+    int instanceVariable = 5;  // Instance variable
+
+    // Non-static method
+    public void instanceMethod() {
+        System.out.println("Accessing instance variable in instance method: " + instanceVariable);
+    }
+
+    // Static method
+    public static void staticMethod() {
+        MyClass obj = new MyClass();  // Create an object to access instance variable
+        System.out.println("Accessing instance variable in static method: " + obj.instanceVariable);  // Access using object reference
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+
+        // Calling non-static method
+        obj.instanceMethod();
+
+        // Calling static method
+        staticMethod();  // Can also be called without an object using the class name: MyClass.staticMethod();
+    }
+}
+```
+
+### Output:
+```
+Accessing instance variable in instance method: 5
+Accessing instance variable in static method: 5
+```
+
+### Key Takeaways:
+- **Non-static methods**: Can directly access instance variables.
+- **Static methods**: Cannot directly access instance variables. They need an **object reference** to access instance variables.
+
+---
+
+### Conclusion:
+- **Instance variables** are tied to the class and the object's lifetime. They can be accessed throughout the class, including from **non-static** and **static methods** (if you use an object reference in static methods).
+- **Local variables** exist only within the scope of the method or block where they are declared and must be initialized before use.
+
+---

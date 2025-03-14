@@ -183,8 +183,10 @@ In the example above:
 - `drive()` is a method.
 
 #### **Object**:
-- An **object** is an instance of a class. When you create an object, it gets its own copy of the properties defined in the class.
+- An **object** is an instance/copy of a class. When you create an object, it gets its own copy of the properties defined in the class.
 - You can also call the methods of the class using the object.
+- We can create an object using new keyword.
+- When we can create an object then only memory will be allocated in heap memory
 
 **Example**:  
 ```java

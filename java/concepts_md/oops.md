@@ -234,7 +234,7 @@ In object-oriented programming (OOP), variables can be classified into **local v
 - **Local variables** are declared **inside** a method, constructor, or block of code.
 - They are only accessible within the block or method in which they are declared.
 - They **do not** have default values. You must explicitly initialize them before using them.
-
+- Local variables are implemented at stack level internally.
 #### **Characteristics**:
 - **Scope**: The scope is limited to the method or block in which they are declared.
 - **Lifetime**: They are created when the method is invoked and destroyed when the method finishes execution.

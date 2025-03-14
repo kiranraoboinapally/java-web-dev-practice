@@ -157,8 +157,10 @@ Topics:
 ### **Classes and Objects**
 
 #### **Class**:
-- A **class** is a blueprint or template for creating objects. It defines the **properties** (fields or variables) and **methods** (functions or behaviors) that the objects created from the class will have.
+- A **class** is a blueprint or template for creating objects. 
+- It defines the **properties** (fields or variables) and **methods** (functions or behaviors) that the objects created from the class will have.
 - A class doesn’t hold any data itself, but objects created from it hold the data for the properties and can use the methods.
+- When we create a class memory will not be allocated until we create an object for class.(proved it class1.java inside java/OOPS)
 
 **Example**:  
 ```java

@@ -30,3 +30,33 @@ Demo(int p,char q)
 //Demo(int a,int b, int c)can be created its 3 parameters of all are int types.
 
 }
+
+/*
+class Demo {
+    Demo(int x) {
+    super();
+        System.out.println("Constructor with int: " + x);
+    }
+
+    public static void main(String[] args) {
+        Demo demo = new Demo(10);
+    }
+}
+*/
+
+/*
+
+class Demo {
+    Demo(){
+        System.out.println("New");
+    }
+    Demo(int x) {
+    this();
+        System.out.println("Constructor with int: " + x);
+    }
+
+    public static void main(String[] args) {
+        Demo demo = new Demo(10);
+    }
+}
+*/

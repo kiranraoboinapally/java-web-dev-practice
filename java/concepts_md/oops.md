@@ -604,15 +604,23 @@ In this example:
 
 ### **Summary of Constructor Overloading vs Method Overloading**
 
-| Feature                           | Constructor Overloading                 | Method Overloading                   |
-|------------------------------------|-----------------------------------------|--------------------------------------|
-| **Purpose**                        | To provide multiple ways to initialize an object | To provide multiple versions of the same method |
-| **Called**                         | When an object is created               | When the method is called           |
-| **Signature**                      | Different parameters in constructors    | Different parameters in methods     |
-| **Inheritance**                    | Constructors are not inherited          | Methods can be inherited and overloaded in subclasses |
-| **Return Type**                    | Does not have a return type             | Does not affect return type in overloading |
-| **Resolution**                     | Decided at **compile time**             | Decided at **compile time**          |
+| Feature                  | Constructor Overloading                                   | Method Overloading                                          |
+|--------------------------|------------------------------------------------------------|-------------------------------------------------------------|
+| **Definition**            | Multiple constructors with different parameter lists.      | Multiple methods with the same name but different parameters.|
+| **Purpose**               | To initialize objects in different ways.                   | To perform similar operations on different types or numbers of inputs.|
+| **Called**                | Invoked during object creation (when a new object is created). | Invoked on objects of a class after the object is created.   |
+| **Return Type**           | Constructors do not have a return type.                    | Methods can have a return type (e.g., `void`, `int`, `String`, etc.).|
+| **Usage**                 | Used for initializing class fields with different sets of arguments. | Used to perform an action with different sets of parameters. |
+| **Inheritance**           | Constructors are **not** inherited.                       | Methods can be inherited and overridden.                   |
+| **Examples**              | Different constructors for creating objects with different initial values. | Different methods for performing the same action on different data types or numbers of arguments. |
 
+---
+
+### **Conclusion**
+- **Constructor Overloading** allows creating objects in multiple ways with different initialization values.
+- **Method Overloading** allows calling a method with different types or numbers of parameters, enabling more flexible behavior.
+
+Both are powerful concepts that help you write cleaner, more readable, and reusable code. However, it’s important to use them appropriately based on whether you are initializing an object (constructor overloading) or performing an operation on various inputs (method overloading).
 ---
 
 ### **Key Differences**:

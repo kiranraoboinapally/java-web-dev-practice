@@ -1174,6 +1174,21 @@ In this example:
 | **Hybrid Inheritance** | Combination of two or more inheritance types.               | Interfaces and classes combined (via `Mammal` and `Animal`) |
 | **Multiple Inheritance** | A class inherits from multiple classes (not allowed directly in Java). | Achieved using interfaces in Java. |
 
+
+### **Benefits of Inheritance**
+
+- **Code Reusability**: Subclasses can reuse code from the superclass.
+- **Extensibility**: New subclasses can be created easily by extending existing classes.
+- **Maintainability**: Changes in the superclass automatically reflect in subclasses, reducing redundancy.
+
+---
+
+### **Limitations of Inheritance**
+
+- **Complexity**: Deep or multiple levels of inheritance can lead to a complex and hard-to-manage system.
+- **Tight Coupling**: Subclasses may become tightly coupled to the behavior of the superclass, causing issues if the superclass changes.
+- **Java's Multiple Inheritance Limitation**: Java does not allow multiple inheritance directly through classes but can achieve it using interfaces.
+
 ---
 
 ### **8. Method Signature**

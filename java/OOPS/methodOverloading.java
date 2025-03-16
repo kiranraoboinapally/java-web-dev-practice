@@ -28,3 +28,23 @@ void display(int x, String str)
     	}
 }
 
+/*
+class Demo {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(2, 3.0));  
+    }
+}
+class Calculator {
+ 
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        System.out.println("Double");
+        return a + b + 0.5;
+    }
+}
+
+//outputs double 5.5
+*/

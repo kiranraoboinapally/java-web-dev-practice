@@ -972,9 +972,16 @@ In this example:
 #### **Definition**:
 - **Inheritance** is a core concept in object-oriented programming (OOP) that allows a class (subclass or derived class) to inherit the properties (fields) and behaviors (methods) of another class (superclass or base class). This facilitates **code reuse** and **extension** of existing code.
 
+- **Note:** At a time class can extends only one classes
+
 ---
 
 #### **Types of Inheritance**:
+1.Single
+2.Multi Level
+3.Heirarchical
+4.Hybrid
+5.Multiple
 
 1. **Single Inheritance**:
    - **Single inheritance** occurs when a class inherits from only **one** superclass.

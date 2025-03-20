@@ -30,7 +30,7 @@ public class Demo
 {
 public static void main(String args[])
 	{
-	thisVsSuper obj=new diff(10);
+	diff obj=new diff(10);
 	obj.method1();
 	}
 }

@@ -10,6 +10,7 @@ public class App
     	ApplicationContext app=new ClassPathXmlApplicationContext("data.xml");
     	System.out.println(app.getBean("student1",Student.class));
     	System.out.println(app.getBean("student2",Student.class));
+    	System.out.println(app.getBean(Employee.class));
     	//ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("data.xml");
     	
     }

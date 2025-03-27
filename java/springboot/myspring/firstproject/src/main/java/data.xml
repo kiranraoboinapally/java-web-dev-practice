@@ -15,4 +15,9 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 <property name="name" value="Arun"/>
 <property name="email" value="arun@gmail.com"/>
 </bean>
+<bean id="employee1" class="com.firstproject.Employee">
+<property name="id" value="103"/>
+<property name="name" value="Varun"/>
+<property name="salary" value="30000"/>
+</bean>
 </beans>

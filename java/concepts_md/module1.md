@@ -163,6 +163,9 @@ Certainly! Here's the updated explanation:
 - Although Java uses the `boolean` type to represent **true/false** values, it’s often stored as a **1 bit** (with `true` as 1 and `false` as 0).
 - When we print a boolean, Java returns the values as `true` or `false`, but internally it’s represented as either **1 or 0** in binary form.
 
+
+
+
 ---
 
 ### **How Do Data Types Work Internally in Java?**

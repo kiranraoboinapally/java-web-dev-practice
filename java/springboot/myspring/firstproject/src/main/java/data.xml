@@ -24,4 +24,11 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 <property name="Student" ref="student1"></property>
 <property name="Employee" ref="employee1"></property>
 </bean>
+<bean id="order1" class="com.firstproject.Order">
+<constructor-arg index="0" value="1"/>
+<constructor-arg index="1" value="Laptop"/>
+<constructor-arg index="2" value="2"/>
+<constructor-arg index="3" value="1000.00"/>
+<constructor-arg index="4" value="Aryan"/>
+</bean>
 </beans>

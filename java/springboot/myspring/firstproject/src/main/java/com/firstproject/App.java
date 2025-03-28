@@ -12,7 +12,7 @@ public class App
     	System.out.println(app.getBean("student2",Student.class));
     	System.out.println(app.getBean(Employee.class));
     	System.out.println(app.getBean(College.class));//ref used in xml tags data.xml for classes configuration
-    	//ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("data.xml");
-    	
+    	//ClassPathXmlApplicationContext app=new ClassPathXmlApplicationContext("data.xml");
+    	System.out.println(app.getBean(Order.class));
     }
 }

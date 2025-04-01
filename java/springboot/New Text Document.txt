@@ -2,3 +2,214 @@ In pom.xml depenednecies used are spring core ,spring context get it from maven 
 javax annotation api dependencies for annotaion approach apis for components
 @ComponentScan(basePacakges={"com.firstproject","com.secondproject"}) if base pacakage not given it will take current package will be taken
 component scan for stereotypes component if its present object will be created with class name as small letters
+
+
+
+### **Spring Bean Lifecycle**
+In Spring, a bean goes through several lifecycle stages managed by the **Spring Container**. The lifecycle consists of initialization, usage, and destruction phases.
+
+---
+
+### **1. Bean Lifecycle Stages**
+1. **Instantiation** – The Spring container creates an instance of the bean.
+2. **Property Injection** – Dependencies are injected into the bean (via constructor or setter methods).
+3. **Bean Initialization**:
+   - **`@PostConstruct` (Annotation) / `init-method` (XML)**: Executes any initialization logic.
+   - **`InitializingBean#afterPropertiesSet()` (Interface Implementation)**: Another way to initialize a bean.
+4. **Bean is Ready to Use** – The bean is now available for the application.
+5. **Bean Destruction**:
+   - **`@PreDestroy` (Annotation) / `destroy-method` (XML)**: Executes cleanup tasks.
+   - **`DisposableBean#destroy()` (Interface Implementation)**: Another way to handle destruction.
+6. **Container Shutdown** – The Spring container is closed, and beans are removed from memory.
+
+---
+
+### **2. Example: Bean Lifecycle in XML Configuration**
+#### **Define Bean with `init-method` and `destroy-method`**
+```xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myBean" class="com.example.MyBean" init-method="init" destroy-method="cleanup"/>
+</beans>
+```
+
+#### **Java Class**
+```java
+package com.example;
+
+public class MyBean {
+    public void init() {
+        System.out.println("Bean is initializing...");
+    }
+
+    public void cleanup() {
+        System.out.println("Bean is being destroyed...");
+    }
+}
+```
+
+---
+
+### **3. Example: Bean Lifecycle Using Annotations (`@PostConstruct` & `@PreDestroy`)**
+#### **Java Class**
+```java
+package com.example;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
+public class MyBean {
+    
+    @PostConstruct
+    public void init() {
+        System.out.println("Bean is initializing...");
+    }
+
+    @PreDestroy
+    public void cleanup() {
+        System.out.println("Bean is being destroyed...");
+    }
+}
+```
+> **Note:** `@PostConstruct` and `@PreDestroy` are part of `jakarta.annotation` (Java EE / Jakarta EE API). Ensure you have the **`javax.annotation-api`** dependency in your `pom.xml`.
+
+```xml
+<dependency>
+    <groupId>javax.annotation</groupId>
+    <artifactId>javax.annotation-api</artifactId>
+    <version>1.3.2</version>
+</dependency>
+```
+
+---
+
+### **4. Example: Implementing `InitializingBean` & `DisposableBean` Interfaces**
+Another way to control the lifecycle is by implementing Spring-provided interfaces.
+
+#### **Java Class**
+```java
+package com.example;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class MyBean implements InitializingBean, DisposableBean {
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Bean is initializing using afterPropertiesSet()...");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("Bean is being destroyed using destroy()...");
+    }
+}
+```
+> **Note:** This approach is less recommended now, as it tightly couples your bean to the Spring framework.
+
+---
+
+### **5. Running the Lifecycle in Spring Application**
+You need to configure the Spring container to observe these lifecycle events.
+
+#### **Using ClassPathXmlApplicationContext**
+```java
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+    public static void main(String[] args) {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+        MyBean bean = context.getBean(MyBean.class);
+
+        // Close the context to trigger destroy method
+        context.close();
+    }
+}
+```
+
+---
+
+### **Conclusion**
+- **XML Configuration** → Use `init-method` and `destroy-method` in `<bean>`.
+- **Annotations** → Use `@PostConstruct` and `@PreDestroy`.
+- **Interfaces** → Implement `InitializingBean` and `DisposableBean`.
+- **Spring Context Management** → Ensure `context.close()` is called to trigger destruction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+### **ApplicationContext Types in Spring**
+
+1. **`ApplicationContext` Interface**: 
+   - Root interface for accessing beans and managing their lifecycle in Spring.
+   - Implementations: `ClassPathXmlApplicationContext`, `AnnotationConfigApplicationContext`, etc.
+
+2. **`ClassPathXmlApplicationContext`**:
+   - **Configuration Type**: XML-based (`beans.xml`).
+   - **Use Case**: Legacy projects, XML configuration.
+   - **When to Use**: If you're working with **legacy systems** or prefer **XML** for configuration.
+   - **Example**: 
+     ```xml
+     <bean id="myBean" class="com.example.MyBean"/>
+     ```
+   - **Context Loading**: `ClassPathXmlApplicationContext("beans.xml")`
+
+3. **`AnnotationConfigApplicationContext`**:
+   - **Configuration Type**: Java-based (annotations like `@Configuration`, `@Bean`, `@ComponentScan`).
+   - **Use Case**: Modern Spring applications, Spring Boot.
+   - **When to Use**: If you prefer **Java-based configuration** and want to avoid XML.
+   - **Example**: 
+     ```java
+     @Configuration
+     @ComponentScan(basePackages = "com.example")
+     public class AppConfig {
+         @Bean
+         public MyBean myBean() {
+             return new MyBean();
+         }
+     }
+     ```
+   - **Context Loading**: `AnnotationConfigApplicationContext(AppConfig.class)`
+
+4. **Differences**:
+   - **XML vs Java**: `ClassPathXmlApplicationContext` uses XML files for bean definitions, while `AnnotationConfigApplicationContext` uses Java classes with annotations.
+   - **Component Scanning**: `AnnotationConfigApplicationContext` supports automatic component scanning with `@ComponentScan`.
+
+5. **When to Choose Which**:
+   - **Use `ClassPathXmlApplicationContext`**: For **legacy projects** that use XML configuration.
+   - **Use `AnnotationConfigApplicationContext`**: For **modern, new Spring applications** or **Spring Boot** projects.
+
+---
+
+### **Key Methods in `ApplicationContext`**:
+- `getBean()`: Retrieve beans.
+- `getBeanDefinitionNames()`: List beans in context.
+- `close()`: Close the context and destroy beans.
+
+---
+
+### **In Short**:
+- **XML-based**: Use `ClassPathXmlApplicationContext` for legacy or XML-configured projects.
+- **Java-based**: Use `AnnotationConfigApplicationContext` for newer, annotation-driven Spring projects.

@@ -1,0 +1,4 @@
+In pom.xml depenednecies used are spring core ,spring context get it from maven repositories
+javax annotation api dependencies for annotaion approach apis for components
+@ComponentScan(basePacakges={"com.firstproject","com.secondproject"}) if base pacakage not given it will take current package will be taken
+component scan for stereotypes component if its present object will be created with class name as small letters

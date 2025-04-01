@@ -10,5 +10,6 @@ public class App
     	System.out.println(context.getBean("s1",Student.class));
     	System.out.println(context.getBean(Employee.class));
     	System.out.println(context.getBean(College.class));
+    	
     }
 }

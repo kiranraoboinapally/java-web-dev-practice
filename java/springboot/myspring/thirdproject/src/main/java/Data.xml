@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="s1" class="com.thirdproject.xml.Student">
+    <constructor-arg index="0" value="Kiran"/>
+    <constructor-arg index="1" value="kiran@gmail.com"/>
+    <constructor-arg index="2" value="17"/>
+    </bean>
+    <bean id="c1" class="com.thirdproject.xml.College" init-method="m1">
+    <property name="name" value="Kiran"/>
+    <property name="cname" value="Loyola"/>
+    <property name="student" ref="s1"/>
+    </bean>
+    </beans>

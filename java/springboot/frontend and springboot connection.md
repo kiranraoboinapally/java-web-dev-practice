@@ -1,4 +1,3 @@
-Yes, you can absolutely build this full-stack application using **Spring Tool Suite (STS)**. Spring Tool Suite is an IDE specifically tailored for Spring-based development and works well with Spring Boot applications. Below are the steps for setting up and developing the backend with Spring Boot and frontend with React using Spring Tool Suite.
 
 ---
 

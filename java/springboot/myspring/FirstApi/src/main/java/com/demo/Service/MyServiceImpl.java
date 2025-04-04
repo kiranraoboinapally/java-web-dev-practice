@@ -13,4 +13,9 @@ public class MyServiceImpl implements MyService {
 	{
 		return dao.m1();
 	}
+	@Override
+	public int add(int num1, int num2) {
+		return dao.add(num1,num2);
+	}
+
 }

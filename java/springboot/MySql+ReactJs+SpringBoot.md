@@ -1,69 +1,43 @@
-Sure! Here's the complete and properly arranged setup for your Spring Boot backend with MySQL and ReactJS frontend, with capitalized package names as you requested:
 
 ---
 
-### Spring Boot Backend Setup (With Capitalized Package Names)
+### **1. Backend (Spring Boot)**
 
-#### 1. Project Structure
+#### Project Structure
+
 ```
-src/
- └── main/
-      └── java/
-           └── com/
-                └── demo/
-                     ├── Config/
-                     │    └── WebConfig.java
-                     ├── Controller/
-                     │    └── OrderController.java
-                     ├── Model/
-                     │    └── Order.java
-                     ├── Repository/
-                     │    └── OrderRepository.java
-                     ├── Service/
-                     │    └── OrderService.java
-                     ├── ServiceImpl/
-                     │    └── OrderServiceImpl.java
-                     └── AmazonOrdersApplication.java
-```
-
----
-
-#### 2. Setup Spring Boot Application
-
-**`pom.xml`** (Spring Boot with dependencies for MySQL, Spring Data JPA, and Spring Web)
-
-```xml
-<dependencies>
-    <!-- Spring Boot Starter Web (REST APIs) -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <!-- Spring Boot Starter Data JPA (JPA repositories) -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-    <!-- MySQL Driver -->
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-    </dependency>
-    <!-- Spring Boot Starter Test (for testing) -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-</dependencies>
+amazon-orders-backend/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── demo/
+│   │   │   │   │   ├── Config/
+│   │   │   │   │   │   └── WebConfig.java
+│   │   │   │   │   ├── Controller/
+│   │   │   │   │   │   └── OrderController.java
+│   │   │   │   │   ├── Model/
+│   │   │   │   │   │   └── Order.java
+│   │   │   │   │   ├── Repository/
+│   │   │   │   │   │   └── OrderRepository.java
+│   │   │   │   │   ├── Service/
+│   │   │   │   │   │   ├── OrderService.java
+│   │   │   │   │   │   └── Impl/
+│   │   │   │   │   │       └── OrderServiceImpl.java
+│   │   │   │   │   └── AmazonOrdersApplication.java
+│   └── resources/
+│       └── application.properties
+├── pom.xml
+└── target/
 ```
 
 ---
 
-#### 3. Spring Boot Backend Code
+### **Backend Files**
 
-##### **`application.properties`** (MySQL Configuration)
+#### **1. `application.properties`**
 
+Configure MySQL database connection:
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/amazon_orders
 spring.datasource.username=root
@@ -74,7 +48,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 ```
 
-##### **`WebConfig.java`** (Enable CORS)
+#### **2. WebConfig.java (CORS Configuration)**
 
 ```java
 package com.demo.Config;
@@ -90,14 +64,14 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")  // React frontend
+                .allowedOrigins("http://localhost:3000") // React frontend runs on port 3000
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
 }
 ```
 
-##### **`Order.java`** (Model Class)
+#### **3. Order.java (Entity)**
 
 ```java
 package com.demo.Model;
@@ -107,7 +81,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Order {
-
     @Id
     private String orderId;
     private String customerName;
@@ -158,7 +131,7 @@ public class Order {
 }
 ```
 
-##### **`OrderRepository.java`** (Repository Interface)
+#### **4. OrderRepository.java**
 
 ```java
 package com.demo.Repository;
@@ -167,11 +140,11 @@ import com.demo.Model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderRepository extends JpaRepository<Order, String> {
-    // Additional query methods can be added here if needed
+    // Custom query methods can be added here if needed
 }
 ```
 
-##### **`OrderService.java`** (Service Interface)
+#### **5. OrderService.java**
 
 ```java
 package com.demo.Service;
@@ -188,10 +161,10 @@ public interface OrderService {
 }
 ```
 
-##### **`OrderServiceImpl.java`** (Service Implementation)
+#### **6. OrderServiceImpl.java**
 
 ```java
-package com.demo.ServiceImpl;
+package com.demo.Service.Impl;
 
 import com.demo.Model.Order;
 import com.demo.Repository.OrderRepository;
@@ -240,7 +213,7 @@ public class OrderServiceImpl implements OrderService {
 }
 ```
 
-##### **`OrderController.java`** (Controller Class)
+#### **7. OrderController.java**
 
 ```java
 package com.demo.Controller;
@@ -260,11 +233,13 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    // GET all orders
     @GetMapping
     public List<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
 
+    // GET order by ID
     @GetMapping("/{orderId}")
     public ResponseEntity<Order> getOrderById(@PathVariable String orderId) {
         Order order = orderService.getOrderById(orderId);
@@ -274,29 +249,33 @@ public class OrderController {
         return ResponseEntity.notFound().build();
     }
 
+    // POST order (Create)
     @PostMapping
-    public Order createOrder(@RequestBody Order order) {
-        return orderService.saveOrder(order);
+    public ResponseEntity<String> createOrder(@RequestBody Order order) {
+        Order createdOrder = orderService.saveOrder(order);
+        return ResponseEntity.status(201).body("Order created successfully: " + createdOrder.getOrderId());
     }
 
+    // PUT order (Update)
     @PutMapping("/{orderId}")
-    public ResponseEntity<Order> updateOrder(@PathVariable String orderId, @RequestBody Order order) {
+    public ResponseEntity<String> updateOrder(@PathVariable String orderId, @RequestBody Order order) {
         Order updatedOrder = orderService.updateOrder(orderId, order);
         if (updatedOrder != null) {
-            return ResponseEntity.ok(updatedOrder);
+            return ResponseEntity.ok("Order updated successfully: " + updatedOrder.getOrderId());
         }
-        return ResponseEntity.notFound().build();
+        return ResponseEntity.status(404).body("Order not found for update: " + orderId);
     }
 
+    // DELETE order
     @DeleteMapping("/{orderId}")
-    public ResponseEntity<Void> deleteOrder(@PathVariable String orderId) {
+    public ResponseEntity<String> deleteOrder(@PathVariable String orderId) {
         orderService.deleteOrder(orderId);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok("Successfully deleted order with ID: " + orderId);
     }
 }
 ```
 
-##### **`AmazonOrdersApplication.java`** (Main Application)
+#### **8. AmazonOrdersApplication.java (Main Spring Boot App)**
 
 ```java
 package com.demo;
@@ -306,7 +285,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class AmazonOrdersApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(AmazonOrdersApplication.class, args);
     }
@@ -315,16 +293,25 @@ public class AmazonOrdersApplication {
 
 ---
 
-### ReactJS Frontend Setup (With Capitalized Package Names)
+### **2. Frontend (ReactJS)**
 
-1. **Create React App**: 
-   ```bash
-   npx create-react-app amazon-orders
-   cd amazon-orders
-   npm install axios
-   ```
+#### Project Structure
 
-2. **`App.js`** (Main React Component)
+```
+amazon-orders-frontend/
+├── src/
+│   ├── App.js
+│   ├── index.js
+├── public/
+│   ├── index.html
+├── package.json
+├── node_modules/
+└── .gitignore
+```
+
+---
+
+#### **App.js**
 
 ```javascript
 import React, { useState, useEffect } from "react";
@@ -357,6 +344,7 @@ function App() {
     axios.post("http://localhost:8080/orders", order)
       .then(response => {
         setOrders([...orders, response.data]);
+        console.log("Response from POST (Create Order): ", response.data); 
         setOrder({
           orderId: "",
           customerName: "",
@@ -376,6 +364,7 @@ function App() {
           o.orderId === order.orderId ? response.data : o
         );
         setOrders(updatedOrders);
+        console.log("Response from PUT (Update Order): ", response.data); 
         setOrder({
           orderId: "",
           customerName: "",
@@ -389,8 +378,9 @@ function App() {
 
   const handleDeleteOrder = (orderId) => {
     axios.delete(`http://localhost:8080/orders/${orderId}`)
-      .then(() => {
+      .then(response => {
         setOrders(orders.filter((order) => order.orderId !== orderId));
+        console.log("Response from DELETE (Delete Order): ", response.data); 
       })
       .catch(error => console.error("There was an error deleting the order!", error));
   };
@@ -400,7 +390,9 @@ function App() {
       <h1>Amazon Orders Management</h1>
 
       <form onSubmit={handleCreateOrder}>
-        <input type="text" name="orderId" placeholder="Order ID" value={order.orderId} onChange={handleChange} />
+        <input type="text" name="
+
+orderId" placeholder="Order ID" value={order.orderId} onChange={handleChange} />
         <input type="text" name="customerName" placeholder="Customer Name" value={order.customerName} onChange={handleChange} />
         <input type="text" name="productName" placeholder="Product Name" value={order.productName} onChange={handleChange} />
         <input type="number" name="quantity" placeholder="Quantity" value={order.quantity} onChange={handleChange} />
@@ -426,20 +418,30 @@ function App() {
 export default App;
 ```
 
----
+### **3. Running the Application**
 
-### Running the Application
-
-1. **Start the Spring Boot Backend:**
-
+#### **Backend**
+1. Ensure MySQL is running and the database is set up (`amazon_orders`).
+2. Run the backend with Maven:
    ```bash
    mvn spring-boot:run
    ```
 
-2. **Start the ReactJS Frontend:**
-
+#### **Frontend**
+1. Install the dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the frontend development server:
    ```bash
    npm start
    ```
 
 ---
+
+### **4. Testing CRUD Operations**
+- **POST**: Create a new order by sending a POST request to `http://localhost:8080/orders`.
+- **GET**: View all orders by sending a GET request to `http://localhost:8080/orders`.
+- **PUT**: Update an order by sending a PUT request to `http://localhost:8080/orders/{orderId}`.
+- **DELETE**: Delete an order by sending a DELETE request to `http://localhost:8080/orders/{orderId}`.
+

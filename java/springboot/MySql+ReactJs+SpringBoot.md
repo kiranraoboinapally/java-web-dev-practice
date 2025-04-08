@@ -382,3 +382,31 @@ Now, you have a full-stack application with CRUD operations for Amazon orders. Y
 - **View** all orders on the page.
 
 This setup includes Spring Boot backend and ReactJS frontend with proper integration.
+
+---
+#### 1. **Enable CORS (Cross-Origin Resource Sharing)**
+Since the frontend (React) will run on a different port (usually port 3000) than the backend (Spring Boot, usually port 8080), you need to enable CORS to allow communication between the frontend and backend.
+
+You can create a global CORS configuration in your Spring Boot application by adding the following configuration class:
+
+```java
+package com.demo.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:3000") // React frontend runs on port 3000
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*");
+    }
+}
+```
+

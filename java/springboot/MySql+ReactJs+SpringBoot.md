@@ -1,26 +1,68 @@
+Sure! Here's the complete and properly arranged setup for your Spring Boot backend with MySQL and ReactJS frontend, with capitalized package names as you requested:
 
-### **Backend (Spring Boot + MySQL)**
+---
 
-We will start with the **Spring Boot backend**, which will expose REST APIs for CRUD operations. In the backend, we will be using **Spring Data JPA** to interact with the **MySQL** database.
+### Spring Boot Backend Setup (With Capitalized Package Names)
 
-### **1. Spring Boot Backend Setup**
-
-#### Step 1: Set Up Your Spring Boot Application
-
-1. Create a Spring Boot project with dependencies like:
-   - **Spring Web**
-   - **Spring Data JPA**
-   - **MySQL Driver**
-
-#### Step 2: Configure MySQL in `application.properties`
-
-Make sure you have MySQL running, and the database is created. You can use the following command to create the `amazon_orders` database:
-
-```sql
-CREATE DATABASE amazon_orders;
+#### 1. Project Structure
+```
+src/
+ └── main/
+      └── java/
+           └── com/
+                └── demo/
+                     ├── Config/
+                     │    └── WebConfig.java
+                     ├── Controller/
+                     │    └── OrderController.java
+                     ├── Model/
+                     │    └── Order.java
+                     ├── Repository/
+                     │    └── OrderRepository.java
+                     ├── Service/
+                     │    └── OrderService.java
+                     ├── ServiceImpl/
+                     │    └── OrderServiceImpl.java
+                     └── AmazonOrdersApplication.java
 ```
 
-Configure the `application.properties` file for MySQL connection:
+---
+
+#### 2. Setup Spring Boot Application
+
+**`pom.xml`** (Spring Boot with dependencies for MySQL, Spring Data JPA, and Spring Web)
+
+```xml
+<dependencies>
+    <!-- Spring Boot Starter Web (REST APIs) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!-- Spring Boot Starter Data JPA (JPA repositories) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <!-- MySQL Driver -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <!-- Spring Boot Starter Test (for testing) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+```
+
+---
+
+#### 3. Spring Boot Backend Code
+
+##### **`application.properties`** (MySQL Configuration)
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/amazon_orders
@@ -32,16 +74,40 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 ```
 
-#### Step 3: Define the Entity Class (`Order.java`)
+##### **`WebConfig.java`** (Enable CORS)
 
 ```java
-package com.demo.model;
+package com.demo.Config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:3000")  // React frontend
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*");
+    }
+}
+```
+
+##### **`Order.java`** (Model Class)
+
+```java
+package com.demo.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class Order {
+
     @Id
     private String orderId;
     private String customerName;
@@ -92,12 +158,12 @@ public class Order {
 }
 ```
 
-#### Step 4: Create a Repository Interface (`OrderRepository.java`)
+##### **`OrderRepository.java`** (Repository Interface)
 
 ```java
-package com.demo.repository;
+package com.demo.Repository;
 
-import com.demo.model.Order;
+import com.demo.Model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderRepository extends JpaRepository<Order, String> {
@@ -105,12 +171,12 @@ public interface OrderRepository extends JpaRepository<Order, String> {
 }
 ```
 
-#### Step 5: Create a Service Layer (`OrderService.java`)
+##### **`OrderService.java`** (Service Interface)
 
 ```java
-package com.demo.service;
+package com.demo.Service;
 
-import com.demo.model.Order;
+import com.demo.Model.Order;
 import java.util.List;
 
 public interface OrderService {
@@ -122,14 +188,14 @@ public interface OrderService {
 }
 ```
 
-#### Step 6: Implement the Service Layer (`OrderServiceImpl.java`)
+##### **`OrderServiceImpl.java`** (Service Implementation)
 
 ```java
-package com.demo.service.impl;
+package com.demo.ServiceImpl;
 
-import com.demo.model.Order;
-import com.demo.repository.OrderRepository;
-import com.demo.service.OrderService;
+import com.demo.Model.Order;
+import com.demo.Repository.OrderRepository;
+import com.demo.Service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -174,13 +240,13 @@ public class OrderServiceImpl implements OrderService {
 }
 ```
 
-#### Step 7: Create Controller (`OrderController.java`)
+##### **`OrderController.java`** (Controller Class)
 
 ```java
-package com.demo.controller;
+package com.demo.Controller;
 
-import com.demo.model.Order;
-import com.demo.service.OrderService;
+import com.demo.Model.Order;
+import com.demo.Service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -194,13 +260,11 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    // GET all orders
     @GetMapping
     public List<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
 
-    // GET order by ID
     @GetMapping("/{orderId}")
     public ResponseEntity<Order> getOrderById(@PathVariable String orderId) {
         Order order = orderService.getOrderById(orderId);
@@ -210,13 +274,11 @@ public class OrderController {
         return ResponseEntity.notFound().build();
     }
 
-    // POST order
     @PostMapping
     public Order createOrder(@RequestBody Order order) {
         return orderService.saveOrder(order);
     }
 
-    // PUT order (update)
     @PutMapping("/{orderId}")
     public ResponseEntity<Order> updateOrder(@PathVariable String orderId, @RequestBody Order order) {
         Order updatedOrder = orderService.updateOrder(orderId, order);
@@ -226,7 +288,6 @@ public class OrderController {
         return ResponseEntity.notFound().build();
     }
 
-    // DELETE order
     @DeleteMapping("/{orderId}")
     public ResponseEntity<Void> deleteOrder(@PathVariable String orderId) {
         orderService.deleteOrder(orderId);
@@ -235,23 +296,37 @@ public class OrderController {
 }
 ```
 
-### **2. Frontend (ReactJS)**
+##### **`AmazonOrdersApplication.java`** (Main Application)
 
-Now let's build the ReactJS frontend to perform CRUD operations with buttons for **Get**, **Post**, **Put (Update)**, and **Delete**.
+```java
+package com.demo;
 
-#### Step 1: Set Up the React App
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-Use the command `npx create-react-app amazon-orders` to create your React app. Then, install Axios for making HTTP requests.
+@SpringBootApplication
+public class AmazonOrdersApplication {
 
-```bash
-npm install axios
+    public static void main(String[] args) {
+        SpringApplication.run(AmazonOrdersApplication.class, args);
+    }
+}
 ```
 
-#### Step 2: Update `App.js` for CRUD Operations
+---
 
-Here’s how you can set up the React frontend with buttons for each operation:
+### ReactJS Frontend Setup (With Capitalized Package Names)
 
-```jsx
+1. **Create React App**: 
+   ```bash
+   npx create-react-app amazon-orders
+   cd amazon-orders
+   npm install axios
+   ```
+
+2. **`App.js`** (Main React Component)
+
+```javascript
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -265,7 +340,6 @@ function App() {
     price: "",
   });
 
-  // Fetch all orders on component mount
   useEffect(() => {
     axios.get("http://localhost:8080/orders")
       .then(response => {
@@ -274,12 +348,10 @@ function App() {
       .catch(error => console.error("There was an error fetching the orders!", error));
   }, []);
 
-  // Handle form input changes
   const handleChange = (e) => {
     setOrder({ ...order, [e.target.name]: e.target.value });
   };
 
-  // Create new order
   const handleCreateOrder = (e) => {
     e.preventDefault();
     axios.post("http://localhost:8080/orders", order)
@@ -296,7 +368,6 @@ function App() {
       .catch(error => console.error("There was an error creating the order!", error));
   };
 
-  // Update existing order
   const handleUpdateOrder = (e) => {
     e.preventDefault();
     axios.put(`http://localhost:8080/orders/${order.orderId}`, order)
@@ -316,7 +387,6 @@ function App() {
       .catch(error => console.error("There was an error updating the order!", error));
   };
 
-  // Delete order
   const handleDeleteOrder = (orderId) => {
     axios.delete(`http://localhost:8080/orders/${orderId}`)
       .then(() => {
@@ -356,57 +426,20 @@ function App() {
 export default App;
 ```
 
-### **3. Run the Application**
+---
 
-1. **Start the Spring Boot Backend**:
-   Run your Spring Boot backend with:
+### Running the Application
+
+1. **Start the Spring Boot Backend:**
 
    ```bash
    mvn spring-boot:run
    ```
 
-2. **Start the React Frontend**:
-   In the React project directory, run:
+2. **Start the ReactJS Frontend:**
 
    ```bash
    npm start
    ```
 
-### **Conclusion**
-
-Now, you have a full-stack application with CRUD operations for Amazon orders. You can:
-
-- **Create** orders with the "Create Order" button.
-- **Update** orders with the "Update Order" button.
-- **Delete** orders with the "Delete" button.
-- **View** all orders on the page.
-
-This setup includes Spring Boot backend and ReactJS frontend with proper integration.
-
 ---
-#### 1. **Enable CORS (Cross-Origin Resource Sharing)**
-Since the frontend (React) will run on a different port (usually port 3000) than the backend (Spring Boot, usually port 8080), you need to enable CORS to allow communication between the frontend and backend.
-
-You can create a global CORS configuration in your Spring Boot application by adding the following configuration class:
-
-```java
-package com.demo.config;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
-
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000") // React frontend runs on port 3000
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("*");
-    }
-}
-```
-

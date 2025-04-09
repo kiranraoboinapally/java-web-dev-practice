@@ -1,5 +1,10 @@
 package com.user.Repository;
 
-public interface UserRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.user.Model.User;
+
+public interface UserRepository extends CrudRepository<User,Long> {
+
 
 }

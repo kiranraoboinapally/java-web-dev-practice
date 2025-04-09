@@ -80,6 +80,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+@Table(name="Orders")
 public class Order {
     @Id
     private String orderId;

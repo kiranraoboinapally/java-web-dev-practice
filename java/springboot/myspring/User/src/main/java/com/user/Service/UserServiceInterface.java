@@ -12,4 +12,7 @@ public interface UserServiceInterface {
 
 	List<User> findAll();
 
+	User update(Long id, User user); 
+
+	void delete(Long id);  
 }

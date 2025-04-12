@@ -7,4 +7,5 @@ import com.user.Model.User;
 public interface UserCrudRepository extends CrudRepository<User,Long>{
 
 	User findByName(String Name);
+
 }

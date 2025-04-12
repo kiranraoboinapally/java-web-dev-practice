@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import com.user.Exception.UserNotFoundException;
 
+import com.user.Exception.UserNotFoundException;
 import com.user.Model.User;
 import com.user.Repository.UserCrudRepository;
 import com.user.Repository.UserJpaRepository;
@@ -66,4 +68,11 @@ public class UserServiceImpl implements UserServiceInterface {
             throw new UserNotFoundException("User with ID " + id + " does not exist.");
         }
     }
+
+	@Override
+	public List<User> myPagination() {
+	PageRequest pagerequest=PageRequest.of(1, 2);
+	Page<User> page=userJpaRepository.findAll(pagerequest);
+	return page.toList();
+	}
 }

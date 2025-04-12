@@ -43,4 +43,8 @@ public User updateUser(@PathVariable Long id, @RequestBody User user) {
 public void deleteUser(@PathVariable Long id) {
     userServiceInterface.delete(id);
 }
+@GetMapping("/pagination")
+public List<User> myPagination()
+{
+	return userServiceInterface.myPagination();}
 }

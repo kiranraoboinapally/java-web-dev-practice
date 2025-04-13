@@ -99,62 +99,6 @@ com.example.freelancemarketplace
 
 ---
 
-## 🚀 What’s Next?
-
-Let me know which one you want me to generate for you:
-- ✅ Service layer interfaces + implementations  
-- ✅ SQL for creating dummy data  
-- ✅ Swagger config  
-- ✅ Full setup instructions to run the project  
-- ✅ DTOs for cleaner responses
-
-I’ve got you covered on any step!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sure! Here's a complete and clean **project structure** for your **Freelance Job Marketplace** Spring Boot project, using:
-
-- ✅ No enums  
-- ✅ No ResponseEntity  
-- ✅ REST API style  
-- ✅ Clean and real-world architecture
-
----
-
 ## 📁 Project Directory Structure
 
 ```
@@ -282,12 +226,62 @@ public class FreelanceMarketplaceApplication {
 
 ---
 
-## ✅ Next Step
+## 👤 USER OPERATIONS (Clients + Freelancers)
 
-Would you like me to generate the full code for:
-- All model classes?
-- One full feature (e.g., User CRUD)?
-- Service layer with simple logic?
-- Sample SQL data?
+| No. | Operation | Hint |
+|-----|-----------|------|
+| 1. | **Create user** | `POST /api/users` → Save user in DB via `userRepository.save(user)` |
+| 2. | **Get user by ID** | `GET /api/users/{id}` → `userRepository.findById(id)` |
+| 3. | **Get all freelancers** | `GET /api/users/freelancers` → `userRepository.findByRole("FREELANCER")` |
+| 4. | **Search users by skill** | `GET /api/users/search?skill=Java` → `userRepository.findBySkillsContaining("Java")` |
+| 5. | **Update user rating** | `PUT /api/users/{id}/rating?rating=4.5` → Fetch + update rating |
+| 6. | **Toggle user active/inactive** | `PUT /api/users/{id}/toggle` → Invert boolean `active` field |
+| 7. | **Get users by role** | Optional: `GET /api/users/role/{role}` |
+| 8. | **Get active users** | Optional: `GET /api/users/active` → `findByActive(true)` |
+| 9. | **Get top freelancers by rating** | `GET /api/users/top-rated` → `findAllByOrderByRatingDesc()` |
 
-Let me know where you'd like to start!
+---
+
+## 📄 JOB POST OPERATIONS
+
+| No. | Operation | Hint |
+|-----|-----------|------|
+| 10. | **Create job post** | `POST /api/jobs` → Save to DB with `jobPostRepository.save(jobPost)` |
+| 11. | **Get job post by ID** | `GET /api/jobs/{id}` |
+| 12. | **Get all open jobs** | `GET /api/jobs/open` → `findByIsOpenTrue()` |
+| 13. | **Get jobs by client** | `GET /api/jobs/client/{clientId}` → `findByPostedById()` |
+| 14. | **Search jobs by keyword** | `GET /api/jobs/search?keyword=Java` → title/description contains |
+| 15. | **Close a job** | `PUT /api/jobs/{id}/close` → `setIsOpen(false)` |
+| 16. | **Sort jobs by deadline** | Optional: `GET /api/jobs/sort/deadline` → `findAll(Sort.by("deadline"))` |
+| 17. | **Recent jobs in last X days** | Optional: Use `LocalDate.now().minusDays(x)` with JPQL/criteria |
+
+---
+
+## 📩 PROPOSAL OPERATIONS
+
+| No. | Operation | Hint |
+|-----|-----------|------|
+| 18. | **Submit proposal** | `POST /api/proposals` → Save proposal with job + freelancer |
+| 19. | **Get proposals for job** | `GET /api/proposals/job/{jobId}` → `findByJobId()` |
+| 20. | **Get proposals by freelancer** | `GET /api/proposals/freelancer/{freelancerId}` |
+| 21. | **Accept proposal** | `PUT /api/proposals/{id}/accept` → `setStatus("ACCEPTED")` |
+| 22. | **Reject proposal** | `PUT /api/proposals/{id}/reject` → `setStatus("REJECTED")` |
+| 23. | **List proposals by status** | Optional: `GET /api/proposals/status/{status}` |
+| 24. | **Count proposals for job** | Optional: `proposalRepository.countByJobId(jobId)` |
+
+---
+
+## 🚦 Total Operations
+
+You now have **24 total operations**, mostly unique and covering:
+
+- CRUD
+- Filters
+- Status updates
+- Search
+- Sorting
+- Counting
+
+All perfect for a strong Spring Boot project with full JPA integration.
+
+---

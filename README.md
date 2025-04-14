@@ -37,10 +37,10 @@ java-web-dev-practice/
 │   └── strings/            # String manipulation and related problems
 │   └── ques.md             # List of all practice problems in this folder
 │
-├── web-development/
-│   ├── html/               # HTML-related practice problems (e.g., forms, tables, layouts)
+├── webdev/
+│   ├── HTML/               # HTML-related practice problems (e.g., forms, tables, layouts)
 │   ├── css/                # CSS styling challenges (e.g., flexbox, grid, animations)
-│   ├── javascript/         # JavaScript exercises (e.g., DOM manipulation, ES6 features, algorithms)
+│   ├── js/         # JavaScript exercises (e.g., DOM manipulation, ES6 features, algorithms)
 │   ├── reactjs/            # ReactJS components and state management problems
 │   └── full-stack/         # Full-stack projects combining ReactJS, Spring Boot, and SQL
 │

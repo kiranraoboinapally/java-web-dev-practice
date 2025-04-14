@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "redme note 11",
+      "price": "23000",
+      "category": "mobiles",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "vivo v20 ",
+      "price": 20000,
+      "category": "mobiles"
+    },
+    {
+      "id": "3",
+      "name": "Mac book Air ",
+      "price": 100000,
+      "category": "mobiles"
+    },
+    {
+      "name": "Poco M6 Pro",
+      "price": "12000",
+      "category": "mobiles",
+      "id": "4"
+    },
+    {
+      "id": "4",
+      "name": "One Plus",
+      "price": 25000,
+      "category": "mobiles"
+    },
+    {
+      "name": "Asus GT1530",
+      "price": "23000",
+      "category": "laptops",
+      "id": "2bca"
+    }
+  ]
+}

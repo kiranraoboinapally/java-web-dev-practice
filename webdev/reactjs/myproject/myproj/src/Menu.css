@@ -1,0 +1,49 @@
+
+.Menu {
+    text-align: center;
+  }
+ul{
+  justify-content: center;
+    list-style-type: none;
+    display:flex;
+    gap: 20px;
+    color:red;
+    text-overflow: ellipsis;
+    text-decoration: double;
+    background-color: rgba(255, 255, 255, 0.4);
+    align-items: center;
+  }
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link:visited {
+  color: rgb(230, 13, 13);
+}
+
+.nav-link:link {
+  color: rgb(239, 223, 6);
+}
+
+.nav-link:active {
+  color: blue;
+}
+
+
+li
+{
+background-color: rgb(0, 0, 0);
+margin:2px 2px 2px 2px;
+padding: 5px;
+border-radius:10px;
+text-align: center;
+align-items: center;
+}
+
+
+
+

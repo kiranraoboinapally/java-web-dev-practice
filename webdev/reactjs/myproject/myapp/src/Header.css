@@ -1,0 +1,13 @@
+.Header {
+    text-align: center;
+  }
+
+ul{
+    display:flex;
+    gap:15px;
+    list-style-type: none;
+    background: blue;
+    padding: 10px;
+    color:white;
+    cursor:pointer;
+}

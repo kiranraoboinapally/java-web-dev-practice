@@ -1,4 +1,5 @@
 
+```markdown
 ---
 
 ## Java Practice Programs
@@ -9,12 +10,10 @@ Note: The `ques.md` file in the `java/` folder provides a complete list of probl
 
 ### Table of Contents
 
-- Folder Structure
-- Java Programs
-- SQL Concepts
-- How to Use
-- Contributing
-- License
+- [Folder Structure](#folder-structure)
+- [How to Use](#how-to-use)
+- [Contributing](#contributing)
+- [License](#license)
 
 ### Folder Structure
 
@@ -97,3 +96,4 @@ Note: Feel free to experiment and add new problems to the `rough/` folder for pr
 This repository is open-source and available under the MIT License.
 
 ---
+```

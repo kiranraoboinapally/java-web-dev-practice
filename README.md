@@ -94,7 +94,7 @@ java-web-dev-practice/
    Example:
    
    ```bash
-   cd web-development/html
+   cd webdev/HTML
    open index.html   # Open HTML file in browser for testing
    ```
 

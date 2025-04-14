@@ -1,5 +1,4 @@
 
-```markdown
 ---
 
 ## Java Practice Programs
@@ -96,4 +95,4 @@ Note: Feel free to experiment and add new problems to the `rough/` folder for pr
 This repository is open-source and available under the MIT License.
 
 ---
-```
+

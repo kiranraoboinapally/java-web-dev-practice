@@ -1,9 +1,9 @@
 
 ---
 
-## Java Practice Programs
+## Java & Web Development Practice Programs
 
-This repository contains a collection of Java practice programs and SQL concepts to help learners strengthen their problem-solving skills and coding abilities. The repository is organized into Java-based challenges and daily updated SQL concepts, allowing you to practice both Java programming and SQL queries.
+This repository contains a collection of practice programs for Java, Web Development (HTML, CSS, JavaScript), SQL concepts, Spring Boot, and ReactJS. These programs aim to help learners strengthen their problem-solving skills and coding abilities across different technologies. The repository is organized into Java-based challenges, web development exercises, SQL concepts, and more, allowing you to practice multiple technologies.
 
 Note: The `ques.md` file in the `java/` folder provides a complete list of problems and challenges in this repository for Java practice problems.
 
@@ -19,7 +19,7 @@ Note: The `ques.md` file in the `java/` folder provides a complete list of probl
 The repository is organized as follows:
 
 ```
-java-practice-problems/
+java-web-dev-practice/
 ├── java/
 │   ├── OOPS/               # Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
 │   ├── arrays/             # Array manipulation and algorithms (e.g., rotation, searching)
@@ -37,6 +37,13 @@ java-practice-problems/
 │   └── strings/            # String manipulation and related problems
 │   └── ques.md             # List of all practice problems in this folder
 │
+├── web-development/
+│   ├── html/               # HTML-related practice problems (e.g., forms, tables, layouts)
+│   ├── css/                # CSS styling challenges (e.g., flexbox, grid, animations)
+│   ├── javascript/         # JavaScript exercises (e.g., DOM manipulation, ES6 features, algorithms)
+│   ├── reactjs/            # ReactJS components and state management problems
+│   └── full-stack/         # Full-stack projects combining ReactJS, Spring Boot, and SQL
+│
 ├── sql/
 │   └── ChatGPT.md          # Daily updated SQL concepts, explanations, and examples
 │
@@ -50,12 +57,12 @@ java-practice-problems/
    Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/kiranraoboinapally/java-practice-problems.git
+   git clone https://github.com/kiranraoboinapally/java-web-dev-practice.git
    ```
 
 2. **Navigate to the Program Directory**:
 
-   Go to the directory that contains the Java or SQL program you want to run.
+   Go to the directory that contains the program you want to run (Java, HTML, CSS, JS, ReactJS, Spring Boot, SQL).
 
 3. **Compile and Run Java Programs**:
    
@@ -77,6 +84,30 @@ java-practice-problems/
 
    Open the `sql/ChatGPT.md` file to explore daily updated SQL concepts.
 
+5. **Web Development**:
+   
+   - **HTML**: Practice building HTML pages and forms.
+   - **CSS**: Learn styling techniques such as Flexbox and CSS Grid.
+   - **JavaScript**: Solve problems involving DOM manipulation, events, and algorithms.
+   - **ReactJS**: Build interactive applications using React, including handling state and props.
+
+   Example:
+   
+   ```bash
+   cd web-development/html
+   open index.html   # Open HTML file in browser for testing
+   ```
+
+   For JavaScript and ReactJS, open the respective files or use tools like `npm` to run them in a local environment.
+
+6. **Spring Boot**:
+
+   For Spring Boot practice, go to the `springboot/` folder and follow the instructions to run Spring Boot applications. Use Maven or Gradle to build and run the application.
+
+   ```bash
+   mvn spring-boot:run   # Run Spring Boot app with Maven
+   ```
+
 ### Contributing
 
 Contributions are welcome! If you have suggestions or want to add new practice problems, please follow these steps:
@@ -95,4 +126,3 @@ Note: Feel free to experiment and add new problems to the `rough/` folder for pr
 This repository is open-source and available under the MIT License.
 
 ---
-

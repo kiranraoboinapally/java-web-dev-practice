@@ -20,28 +20,31 @@ Note: The `ques.md` file in the `java/` folder provides a complete list of probl
 
 The repository is organized as follows:
 
-```plaintext
+```
+
 java-practice-problems/
 ├── java/
-│   ├── basics/            # Basic Java programs (e.g., Swapping Numbers, FizzBuzz)
-│   ├── loops/             # Programs for different types of loops (for, while, do-while)
-│   │   ├── for/           # Programs using 'for' loop
-│   │   ├── do-while/      # Programs using 'do-while' loop
-│   │   └── while/         # Programs using 'while' loop
-│   ├── concepts_md/       # Concepts in markdown format (e.g., OOP, Java fundamentals)
-│   ├── arrays/            # Array manipulation and algorithms (e.g., rotation, searching)
-│   ├── strings/           # String manipulation and related problems
-│   ├── exceptions/        # Exception handling programs (e.g., try-catch blocks)
-│   ├── OOPS/              # Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
-│   ├── springboot/        # Spring Boot related practice and learning
-│   ├── leetcode/          # Solutions to Leetcode problems
-│   ├── rough/             # Rough/experimental problem-solving code (Feel free to add problems here)
-│   └── ques.md            # List of all practice problems in this folder
+│   ├── OOPS/               # Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
+│   ├── arrays/             # Array manipulation and algorithms (e.g., rotation, searching)
+│   ├── basics/             # Basic Java programs (e.g., Swapping Numbers, FizzBuzz)
+│   ├── collections/        # Collection-related programs (e.g., List, Set, Map)
+│   ├── concepts_md/        # Concepts in markdown format (e.g., OOP, Java fundamentals)
+│   ├── exceptions/         # Exception handling programs (e.g., try-catch blocks)
+│   ├── leetcode/           # Solutions to Leetcode problems
+│   ├── loops/              # Programs for different types of loops (for, while, do-while)
+│   │   ├── for/            # Programs using 'for' loop
+│   │   ├── do-while/       # Programs using 'do-while' loop
+│   │   └── while/          # Programs using 'while' loop
+│   ├── rough/              # Rough/experimental problem-solving code (Feel free to add problems here)
+│   ├── springboot/         # Spring Boot related practice and learning
+│   └── strings/            # String manipulation and related problems
+│   └── ques.md             # List of all practice problems in this folder
 │
 ├── sql/
-│   └── ChatGPT.md         # Daily updated SQL concepts, explanations, and examples
+│   └── ChatGPT.md          # Daily updated SQL concepts, explanations, and examples
 │
-└── LICENSE                # Repository license file
+└── LICENSE                 # Repository license file
+
 ```
 
 ### How to Use

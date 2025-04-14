@@ -21,7 +21,6 @@ Note: The `ques.md` file in the `java/` folder provides a complete list of probl
 The repository is organized as follows:
 
 ```
-
 java-practice-problems/
 ├── java/
 │   ├── OOPS/               # Object-Oriented Programming concepts (e.g., classes, inheritance, polymorphism)
@@ -44,7 +43,6 @@ java-practice-problems/
 │   └── ChatGPT.md          # Daily updated SQL concepts, explanations, and examples
 │
 └── LICENSE                 # Repository license file
-
 ```
 
 ### How to Use

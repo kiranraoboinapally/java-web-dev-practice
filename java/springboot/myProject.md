@@ -1,17 +1,3 @@
-Absolutely! Here’s a complete overview of your project, requirements, and development tasks — simplified and clearly laid out.
-
----
-
-## ✅ PROJECT OVERVIEW
-
-### 📌 Project Name: **Freelance Job Marketplace**
-
-This is a RESTful Spring Boot application where:
-- **Clients** can post jobs.
-- **Freelancers** can browse those jobs and submit proposals.
-- Both users interact via a system of job listings and proposals.
-- All roles and statuses are handled as simple `String` fields (not enums).
-- No `ResponseEntity` is used — just plain object responses.
 
 ---
 

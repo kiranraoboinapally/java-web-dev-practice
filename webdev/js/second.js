@@ -3,6 +3,8 @@
 over here */
 
 //Arithmetic Operators
+
+console.log("--------------------------Second JS file--------------------------");
 let k=2;
 let b=3;
 console.log(k+b)

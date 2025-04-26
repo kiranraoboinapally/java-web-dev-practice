@@ -36,6 +36,11 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
+      # Build required for Java/Kotlin so CodeQL can analyze the bytecode
+      - name: Build Java project (required for CodeQL)
+        if: matrix.language == 'java-kotlin'
+        run: mvn -f java/springboot/myspring/pom.xml clean install -DskipTests
+
       - name: Run CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:

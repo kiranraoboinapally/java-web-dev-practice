@@ -1,0 +1,128 @@
+name: "CodeQL Advanced + Build & Test Workflow"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '29 14 * * 0'  # Runs every Sunday at 14:29 UTC
+
+jobs:
+  # CodeQL Analysis Job
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: java-kotlin
+            build-mode: none  # Analyze Java; adjust if Kotlin needs separate handling
+          - language: javascript-typescript
+            build-mode: none
+          - language: python
+            build-mode: none
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
+      - if: matrix.build-mode == 'manual'
+        shell: bash
+        run: |
+          echo 'Replace this with the commands to build your code for manual build mode.'
+          exit 1
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"
+
+  # Java Build and Test Job
+  java:
+    name: Build and Test Java Programs
+    runs-on: ubuntu-latest
+    needs: analyze  # Ensure CodeQL analysis runs first
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 11 for Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Compile Java Programs
+        run: |
+          find ./java -name "*.java" -exec javac {} \;
+
+      - name: Run Java Programs
+        run: |
+          javac ./java/basics/fizzBuzz.java
+          java fizzBuzz
+
+      - name: Run Java Unit Tests
+        run: |
+          mvn test  # Run tests using Maven if applicable
+
+  # ReactJS Build and Test Job
+  js-react:
+    name: Test JavaScript and ReactJS Code
+    runs-on: ubuntu-latest
+    needs: analyze  # Ensure CodeQL analysis runs first
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js for ReactJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies (React)
+        run: |
+          cd webdev/reactjs
+          npm install
+
+      - name: Run JavaScript Tests (React)
+        run: |
+          cd webdev/reactjs
+          npm test -- --watchAll=false
+
+  # Spring Boot Build and Test Job
+  springboot:
+    name: Build and Test Spring Boot Application
+    runs-on: ubuntu-latest
+    needs: analyze  # Ensure CodeQL analysis runs first
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 11 for Spring Boot
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Build Spring Boot Application
+        run: |
+          cd java/springboot
+          mvn clean install
+
+      - name: Run Spring Boot Tests
+        run: |
+          cd java/springboot
+          mvn test

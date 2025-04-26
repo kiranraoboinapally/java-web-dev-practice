@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Cache CodeQL Analysis
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.cache/codeql
           key: ${{ runner.os }}-codeql-${{ hashFiles('java/**/*.java', 'python/**/*.py', 'webdev/reactjs/**/*.js') }}
@@ -54,7 +54,7 @@ jobs:
           java-version: '17'
 
       - name: Cache Maven dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('java/springboot/myspring/pom.xml') }}
@@ -95,7 +95,7 @@ jobs:
           python-version: '3.x'
 
       - name: Cache Python dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-python-${{ hashFiles('python/requirements.txt') }}
@@ -126,7 +126,7 @@ jobs:
           node-version: '14'
 
       - name: Cache Node.js modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: webdev/reactjs/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('webdev/reactjs/package-lock.json') }}

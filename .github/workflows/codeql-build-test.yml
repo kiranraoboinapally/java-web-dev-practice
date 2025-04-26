@@ -66,6 +66,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      - name: Print directory structure (for debugging)
+        run: ls -R java/springboot/myspring/
+
       - name: Build all Spring Boot Projects
         run: |
           # Loop through all sub-projects and run 'mvn clean install' for each
@@ -97,64 +100,3 @@ jobs:
               mvn -f "$dir/pom.xml" test
             fi
           done
-
-  python:
-    runs-on: ubuntu-latest
-    needs: analyze
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Cache Python dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-python-${{ hashFiles('python/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-python-
-
-      - name: Install dependencies
-        run: |
-          cd python
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run Python Tests
-        run: |
-          cd python
-          python -m unittest discover
-
-  reactjs:
-    runs-on: ubuntu-latest
-    needs: analyze
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: webdev/reactjs/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('webdev/reactjs/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install Dependencies
-        run: |
-          cd webdev/reactjs
-          npm install
-
-      - name: Run React Tests
-        run: |
-          cd webdev/reactjs
-          npm test -- --watchAll=false

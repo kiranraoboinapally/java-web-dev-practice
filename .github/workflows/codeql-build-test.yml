@@ -34,6 +34,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
+          distribution: github
           languages: ${{ matrix.language }}
 
       # Build required for Java/Kotlin so CodeQL can analyze the bytecode

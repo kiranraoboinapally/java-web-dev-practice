@@ -530,16 +530,75 @@ Only DML should apply for autocommit i.e., TCL.
 ----------------------------------------------
 
 Logical Operators:
---between
---in
---like
---or
---and
+--between ==>prints the range
+--in ==> only selected rows will be displayed
+--like ==>
+--or ==> any one condition has to be true
+--and ==> two conditions must be true
 --not
---
+--is null
 
+Operators only must use with columns
+Between:
+between operator is used to compare the value in a column
+example selecct * from students where age between 6 and 18; (only used on numeric data ypes)
+In:
+the in opeartor evaluates multiple values on a single data column
+written as a word "IN" followed by multiole vvalues separated by comma inside brackets
+exxample selcct * from studetn where age IN(5,6);
+It can be usedd for numbers and string data types
 
+Like:
+a wild character is used as substitute for any characters in a string
+the % means zero or more charcters and _ means exactly one charcter
+exmaple select * from students where firstname Like 'Jo%';(zero or more)
+selct * from students where firstname like 'Jo_';(exactly one)
 
+the wild cards are used to search for data in a given column
 
 ----------------------------------------------
+Types of SQL Functions
+1.String Functions: operates on string data types
+2.Numeric Functions: opeartes on numeric data types
+3.Date Functions: operates on date data types
+4.Aggregate Functions: operates on all the data types.
 
+1.string functions:
+a.upper()
+b.lower()
+c.length()
+d.instr()
+e.trim()
+f.substring()
+g.concat()
+h.reverse()
+
+2.Numericc Functions
+
+3.Date Functions:
+a.Current_date()
+b.Currrent_time()
+c.now()
+d.Sysdate()
+e.month('YYYY-MM-DD')
+f.year('YYYY-MM-DD')
+g.day('YYYY-MM-DD')
+
+
+4.Aggraegate Functions
+a.AVG
+b.SUM
+c.MIN
+d.MAX
+e.COUNT
+f.LIMIT
+
+
+
+e.Count :
+it counts total no.of rows and not count null values it also counts duplicate values
+
+----------------------------------------------
+Aliases:
+
+----------------------------------------------

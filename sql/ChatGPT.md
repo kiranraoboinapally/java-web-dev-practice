@@ -454,7 +454,285 @@ In this example:
 --- 
 
 
-/*line 236 completed in sql/notes.txt
-need to add more...wait for additional updates to be extracted from sql/notes.txt 
-should make clear and clean code over here.*/
+
+---
+
+## 1. Operators in MySQL
+
+**Definition:** Operators are symbols that specify the operation to be performed on data or columns.
+
+### Types of Operators:
+
+* **Arithmetic Operators:** `+`, `-`, `/`, `%`, `*`
+  Example: `SELECT 1 + 2;`
+* **Relational Operators:** `>`, `<`, `>=`, `<=`, `=`, `!=`
+  Example: `SELECT 17 > 10;`
+* **Logical Operators:** `AND`, `OR`, `NOT`
+  Used to combine multiple conditions in `WHERE` clause.
+
+### Important Notes:
+
+* Operators are used with columns in `SELECT` and `WHERE`.
+* Example:
+
+  ```sql
+  SELECT * FROM zomato WHERE id = 102 OR price = 170;
+  SELECT * FROM registration WHERE NOT id = 101;
+  ```
+
+---
+
+## 2. WHERE Clause
+
+* Filters rows based on conditions.
+* Syntax:
+
+  ```sql
+  SELECT * FROM table_name WHERE condition;
+  ```
+* Logical operators used here:
+
+  * `AND`: Both conditions must be true (filters rows individually).
+  * `OR`: Either condition can be true (affects multiple rows).
+
+---
+
+## 3. Multiple Insert Omissions
+
+When doing multiple inserts, omit:
+
+* Default values
+* Virtually generated columns
+* `AUTO_INCREMENT` columns
+
+---
+
+## 4. Creating a Table Example
+
+```sql
+CREATE TABLE registration (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(45) NOT NULL,
+  email VARCHAR(45) NOT NULL UNIQUE,
+  password VARCHAR(45) NOT NULL,
+  mobile BIGINT NOT NULL UNIQUE,
+  gender CHAR(1) NOT NULL
+);
+```
+
+---
+
+## 5. Data Manipulation Language (DML)
+
+Operations that work with **records**:
+
+| Command  | Description               |
+| -------- | ------------------------- |
+| `INSERT` | Adds new records          |
+| `UPDATE` | Modifies existing records |
+| `DELETE` | Removes records           |
+
+### Examples:
+
+* **DELETE:**
+
+  ```sql
+  DELETE FROM registration WHERE id = 102;
+  ```
+
+  To delete multiple rows, use `OR` (never comma).
+
+* **UPDATE:**
+
+  * Update one column:
+
+    ```sql
+    UPDATE registration SET password = 'password' WHERE id = 101;
+    ```
+
+  * Update multiple columns:
+
+    ```sql
+    UPDATE registration SET password = 'abcd123', mobile = 9845 WHERE id = 102;
+    ```
+
+  * Update multiple records:
+
+    ```sql
+    UPDATE registration SET password = 'xyz' WHERE id = 102 OR id = 103;
+    ```
+
+  * Update entire table (no `WHERE`):
+
+    ```sql
+    UPDATE registration SET password = 'pqr';
+    ```
+
+---
+
+## 6. Data Definition Language (DDL)
+
+DDL commands affect **tables and columns**:
+
+### Table operations:
+
+* `CREATE TABLE`
+* `DROP TABLE`
+* `TRUNCATE TABLE`
+* `RENAME TABLE`
+
+### Column operations via `ALTER TABLE`:
+
+* Add column:
+
+  ```sql
+  ALTER TABLE student ADD COLUMN gender VARCHAR(45) NOT NULL;
+  ```
+* Modify column:
+
+  ```sql
+  ALTER TABLE student MODIFY COLUMN mobile BIGINT NOT NULL;
+  ```
+* Drop column:
+
+  ```sql
+  ALTER TABLE student DROP COLUMN gender;
+  ```
+* Rename column:
+
+  ```sql
+  ALTER TABLE student RENAME COLUMN gender TO sgender;
+  ```
+* Add/drop constraints and indexes:
+
+  ```sql
+  ALTER TABLE student ADD UNIQUE(email);
+  ALTER TABLE student DROP INDEX mobile;
+  ALTER TABLE student DROP PRIMARY KEY;
+  ALTER TABLE student ADD PRIMARY KEY(roll);
+  ```
+
+### Rename table example:
+
+```sql
+RENAME TABLE old_table TO new_table;
+```
+
+---
+
+## 7. Difference Between DELETE, TRUNCATE, DROP
+
+| Feature        | DELETE            | TRUNCATE                              | DROP                      |
+| -------------- | ----------------- | ------------------------------------- | ------------------------- |
+| Type           | DML               | DDL                                   | DDL                       |
+| Effect         | Deletes rows      | Deletes all rows but keeps table      | Deletes table & structure |
+| WHERE clause   | Allowed           | Not allowed                           | Not allowed               |
+| Rollback       | Can rollback      | Cannot rollback                       | Cannot rollback           |
+| Speed          | Slower            | Faster                                | Drops table instantly     |
+| Logging        | Logs deleted rows | Removes pages, logs page deallocation | N/A                       |
+| Triggers fired | Yes               | No                                    | No                        |
+
+---
+
+## 8. Transaction Control Language (TCL)
+
+Used to control transactions:
+
+| Command     | Description                             |
+| ----------- | --------------------------------------- |
+| `COMMIT`    | Save all changes permanently            |
+| `ROLLBACK`  | Undo changes since last commit          |
+| `SAVEPOINT` | Set a point to rollback partial changes |
+
+### Autocommit mode:
+
+* `SET autocommit=0;` disables auto commit (manual commit required).
+* `SET autocommit=1;` enables auto commit (default behavior).
+
+---
+
+## 9. Logical Operators in Detail
+
+* **BETWEEN**: Checks if value is in range (inclusive).
+
+  ```sql
+  SELECT * FROM students WHERE age BETWEEN 6 AND 18;
+  ```
+* **IN**: Checks if value is in a list.
+
+  ```sql
+  SELECT * FROM students WHERE age IN (5, 6);
+  ```
+* **LIKE**: Pattern matching with wildcards `%` (zero or more chars) and `_` (exactly one char).
+
+  ```sql
+  SELECT * FROM students WHERE firstname LIKE 'Jo%'; -- names starting with 'Jo'  
+  SELECT * FROM students WHERE firstname LIKE 'Jo_'; -- names with 'Jo' + one char
+  ```
+* **AND**: Both conditions must be true.
+* **OR**: Either condition can be true.
+* **NOT**: Negates condition.
+* **IS NULL**: Checks for NULL values.
+
+---
+
+## 10. SQL Functions
+
+### 10.1 String Functions
+
+| Function      | Description                     |
+| ------------- | ------------------------------- |
+| `UPPER()`     | Converts string to uppercase    |
+| `LOWER()`     | Converts string to lowercase    |
+| `LENGTH()`    | Returns length of string        |
+| `INSTR()`     | Returns position of substring   |
+| `TRIM()`      | Removes leading/trailing spaces |
+| `SUBSTRING()` | Extracts substring              |
+| `CONCAT()`    | Concatenates strings            |
+| `REVERSE()`   | Reverses a string               |
+
+### 10.2 Numeric Functions
+
+(Examples not provided, but include `ROUND()`, `CEIL()`, `FLOOR()`, etc.)
+
+### 10.3 Date Functions
+
+| Function         | Description                   |
+| ---------------- | ----------------------------- |
+| `CURRENT_DATE()` | Returns current date          |
+| `CURRENT_TIME()` | Returns current time          |
+| `NOW()`          | Returns current date and time |
+| `SYSDATE()`      | Returns system date and time  |
+| `MONTH(date)`    | Extracts month from date      |
+| `YEAR(date)`     | Extracts year from date       |
+| `DAY(date)`      | Extracts day from date        |
+
+### 10.4 Aggregate Functions
+
+| Function  | Description                        |
+| --------- | ---------------------------------- |
+| `AVG()`   | Returns average value              |
+| `SUM()`   | Returns sum of values              |
+| `MIN()`   | Returns minimum value              |
+| `MAX()`   | Returns maximum value              |
+| `COUNT()` | Counts rows (does not count NULLs) |
+| `LIMIT`   | Limits the number of rows returned |
+
+---
+
+## 11. COUNT Function Details
+
+* Counts total number of rows, **excluding NULL values**.
+* Counts duplicates as separate rows.
+* Useful for counting rows matching a condition.
+
+Example:
+
+```sql
+SELECT COUNT(*) FROM students;       -- Counts all rows including duplicates and NULLs
+SELECT COUNT(column_name) FROM table; -- Counts only non-NULL values in that column
+SELECT COUNT(DISTINCT column_name) FROM table; -- Counts distinct non-NULL values
+```
+
+---
 

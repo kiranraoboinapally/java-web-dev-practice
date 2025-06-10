@@ -36,6 +36,9 @@ echo "*.class" >> .gitignore
 git rm --cached "*.class"
 #to avoid or ignoring .class in future commits 
 
+#for cloning others tree branch or which is not a default main branch
+git clone -b other-branch-name https://github.com/username/repo.git
+
 
 
 git ls-files

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Currency Converter</title>
+</head>
+<body>
+<h1>USD to Currency Converter</h1>
+
+<form action="/convert" method="post">
+    <label>USD Amount:</label>
+    <input type="number" name="usdAmount" step="0.01" required>
+    <label>Target Currency:</label>
+    <select name="targetCurrency">
+        <option th:each="curr : ${currencies}" th:value="${curr}" th:text="${curr}"></option>
+    </select>
+    <button type="submit">Convert</button>
+</form>
+
+<h2>Conversion History</h2>
+<table border="1">
+    <tr>
+        <th>USD Amount</th>
+        <th>Currency</th>
+        <th>Converted Amount</th>
+        <th>Timestamp</th>
+    </tr>
+    <tr th:each="item : ${history}">
+        <td th:text="${item.usdAmount}"></td>
+        <td th:text="${item.targetCurrency}"></td>
+        <td th:text="${item.convertedAmount}"></td>
+        <td th:text="${item.timestamp}"></td>
+    </tr>
+</table>
+</body>
+</html>

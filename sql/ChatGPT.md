@@ -450,11 +450,483 @@ CREATE TABLE flipkart (
 In this example:
 - The `flipkart` table has foreign keys that link to the `orders` table and the `customer` table, ensuring that the customer and the order exist before an entry is made in the `flipkart` table.
 - The `customer` table has feedback linked to the `cid`, which is used as a reference in `flipkart`.
+---
+### 6. Operators
 
---- 
+**Definition:**
+An **operator** is a symbol or keyword used to perform operations on data, typically on column values or constants in SQL queries. Operators help in manipulating, comparing, or combining data.
+
+---
+
+#### Types of Operators in MySQL
+
+There are **three main categories** of operators:
+
+---
+
+##### 6.1 Arithmetic Operators
+
+These operators perform mathematical calculations on numeric data.
+
+| Operator | Meaning             | Example          | Result |
+| -------- | ------------------- | ---------------- | ------ |
+| `+`      | Addition            | `SELECT 5 + 3;`  | `8`    |
+| `-`      | Subtraction         | `SELECT 10 - 7;` | `3`    |
+| `*`      | Multiplication      | `SELECT 4 * 6;`  | `24`   |
+| `/`      | Division            | `SELECT 20 / 4;` | `5`    |
+| `%`      | Modulus (Remainder) | `SELECT 10 % 3;` | `1`    |
+
+* These operators are mainly used on numeric columns or numeric literals.
+* Example usage in SQL:
+
+  ```sql
+  SELECT price, price * 0.10 AS discount FROM products;
+  ```
+
+---
+
+##### 6.2 Relational (Comparison) Operators
+
+These operators compare two values and return a boolean result (`TRUE` or `FALSE`).
+
+| Operator     | Meaning                  | Example                                          | Result                           |
+| ------------ | ------------------------ | ------------------------------------------------ | -------------------------------- |
+| `=`          | Equal to                 | `SELECT * FROM users WHERE age = 25;`            | Rows where age = 25              |
+| `!=` or `<>` | Not equal to             | `SELECT * FROM users WHERE id != 10;`            | Rows where id is not 10          |
+| `<`          | Less than                | `SELECT * FROM orders WHERE quantity < 5;`       | Rows with quantity less than 5   |
+| `>`          | Greater than             | `SELECT * FROM products WHERE price > 100;`      | Rows with price greater than 100 |
+| `<=`         | Less than or equal to    | `SELECT * FROM table WHERE col <= 50;`           | Rows where col ≤ 50              |
+| `>=`         | Greater than or equal to | `SELECT * FROM employees WHERE salary >= 30000;` | Rows where salary ≥ 30000        |
+
+* Commonly used in `WHERE` clauses for filtering data.
+
+---
+
+##### 6.3 Logical Operators
+
+These operators combine multiple boolean conditions to form complex queries.
+
+| Operator | Meaning                | Description                                               | Example                                   |
+| -------- | ---------------------- | --------------------------------------------------------- | ----------------------------------------- |
+| `AND`    | Logical AND            | Returns TRUE only if **both** conditions are TRUE         | `WHERE age > 20 AND gender = 'M'`         |
+| `OR`     | Logical OR             | Returns TRUE if **any one** condition is TRUE             | `WHERE city = 'Delhi' OR city = 'Mumbai'` |
+| `NOT`    | Logical NOT (negation) | Reverses the condition: TRUE becomes FALSE and vice versa | `WHERE NOT status = 'active'`             |
+
+* Used mainly in `WHERE` clauses to combine multiple filters.
+* Example:
+
+  ```sql
+  SELECT * FROM employees WHERE department = 'Sales' AND salary > 50000;
+  ```
+
+---
+
+#### Important Notes on Operators
+
+* **Operators are used with columns** or constants inside SQL queries.
+* For example, you can use arithmetic operators in a `SELECT` statement to perform calculations on column values:
+
+  ```sql
+  SELECT price, price * 0.9 AS discounted_price FROM products;
+  ```
+* Relational and logical operators are mostly used in `WHERE` clauses to filter rows based on conditions.
+* You can combine multiple logical conditions to refine data selection:
+
+  ```sql
+  SELECT * FROM orders WHERE quantity > 10 AND status = 'pending';
+  ```
+
+---
+
+#### Examples of Using Operators
+
+1. **Arithmetic Operator**
+
+```sql
+SELECT 10 + 5;  -- Returns 15
+SELECT salary * 12 AS yearly_salary FROM employees;
+```
+
+2. **Relational Operator**
+
+```sql
+SELECT * FROM students WHERE age > 18;
+SELECT * FROM products WHERE price <= 500;
+```
+
+3. **Logical Operators**
+
+```sql
+SELECT * FROM customers WHERE city = 'New York' AND active = 1;
+SELECT * FROM orders WHERE status = 'shipped' OR status = 'delivered';
+SELECT * FROM employees WHERE NOT department = 'HR';
+```
+
+---
 
 
-/*line 236 completed in sql/notes.txt
-need to add more...wait for additional updates to be extracted from sql/notes.txt 
-should make clear and clean code over here.*/
+**7. WHERE Clause **
+
+---
+
+### What is WHERE Clause?
+
+The **WHERE** clause is used in SQL to filter rows from a table based on specified condition(s). It returns only those records that meet the condition(s), helping you work with precise data.
+
+---
+
+### Syntax:
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+
+---
+
+### Key Points:
+
+* Conditions can use operators like `=`, `>`, `<`, `>=`, `<=`, `!=`, combined with logical operators `AND`, `OR`, `NOT`.
+* Multiple conditions can be combined.
+* Applicable in `SELECT`, `UPDATE`, `DELETE` statements.
+* If omitted, all rows are affected or returned.
+
+---
+
+### Examples:
+
+1. Filter rows by one condition:
+
+```sql
+SELECT * FROM registration WHERE id = 102;
+```
+
+2. Filter rows by multiple conditions with OR:
+
+```sql
+SELECT * FROM zomato WHERE id = 102 OR price = 170;
+```
+
+3. Use NOT operator to negate a condition:
+
+```sql
+SELECT * FROM registration WHERE NOT id = 101;
+```
+
+4. Use AND operator for multiple conditions that all must be true:
+
+```sql
+SELECT * FROM employees WHERE department = 'Sales' AND salary > 50000;
+```
+
+---
+
+### Notes on Logical Operators in WHERE:
+
+* **AND** requires all conditions to be true for a row to be selected.
+* **OR** requires at least one condition to be true.
+* **NOT** negates a condition.
+* Conditions apply only to **columns** in the table.
+
+---
+
+### Usage Examples in Other Statements:
+
+* Delete specific records:
+
+```sql
+DELETE FROM registration WHERE id = 102;
+```
+
+* Update specific records:
+
+```sql
+UPDATE registration SET password = 'newpass' WHERE id = 101;
+```
+
+---
+
+### 8. Multiple Insert and Auto-Handled Columns
+
+---
+
+### What is Multiple Insert?
+
+Multiple insert refers to inserting several rows into a table with a single `INSERT` statement, which is more efficient than inserting one row at a time.
+
+---
+
+### Syntax for Multiple Insert:
+
+```sql
+INSERT INTO table_name (column1, column2, ...)
+VALUES 
+    (value1_1, value1_2, ...),
+    (value2_1, value2_2, ...),
+    ...;
+```
+
+---
+
+### Example:
+
+```sql
+INSERT INTO registration (name, email, password, mobile, gender)
+VALUES
+    ('Alice', 'alice@example.com', 'pass1', 1234567890, 'F'),
+    ('Bob', 'bob@example.com', 'pass2', 9876543210, 'M');
+```
+
+---
+
+### Columns Automatically Handled (Omitted Columns)
+
+When inserting records, some columns don’t require explicit values because they are handled automatically by the database:
+
+1. **Default Columns**
+   Columns with a default value defined will automatically get that default if omitted in the insert.
+
+   **Note:**
+   If you explicitly insert a value into a default column, **that value is stored**, regardless of the default. The default is only applied when the column is omitted in the `INSERT`.
+
+2. **Virtually Generated Columns**
+   Computed/generated columns that derive their values automatically from other columns.
+
+3. **AUTO\_INCREMENT Columns**
+   Columns (usually primary keys) that auto-increment their value on each new row insertion.
+
+---
+
+### Example of Table with AUTO\_INCREMENT:
+
+```sql
+CREATE TABLE registration 
+(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(45) NOT NULL,
+  email VARCHAR(45) NOT NULL UNIQUE,
+  password VARCHAR(45) NOT NULL, 
+  mobile BIGINT NOT NULL UNIQUE, 
+  gender CHAR(1) NOT NULL
+);
+```
+
+In this case, `id` is auto-generated, so you don't provide it explicitly in the `INSERT` statements.
+
+---
+
+### 9. DML (Data Manipulation Language)
+
+---
+
+### What is DML?
+
+DML commands are used to **work with data records** inside database tables. They allow you to **insert**, **update**, and **delete** records.
+
+---
+
+### Main DML Commands:
+
+1. **INSERT**
+   Adds new records into a table.
+
+2. **UPDATE**
+   Modifies existing records in a table.
+
+3. **DELETE**
+   Removes existing records from a table.
+
+---
+
+### INSERT Command
+
+Syntax:
+
+```sql
+INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+```
+
+Example:
+
+```sql
+INSERT INTO registration (name, email, password, mobile, gender)
+VALUES ('John', 'john@example.com', 'pass123', 9876543210, 'M');
+```
+
+---
+
+### UPDATE Command
+
+Syntax:
+
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+
+* The **WHERE** clause specifies which rows to update.
+* If **WHERE** is omitted, **all rows** in the table will be updated.
+
+---
+
+#### UPDATE Examples:
+
+* **Update single column for one record:**
+
+```sql
+UPDATE registration SET password='newpass' WHERE id=101;
+```
+
+* **Update multiple columns for one record:**
+
+```sql
+UPDATE registration SET password='abcd123', mobile=1234567890 WHERE id=102;
+```
+
+* **Update multiple records:**
+
+```sql
+UPDATE registration SET password='xyz' WHERE id=102 OR id=103;
+```
+
+* **Update entire table (no WHERE):**
+
+```sql
+UPDATE registration SET password='defaultpass';
+```
+
+---
+
+### DELETE Command
+
+Syntax:
+
+```sql
+DELETE FROM table_name WHERE condition;
+```
+
+* Deletes records matching the **WHERE** condition.
+* Without **WHERE**, deletes all rows from the table.
+
+---
+
+#### DELETE Examples:
+
+* Delete one record:
+
+```sql
+DELETE FROM registration WHERE id=102;
+```
+
+* Delete multiple records:
+
+```sql
+DELETE FROM registration WHERE id=101 OR id=103;
+```
+
+> **Note:**
+> Use **OR** to combine multiple conditions.
+> Do **not** use commas — commas are for columns only, not for combining conditions.
+
+---
+
+### Important Notes on DML:
+
+* Always use **WHERE** to avoid unintentional updates or deletes on the entire table.
+* Changes with DML commands can be controlled with **transactions** (COMMIT, ROLLBACK).
+* DML commands modify the data but **do not change the table structure**.
+
+---
+
+### 10. DELETE vs TRUNCATE vs DROP
+
+---
+
+These three commands are used to remove data or tables in MySQL but behave very differently.
+
+---
+
+### 1. DELETE
+
+* **Type:** DML (Data Manipulation Language)
+* **Purpose:** Deletes **rows/records** from a table.
+* **Usage:** Can delete specific rows by using a **WHERE** clause.
+* **Rollback:** Can be rolled back if inside a transaction before commit.
+* **Speed:** Slower than TRUNCATE because it logs individual row deletions.
+* **Triggers:** Triggers (DELETE triggers) are fired.
+* **Effect on Table Structure:** Table structure **remains intact** after deletion.
+
+---
+
+### DELETE Example:
+
+```sql
+DELETE FROM registration WHERE id = 101;
+```
+
+---
+
+### 2. TRUNCATE
+
+* **Type:** DDL (Data Definition Language)
+* **Purpose:** Deletes **all rows** from a table quickly.
+* **Usage:** Removes all data; **cannot use WHERE clause**.
+* **Rollback:** Cannot be rolled back in many database engines.
+* **Speed:** Faster than DELETE because it deallocates data pages instead of logging each row.
+* **Triggers:** Does **not** fire DELETE triggers.
+* **Effect on Table Structure:** Table structure remains intact.
+* **Resets AUTO\_INCREMENT:** Yes, usually resets any AUTO\_INCREMENT counters to zero.
+
+---
+
+### TRUNCATE Example:
+
+```sql
+TRUNCATE TABLE registration;
+```
+
+---
+
+### 3. DROP
+
+* **Type:** DDL (Data Definition Language)
+* **Purpose:** Deletes the **entire table** including structure and data.
+* **Usage:** Removes table completely from the database.
+* **Rollback:** Cannot be rolled back.
+* **Triggers:** N/A (table no longer exists).
+* **Effect on Table Structure:** Table is **permanently removed**.
+* **Cannot use WHERE clause.**
+
+---
+
+### DROP Example:
+
+```sql
+DROP TABLE registration;
+```
+
+---
+
+### Table:
+
+| Feature                | DELETE                | TRUNCATE | DROP                     |
+| ---------------------- | --------------------- | -------- | ------------------------ |
+| Type                   | DML                   | DDL      | DDL                      |
+| Deletes Rows           | Specific rows (WHERE) | All rows | Entire table & structure |
+| WHERE Clause           | Yes                   | No       | No                       |
+| Rollback               | Yes (before commit)   | No       | No                       |
+| Speed                  | Slower                | Faster   | N/A                      |
+| Triggers Fired         | Yes                   | No       | N/A                      |
+| Table Structure Kept   | Yes                   | Yes      | No                       |
+| Resets AUTO\_INCREMENT | No                    | Yes      | N/A                      |
+
+---
+
+
+
+
+
 

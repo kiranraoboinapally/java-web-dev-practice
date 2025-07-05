@@ -302,4 +302,3 @@ A **distro** is a complete Linux-based OS that bundles the Linux kernel + tools 
 * **Package management** and software installation
 
 ---
-

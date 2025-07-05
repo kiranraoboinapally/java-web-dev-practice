@@ -36,6 +36,9 @@ echo "*.class" >> .gitignore
 git rm --cached "*.class"
 #to avoid or ignoring .class in future commits 
 
+#for cloning others tree branch or which is not a default main branch
+git clone -b other-branch-name https://github.com/username/repo.git
+
 
 
 git ls-files
@@ -82,3 +85,8 @@ npm -i axios
 In MySQL WorkBench to change port number>>>from 3306 to 3030
 Open Notepad as Run administartaor and open below file and change port number from 3306 to 3030
 C:\ProgramData\MySQL\MySQL Server 8.0\my.ini
+
+
+
+usd currency converter api
+https://open.er-api.com/v6/latest/USD

@@ -90,3 +90,43 @@ C:\ProgramData\MySQL\MySQL Server 8.0\my.ini
 
 usd currency converter api
 https://open.er-api.com/v6/latest/USD
+
+
+---
+
+### **How to Ignore Untracked Files in Git**
+
+1. **Add to `.gitignore`**:
+
+   * Ensure the files or directories you want to ignore are listed in `.gitignore`. Example:
+
+     ```bash
+     /.metadata/
+     back/tasksTODO.md
+     back/README.md
+     ```
+
+2. **Untracked Files**:
+
+   * Files marked in **red** by `git status` are **untracked** (not staged or committed yet).
+   * These files are **ignored from future commits** once added to `.gitignore`.
+
+3. **Clean Up Untracked Files**:
+
+   * To remove untracked files that are ignored (and not tracked by Git), use:
+
+     ```bash
+     git clean -fdX
+     ```
+   * `-f` forces the operation, `-d` removes untracked directories, `-X` cleans only ignored files.
+
+4. **Check Status**:
+
+   * After cleaning up, run `git status` to ensure those files are no longer showing in red (untracked).
+
+5. **Notes**:
+
+   * Files in `.gitignore` won't be added to version control if untracked.
+   * Once added, Git ignores them permanently unless `.gitignore` is modified.
+
+---

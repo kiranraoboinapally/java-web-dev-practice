@@ -130,3 +130,78 @@ https://open.er-api.com/v6/latest/USD
    * Once added, Git ignores them permanently unless `.gitignore` is modified.
 
 ---
+
+## ✅ Situation Summary
+
+* You have two branches: `branch1` and `branch2`.
+* In `branch1`, you created and committed `file1` and `file2`.
+* You then switched to `branch2` and created `file3` (without committing immediately).
+* While on `branch2`, you saw `file3` listed even in `branch1` (before committing).
+* Then you committed `file3` in `branch2`.
+* Now you switched back to `branch1` and `file3` disappeared — it's not visible in `branch1`.
+
+---
+
+## 📋 Explanation Table
+
+| Step | Current Branch | Action Taken                                   | Files in Working Directory             | Git Status / Reason                                                                          |
+| ---- | -------------- | ---------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------- |
+| 1    | `branch1`      | Create `file1`, `file2` and commit             | `file1`, `file2`                       | Committed in `branch1`                                                                       |
+| 2    | `branch2`      | Checkout `branch2`                             | `file1`, `file2` (copied from branch1) | No changes yet in this branch                                                                |
+| 3    | `branch2`      | Create `file3` (no commit)                     | `file1`, `file2`, `file3`              | `file3` is **untracked**, so it's present across branches for now                            |
+| 4    | `branch1`      | Checkout `branch1` (before committing `file3`) | `file1`, `file2`, `file3`              | Since `file3` was uncommitted, Git keeps it as untracked                                     |
+| 5    | `branch2`      | Commit `file3`                                 | `file1`, `file2`, `file3`              | Now `file3` is tracked in `branch2` only                                                     |
+| 6    | `branch1`      | Checkout `branch1` again                       | `file1`, `file2` (no `file3`)          | `file3` is tracked only in `branch2` — so it's removed from working directory when switching |
+
+---
+
+## 🔍 Why `file3` disappeared?
+
+* When `file3` was **untracked**, Git doesn’t control it — so it stays even when you change branches.
+* Once `file3` is **committed** to `branch2`, it becomes **tracked by Git only in `branch2`**.
+* When you switch to `branch1`, Git aligns your working directory to match that branch — and since `file3` is **not part of `branch1`**, it's removed from the working directory.
+
+---
+
+## 🧠 Key Concepts to Remember
+
+| Concept               | Meaning                                                                                 |
+| --------------------- | --------------------------------------------------------------------------------------- |
+| **Untracked file**    | Git doesn't care about it — it exists in all branches until deleted manually or tracked |
+| **Tracked file**      | Git version-controls it — only appears in branches where it's committed                 |
+| **Branch Checkout**   | Git updates working directory to reflect the files of the target branch                 |
+| **Committing a file** | Links it to the current branch only                                                     |
+
+---
+
+## 🧪 You Can Try This
+
+If you want to test and observe:
+
+```bash
+# Initialize a new repo
+git init test-repo && cd test-repo
+
+# Create and commit in branch1
+git checkout -b branch1
+echo "Hello" > file1 && echo "World" > file2
+git add file1 file2 && git commit -m "Add file1 and file2"
+
+# Switch to branch2 and create file3 (no commit)
+git checkout -b branch2
+echo "Branch2 file" > file3
+
+# Observe file3 visible in both branches (untracked)
+git checkout branch1   # file3 will still be there
+ls                     # shows file1, file2, file3
+
+# Commit file3 in branch2
+git checkout branch2
+git add file3 && git commit -m "Add file3"
+
+# Now switch to branch1 again
+git checkout branch1
+ls  # file3 will be gone!
+```
+
+---

@@ -28,6 +28,9 @@ git remote add origin  url
 git push -u origin main (or) git push origin master
 
 
+git merge --abort
+#if there is git conflict then undo it by using aabove command
+
 find . -type f -name "*.class" -exec git rm {} \;
 #used to delete certain files ends with .class extension to delete all
 

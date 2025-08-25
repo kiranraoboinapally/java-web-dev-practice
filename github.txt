@@ -333,3 +333,6 @@ git commit -m "Pulled folder3 from branch a"
 * `folder3/` is now in **branch `x`**, and no other directories (like `folder1/` or `folder2/`) have been affected by any commits in branch `a`.
 
 ---
+
+
+to clone only sub branch not default branch git clone --branch branchName --single-branch https://github.com/kiranraoboinapally/repoName.git

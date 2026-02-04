@@ -214,3 +214,20 @@ https://open.er-api.com/v6/latest/USD
 | 4    | `branch1` | Switch to `branch1`        | `file3` disappears (not tracked) |
 
 ---
+
+
+for already commited so i wanted 
+So in short:
+
+Add to .gitignore:
+
+backend/migrations/
+
+
+If it was already committed, run:
+
+git rm -r --cached backend/migrations
+git commit -m "Ignore backend migrations"
+
+
+Keep the folder locally — don’t delete it.

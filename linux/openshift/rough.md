@@ -22,3 +22,13 @@ https://docs.okd.io/latest/installing/installing_sno/install-sno-installing-sno.
 for above single node open shift clear and clean but is it same as openshift or not need to see full clearly documentation
 
 ---
+openshift related links for documentation
+https://docs.redhat.com/en/documentation/openshift_container_platform/4.21#Disconnected%20Environments
+
+(with videos in youtube)
+https://www.sandervanvugt.com/learning-openshift/
+
+https://trilio.io/openshift-tutorial/
+
+https://www.tutorialspoint.com/openshift/index.htm
+

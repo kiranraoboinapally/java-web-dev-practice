@@ -15,3 +15,10 @@ https://www.docker.com/101-tutorial/
 
 This link below documentation is perfect for openshift for quick overview
 https://kubex.ai/openshift-tutorial/
+
+---
+
+https://docs.okd.io/latest/installing/installing_sno/install-sno-installing-sno.html
+for above single node open shift clear and clean but is it same as openshift or not need to see full clearly documentation
+
+---

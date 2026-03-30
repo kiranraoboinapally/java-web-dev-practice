@@ -32,3 +32,5 @@ https://trilio.io/openshift-tutorial/
 
 https://www.tutorialspoint.com/openshift/index.htm
 
+difference between docker and kuberenetes
+https://www.paloaltonetworks.com/cyberpedia/kubernetes-docker

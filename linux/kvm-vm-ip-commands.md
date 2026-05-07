@@ -42,11 +42,16 @@ virsh net-dhcp-leases default
 
 ```bash
 for vm in $(virsh list --name); do
-  mac=$(virsh domiflist $vm | awk '/virtio/ {print $5}')
-  ip=$(ip neigh | grep -i $mac | awk '{print $1}')
-  echo "$vm -> $ip"
+  [ -z "$vm" ] && continue
+
+  mac=$(virsh domiflist "$vm" | awk '/virtio/ {print $5}')
+  ip=$(ip neigh | awk -v mac="$mac" 'tolower($0) ~ tolower(mac) {print $1}')
+
+  echo "$vm -> ${ip:-No IP found}"
 done
 ```
+
+
 
 ### Commit message
 

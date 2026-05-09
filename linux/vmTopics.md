@@ -12,3 +12,17 @@
 | VPN            | IPSec, SSL VPN                  |
 | Containers     | Kubernetes/OpenShift            |
 | Storage        | SAN/NAS                         |
+
+---
+Recommended Lab Architecture
+
+Since you already have RHEL:
+
+Install:
+
+KVM/libvirt
+Cockpit
+Virtual networks //should see
+pfSense/OPNsense firewall VM //should see
+
+Then create zones.

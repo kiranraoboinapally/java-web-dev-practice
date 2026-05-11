@@ -268,3 +268,10 @@ sudo virsh edit oraclelinux8
 - Always use sudo for commands affecting libvirt/KVM
 
 ---
+
+sudo sshd -T | grep pubkeyauthentication
+pubkeyauthentication yes
+sudo sshd -T | grep -i passwordauthentication
+passwordauthentication no
+
+check these for setting as login with pageant for this without password

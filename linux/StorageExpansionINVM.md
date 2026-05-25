@@ -107,7 +107,10 @@ OR create snapshot:
 ```bash
 virsh snapshot-create-as ayd before-expand
 ```
-
+After Server Started and resize done.Do this command to delete
+```
+rm -f /home/kvm-images/ayd-backup.qcow2
+```
 ---
 
 # Step 4 — Shutdown VM

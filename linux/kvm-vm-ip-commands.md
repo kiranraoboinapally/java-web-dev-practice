@@ -52,7 +52,16 @@ done
 ```
 
 
+## For checking complete CPUs,RAM,Storage,VMs
 
-### Commit message
+```
+echo "===== CPU ====="; lscpu | grep -E "Model name|CPU\\(s\\)|Thread|Core|Socket"; echo; \
+echo "===== RAM ====="; free -h; echo; \
+echo "===== DISK ====="; lsblk; echo; \
+echo "===== FILESYSTEM ====="; df -h; echo; \
+echo "===== VMS ====="; virsh list --all 2>/dev/null
+```
+
+
 
 

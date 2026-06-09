@@ -139,7 +139,7 @@ sudo virt-install \
   --cdrom /var/lib/libvirt/images/OracleLinux-R8-U8-x86_64-dvd.iso \
   --os-variant ol8.0 \
   --network bridge=br0 \
-  --graphics vnc \
+  --graphics vnc,listen=127.0.0.1 \
   --noautoconsole
 ```
 

@@ -1,4 +1,4 @@
-
+WireGuard Setup
 
 ```text
 Physical Host

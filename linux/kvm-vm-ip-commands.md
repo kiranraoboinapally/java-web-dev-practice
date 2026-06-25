@@ -41,13 +41,18 @@ virsh net-dhcp-leases default
 ## Show all VM IPs
 
 ```bash
-for vm in $(virsh list --name); do
-  [ -z "$vm" ] && continue
+#!/bin/bash
 
-  mac=$(virsh domiflist "$vm" | awk '/virtio/ {print $5}')
-  ip=$(ip neigh | awk -v mac="$mac" 'tolower($0) ~ tolower(mac) {print $1}')
+VM_LIST=$(virsh list --name)
 
-  echo "$vm -> ${ip:-No IP found}"
+for VM in $VM_LIST
+do
+    MAC=$(virsh domiflist "$VM" | awk 'NR>2 {print $5}')
+
+    if [ -n "$MAC" ]; then
+        IP=$(ip neigh show | awk -v mac="$MAC" '$0~mac {print $1}')
+        echo "$VM : ${IP:-UNKNOWN}"
+    fi
 done
 ```
 

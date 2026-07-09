@@ -67,6 +67,9 @@ echo "===== FILESYSTEM ====="; df -h; echo; \
 echo "===== VMS ====="; virsh list --all 2>/dev/null
 ```
 
+nmcli connection show "$(nmcli -t -f NAME connection show --active | head -1)" | grep "ipv4.method"
 
+above command inside vm
+If this returns manual then IP is fixed other than that as auto means it will change IP sometimes
 
 

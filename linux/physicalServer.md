@@ -560,4 +560,16 @@ VM Creation
    ↓
 Automation
 ```
+---
 
+## To check Physical Server Software.
+
+```
+$ systemd-detect-virt
+none
+$ cat /sys/class/dmi/id/product_name
+System x3650 M5: -[someValue]-
+$ cat /sys/class/dmi/id/sys_vendor
+LENOVO
+```
+---

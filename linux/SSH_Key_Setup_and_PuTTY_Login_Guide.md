@@ -234,3 +234,5 @@ That is why login works.
 6. Login
 
 ---
+
+sudo grep "Accepted publickey" /var/log/secure

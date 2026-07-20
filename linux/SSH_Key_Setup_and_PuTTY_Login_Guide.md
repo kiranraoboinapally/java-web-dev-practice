@@ -234,5 +234,9 @@ That is why login works.
 6. Login
 
 ---
-
+1.
 sudo grep "Accepted publickey" /var/log/secure
+2.
+sudo journalctl -u sshd --since "today"
+3.
+sudo grep sshd /var/log/secure | tail -20

@@ -56,6 +56,10 @@ do
 done
 ```
 
+```
+or
+virsh domifaddr <VMNAME> --source agent
+```
 
 ## For checking complete CPUs,RAM,Storage,VMs
 

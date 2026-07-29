@@ -85,3 +85,13 @@ System enp1s0  d1ca3b8c-2bac-a1b2-1a23-efa5b2d2171a  ethernet  enp1s0
 ipv4.method:                            auto
 
 ```
+
+```
+for checking inside the main host ips auto or manual so check the type bridge as using the below command
+# nmcli con show
+NAME         UUID                                  TYPE       DEVICE
+br0          3ba17a0b-0cfd-17ea-b188-8c2175ab3fa1  bridge     br0
+# nmcli con show br0 | grep ipv4.method
+ipv4.method:                            manual
+if its manual means ip will be fixed doesnt changes but inside vms also should return as manual
+```

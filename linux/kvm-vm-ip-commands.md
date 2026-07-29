@@ -71,9 +71,17 @@ echo "===== FILESYSTEM ====="; df -h; echo; \
 echo "===== VMS ====="; virsh list --all 2>/dev/null
 ```
 
+```
 nmcli connection show "$(nmcli -t -f NAME connection show --active | head -1)" | grep "ipv4.method"
 
 above command inside vm
 If this returns manual then IP is fixed other than that as auto means it will change IP sometimes
 
+OR below like that
+ nmcli con show
+NAME           UUID                                  TYPE      DEVICE  
+System enp1s0  d1ca3b8c-2bac-a1b2-1a23-efa5b2d2171a  ethernet  enp1s0      
+[admin@crmdev core-api]$ nmcli con show "enp1s0" | grep ipv4.method
+ipv4.method:                            auto
 
+```

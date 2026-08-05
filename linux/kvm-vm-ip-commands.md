@@ -95,3 +95,9 @@ br0          3ba17a0b-0cfd-17ea-b188-8c2175ab3fa1  bridge     br0
 ipv4.method:                            manual
 if its manual means ip will be fixed doesnt changes but inside vms also should return as manual
 ```
+
+```
+nmcli device show enp1s0 | grep -E "IP4.ADDRESS|IP4.GATEWAY|IP4.DNS"
+nmcli connection show "System enp1s0" | grep -E "ipv4.method|ipv4.addresses|ipv4.gateway|ipv4.dns|ipv4.routes"
+System enp1s0 is from the <connection name>
+```
